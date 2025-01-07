@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #2D2A29;
+    --secondary-color: #625F5F;
+    --background-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.landing {
+    text-align: center;
+    height: 100vh;
+    padding: 2em;
+}
+
+.landing__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    padding-bottom: 1rem;
+}
+
+.landing__header__appIcon {
+    width: 2em;
+    border-radius: 0.25em;
+}
+
+.landing__header__appName {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.landing__title {
+    padding-bottom: 0.5rem;
+}
+
+.landing__title--breakpoint {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .landing__title--breakpoint {
+        display: block;
+    }
+}
+
+.landing__subtitle {
+    color: var(--secondary-color);
+    padding-bottom: 1rem;
+}
+
+.landing__disclaimer {
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+.landing__disclaimer--date {
+    color: var(--primary-color);
+}
+
+.landing__container {
+    display: flex;
+    justify-content: center;
+    margin-right: 96px;
+}
+
+.landing__image {
+    height: 40vw;
+    min-height: 360px;
+    margin-right: -96px;
+    max-height: 600px;
+}
+
+.landing__image--bookmarks {
+    rotate: -4deg;
+    scale: 0.8;
+}
+
+.landing__image--playbackSpeed {
+    rotate: -2deg;
+    z-index: 1;
+    scale: 0.9;
+}
+
+.landing__image--player {
+    rotate: 2deg;
+    z-index: 1;
+    scale: 0.9;
+}
+
+.landing__image--nowPlaying {
+    rotate: 4deg;
+    scale: 0.8;
+}
+
+.landing__image--library {
+    z-index: 2;
+}
