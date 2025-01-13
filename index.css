@@ -19,11 +19,6 @@ body {
     color: var(--primary-color);
 }
 
-h1, h4, p {
-    text-align: center;
-    margin: 0.5em 0;
-}
-
 .landing {
     display: flex;
     flex-direction: column;
@@ -53,6 +48,7 @@ h1, h4, p {
 .landing__title {
     font-size: 3rem;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .landing__title--breakpoint {
@@ -66,15 +62,15 @@ h1, h4, p {
 }
 
 .landing__subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .landing__disclaimer {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .landing__disclaimer--date {
@@ -84,7 +80,7 @@ h1, h4, p {
 .landing__images {
     display: flex;
     justify-content: center;
-    margin-left: -3rem;
+    margin-left: -5rem;
 }
 
 .landing__image {
@@ -92,7 +88,7 @@ h1, h4, p {
     min-height: 360px;
     height: 40vw;
     transform: rotate(0);
-    margin-right: -3rem;
+    margin-right: -5rem;
 }
 
 .landing__image--bookmarks {
