@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novelwave</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <title>Novelwave - Audiobook Player</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <section class="landing">
-        <div class="landing__header">
-            <img class="landing__header__appIcon"src="resources/icons/icon.novelwave.png"/>
-            <p class="landing__header__appName">Novelwave</p>
-        </div>
-        <h1 class="landing__title">Your ultimate <br class="landing__title--breakpoint">audiobook player!</h1>
-        <h4 class="landing__subtitle">Import, customize, and enjoy your DRM-free audiobooks offline with Novelwave.</h4>
-        <h4 class="landing__disclaimer">Coming <span class="landing__disclaimer--date">February 1, 2025</span></h4>
-        <div class="landing__container">
-            <img class="landing__image landing__image--bookmarks" src="resources/images/image.bookmarks.png"/>
-            <img class="landing__image landing__image--playbackSpeed" src="resources/images/image.playbackSpeed.png"/>
-            <img class="landing__image landing__image--library" src="resources/images/image.library.png"/>
-            <img class="landing__image landing__image--player" src="resources/images/image.player.png"/>
-            <img class="landing__image landing__image--nowPlaying" src="resources/images/image.nowPlaying.png"/>
-        </div>
-    </section>
-</body>
-</html>
+    <main class="landing">
+        <header class="landing__header">
+            <img class="landing__header__icon" src="resources/icons/icon.novelwave.png" alt="Novelwave app icon">
+            <p class="landing__header__name">Novelwave</p>
+        </header>
+        <h1 class="landing__title">
+            Your ultimate <span class="landing__title--breakpoint">audiobook player!</span>
+        </h1>
+        <p class="landing__subtitle">
+            Import, customize, and enjoy your DRM-free audiobooks offline with Novelwave.
+        </p>
+        <p class="landing__disclaimer">
+            Coming <span class="landing__disclaimer--date">February 1, 2025</span>
+        </p>
+        <section class="landing__images">
+            <img class="landing__image landing__image--bookmarks" src="resources/images/image.bookmarks.png" alt="Bookmark feature preview">
+            <img class="landing__image landing__image--playback-speed" src="resources/images/image.playbackSpeed.png" alt="Playback speed feature preview">
+            <img class="landing__image landing__image--library" src="resources/images/image.library.png" alt="Library view preview">
+            <img class="landing__image landing__image--player" src="resources/images/image.player.png" alt="Player feature preview">
+            <img class="landing__image landing__image--now-playing" src="resources/images/image.nowPlaying.png" alt="Now playing screen preview">
+        </section
