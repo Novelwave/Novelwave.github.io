@@ -1,0 +1,17 @@
+.app__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+
+.app__header__icon {
+    width: 2em;
+    border-radius: 0.25em;
+}
+
+.app__header__name {
+    font-size: 1rem;
+    font-weight: 600;
+}

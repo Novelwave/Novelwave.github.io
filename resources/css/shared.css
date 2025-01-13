@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #C7C7C7;
+    --disabled-color: #969494;
+    --background-color: #1E1E1E;
+    --accent-color: #E3D58B;
+    --contrast-color: #2D2A29;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}

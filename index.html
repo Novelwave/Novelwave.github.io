@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novelwave - Audiobook Player</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="resources/css/shared.css">
+    <link rel="stylesheet" href="resources/css/header.css">
+    <link rel="stylesheet" href="resources/css/footer.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicon/site.webmanifest">
 </head>
 <body>
+    <header class="app__header">
+        <img class="app__header__icon" src="resources/icons/icon.novelwave.png" alt="Novelwave app icon">
+        <p class="app__header__name">Novelwave</p>
+    </header>
     <main class="landing">
-        <header class="landing__header">
-            <img class="landing__header__icon" src="resources/icons/icon.novelwave.png" alt="Novelwave app icon">
-            <p class="landing__header__name">Novelwave</p>
-        </header>
         <h1 class="landing__title">
             Your ultimate <span class="landing__title--breakpoint">audiobook player!</span>
         </h1>
@@ -31,4 +34,13 @@
             <img class="landing__image landing__image--library" src="resources/images/image.library.png" alt="Library view preview">
             <img class="landing__image landing__image--player" src="resources/images/image.player.png" alt="Player feature preview">
             <img class="landing__image landing__image--now-playing" src="resources/images/image.nowPlaying.png" alt="Now playing screen preview">
-        </section
+        </section>
+    </main>
+    <footer class="app__footer">
+        <a class="app__footer__link app__footer__link--support" href="">Support</a>
+        <div class="app__footer__divider"></div>
+        <a class="app__footer__link app__footer__link--privacy-policy" href="">Privacy Policy</a>
+        <div class="app__footer__divider"></div>
+        <a class="app__footer__link app__footer__link--terms-and-conditions" href="">Terms & Conditions</a>
+    </footer>
+</body>
