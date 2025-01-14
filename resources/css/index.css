@@ -10,6 +10,23 @@
     margin-bottom: 1rem;
 }
 
+.landing__title--highlighted {
+    color: var(--accent-color);
+    position: relative;
+}
+
+.landing__title--highlighted::after {
+    content: '';
+    background: url("/resources/vectors/vector.underline.svg") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    width: 100%;
+}
+
 .landing__subtitle {
     font-size: 1.5rem;
     font-weight: 400;
