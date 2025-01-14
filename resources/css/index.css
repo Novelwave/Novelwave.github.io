@@ -47,14 +47,24 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1000px;
-    min-width: 300px
+    min-width: 300px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .landing__image {
     width: 30%;
     margin-right: -3rem;
     margin-left: -3rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (max-width: 750px) {
@@ -90,32 +100,41 @@
     }
 }
 
-.landing__image:hover {
-    transform: scale(1.1);
-}
-
 .landing__image--bookmarks {
     rotate: -4deg;
     scale: 0.8;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .landing__image--playback-speed {
     rotate: -2deg;
     z-index: 2;
     scale: 0.9;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s;
 }
 
 .landing__image--library {
     z-index: 3;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.4s;
 }
 
 .landing__image--player {
     rotate: 2deg;
     z-index: 2;
     scale: 0.9;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s;
 }
 
 .landing__image--now-playing {
     rotate: 4deg;
     scale: 0.8;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
