@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="resources/css/header.css">
         <link rel="stylesheet" href="resources/css/shared.css">
         <link rel="stylesheet" href="resources/css/footer.css">
+        <link rel="stylesheet" href="resources/css/support.css">
 
         <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
@@ -28,7 +29,64 @@
             </a>
         </header>
 
-        <h3>Nothing here yet :)</h3>
+        <!-- MAIN -->
+        <main>
+            <section class="support">
+                <h1 class="support__title">Support</h1>
+                <p class="support__effective-date">Last Updated On: <span class="support__effective-date--date">January 20, 2025</span></p>
+
+                <div class="support__picker">
+                    <button class="support__button support__button--active" data-section="faq">FAQ</button>
+                    <button class="support__button" data-section="troubleshoot">Troubleshooting</button>
+                  </div>
+
+                <div class="support__content support__content--faq">
+                    <div class="support__topic">
+                        <p class="support__question">• How do I import audiobooks into Novelwave?</p>
+                        <p>You can import audiobooks in 2 ways:</p>
+                        <ul>
+                            <li>1. Using the dedicated "Import" button inside the app.</li>
+                            <li>2. Using the native iOS "Open With" share menu.</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question">• What audiobook formats are supported?</p>
+                        <p>Novelwave supports all standard audio formats, as well as MPEG-4 video formats. This ensures that audiobooks converted from M4A to MP4 can still be imported and played correctly. However, please note that Novelwave is not intended to function as a video player.</p>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question">• How can I merge separate audio files into a single audiobook?</p>
+                        <p>When importing audiobooks, you can choose the “Merge Chapters” option. This feature enables you to combine multiple audio files into a single audiobook entry, with each file designated as a chapter.</p>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question">• Can Novelwave play DRM-protected audiobooks?</p>
+                        <p>No, Novelwave is designed for DRM-free audiobooks only. Please ensure that your audiobooks are free of any digital rights management (DRM) restrictions.</p>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question">• Where are my audiobooks stored?</p>
+                        <p>Your audiobooks are stored locally on your device. The app does not collect or transmit any data.</p>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question">• How can I export my audiobooks/collections?</p>
+                        <p>To export your audiobooks outside of Novelwave, follow these steps:</p>
+                        <ul>
+                            <li>1. Tap on the "Edit" button next to the search field to enter "Edit Mode".</li>
+                            <li>2. Select the audiobooks/collections that you want to export.</li>
+                            <li>3. In the context menu, tap on the "Share" button, which will open the native iOS share menu.</li>
+                            <li>4. Pick the destination where you want to share your audiobooks.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="support__content support__content--troubleshoot">
+                </div>
+            </section>
+
+            <p class="support__footnote">For any questions or feedback, please feel free to get in touch with me at: <a href="mailto:mihaipetrenco@icloud.com">mihaipetrenco@icloud.com</a> and I'll get back to you as soon as possible!<br><br>Thank you for trying out Novelwave ❤️!</p>
+        </main>
 
         <!-- FOOTER -->
         <footer class="app__footer">
@@ -39,4 +97,26 @@
             <a class="app__footer__link app__footer__link--terms-and-conditions" href="/terms">Terms & Conditions</a>
         </footer>
     </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".support__button");
+            const sections = document.querySelectorAll(".support__content");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    buttons.forEach(btn => btn.classList.remove("support__button--active"));
+                    button.classList.add("support__button--active");
+                    const targetSection = button.getAttribute("data-section");
+
+                    sections.forEach(section => {
+                        if (section.classList.contains(`support__content--${targetSection}`)) {
+                            section.style.display = "block";
+                        } else {
+                            section.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </html>
