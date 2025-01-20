@@ -82,10 +82,33 @@
                     </div>
                 </div>
                 <div class="support__content support__content--troubleshoot">
+                    <div class="support__topic">
+                        <p class="support__question">• Importing an audiobook fails with a "File already exists" error.</p>
+                        <p>Every audiobook you import is copied in the app's private Documents directory. The file name is preserved as is. This means that multiple audio files with the same name cannot be added to the same collection.</p>
+                        <ul>
+                            <li>1. If the collection contains an audiobook with the same file name, try renaming the file before importing.</li>
+                            <li>2. If you're certain that the collection does not have an audiobook with the same file name, please refer to <a href="#state-issue">Novelwave does not reflect the correct state of my audiobook collection.</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question">• Creating a collection fails with a "Directory already exists" error.</p>
+                        <p>Collections are represented as folders in the app's private Documents directory. The folder name matches the collection name you specified during creation. This means that multiple child collections with the same name cannot be created in the same parent collection.</p>
+                        <ul>
+                            <li>1. If the parent collection contains a child collection with the same name, try picking a different collection name.</li>
+                            <li>2. If you're certain that the parent collection does not have a child collection with the same name, please refer to <a href="#state-issue">Novelwave does not reflect the correct state of my audiobook collection.</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="support__topic">
+                        <p class="support__question" id="state-issue">• Novelwave does not reflect the correct state of my audiobook collection.</p>
+                        <p>Bad news. This is a bug in the application itself and should have never happened.<br><br>In short, the application got out of sync with the Documents folder and does not reflect the correct data. Unfortunately, at this point, the only solution is to reinstall the app and start from a blank slate.<br><br><strong>Please make sure to export your existing audiobooks/collections before deleting the app as they will be deleted together with the app itself.</strong><br><br>A built-in file sync feature is being planned which will ensure that even if this somehow happens in the future, you will be able to easily recover without losing any progress.</p>
+                    </div>
+                    <hr>
                 </div>
             </section>
 
-            <p class="support__footnote">For any questions or feedback, please feel free to get in touch with me at: <a href="mailto:mihaipetrenco@icloud.com">mihaipetrenco@icloud.com</a> and I'll get back to you as soon as possible!<br><br>Thank you for trying out Novelwave ❤️!</p>
+            <p class="support__footnote">For any questions or feedback, please feel free to get in touch with me at <a href="mailto:mihaipetrenco@icloud.com">mihaipetrenco@icloud.com</a> and I'll get back to you as soon as possible!<br><br>Thank you for trying out Novelwave ❤️!</p>
         </main>
 
         <!-- FOOTER -->
