@@ -34,8 +34,12 @@
     margin-bottom: 2rem;
 }
 
-.landing__disclaimer {
-    margin-bottom: 3rem;
+.landing__download {
+    margin-bottom: 2rem;
+}
+
+.landing__download__logo {
+    width: 10rem;
 }
 
 .landing__disclaimer--date {
