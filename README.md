@@ -5,9 +5,9 @@ player designed for your personal DRM-free audiobook collection. Effortlessly im
 
 <table>
   <tr>
-    <td valign="top"><img src="resources/images/image.library.png"/></td>
-    <td valign="top"><img src="resources/images/image.player.png"/></td>
-    <td valign="top"><img src="resources/images/image.nowPlaying.png"/></td>
+    <td valign="top"><img src="images/light-device-front@2x.png" alt="Library"/></td>
+    <td valign="top"><img src="images/light-device-player@2x.png" alt="Player"/></td>
+    <td valign="top"><img src="images/gallery/light-widgets@2x.png" alt="Now Playing widgets"/></td>
   </tr>
 </table>
 

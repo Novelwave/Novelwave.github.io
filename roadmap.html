@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Where Novelwave is headed: what's in the current version, what's coming in 3.1, and what's further down the road.">
+    <title>Roadmap — Novelwave</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
+    <script src="roadmap.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Main">
+            <ul class="header-links">
+                <li><a href="./"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
+            <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="page container" id="main">
+        <header class="page-header">
+            <p class="eyebrow">Roadmap</p>
+            <h1 class="section-title">Where Novelwave is <span class="accent">headed</span></h1>
+            <p class="lede">Choose a stop on the map to see what's in it. There are no dates, and plans can change as we learn what listeners need most.</p>
+            <p class="page-meta">Last updated October 15, 2026</p>
+        </header>
+
+        <ol class="roadmap" aria-label="Versions">
+            <li class="roadmap-stop is-released">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-0">
+                    <span class="roadmap-dot" aria-hidden="true"></span>
+                    <span class="roadmap-stop-label">
+                        <span class="roadmap-version">3.0</span>
+                        <span class="roadmap-status">Released</span>
+                    </span>
+                </button>
+                <p class="roadmap-summary">A new chapter: iCloud sync, iCloud Drive import, a bolder Player and Now Playing widgets.</p>
+                <div class="tile roadmap-changelog" id="changelog-3-0" role="region" aria-labelledby="changelog-3-0-title">
+                    <h2 class="tile-title" id="changelog-3-0-title">What's in Novelwave 3.0</h2>
+                    <div class="roadmap-groups">
+                        <section class="roadmap-group">
+                            <h3>A new chapter</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Refreshed design.</span> A refreshed library, player and profile make browsing, listening and managing your audiobooks easier.</li>
+                                <li><span class="roadmap-change-title">Sync between devices.</span> Shelves, audiobook details, listening progress and bookmarks stay in sync through iCloud.</li>
+                                <li><span class="roadmap-change-title">Import from iCloud Drive.</span> Add audiobooks to Novelwave's iCloud Drive folder, then download, pause, resume or remove them whenever you like.</li>
+                                <li><span class="roadmap-change-title">Export your audiobooks.</span> Save single audiobooks, a selection, shelves or your whole library to Files.</li>
+                                <li><span class="roadmap-change-title">Become a beta tester.</span> Request a TestFlight invitation from Profile to try new features early.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>A Player with more presence</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">A cover that comes alive.</span> It sits forward while playing and eases back when paused, over a background tinted with its color.</li>
+                                <li><span class="roadmap-change-title">A scrubber you can grab.</span> A slim track with a knob that never jumps playback when you touch it.</li>
+                                <li><span class="roadmap-change-title">A new speed control.</span> A smooth slider with firm stops at the presets, showing how long the rest of the book takes at that speed.</li>
+                                <li><span class="roadmap-change-title">Controls that respond.</span> Animated symbols and haptic feedback.</li>
+                                <li><span class="roadmap-change-title">Progress in the Mini Player.</span> A thin line shows how far through the book you are.</li>
+                                <li><span class="roadmap-change-title">A finish worth celebrating.</span> Confetti when you reach the end of an audiobook.</li>
+                                <li><span class="roadmap-change-title">The right cover for every file.</span> Merged audiobooks show each file's own cover again.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>Around the app</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Now Playing widgets.</span> Small and medium, with the cover, play and pause, skip buttons on the medium size, and a tap that opens the book.</li>
+                                <li><span class="roadmap-change-title">A cat for company.</span> Empty shelves, searches, bookmarks, chapters and widgets now have a resident cat.</li>
+                                <li><span class="roadmap-change-title">Import from an empty shelf.</span> An empty shelf offers to import audiobooks straight away.</li>
+                                <li><span class="roadmap-change-title">Text at your size.</span> Every screen follows your Dynamic Type setting.</li>
+                                <li><span class="roadmap-change-title">Snappier covers.</span> Covers load once and are decoded at the size they're shown, so lists scroll smoothly.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </li>
+            <li class="roadmap-stop is-current is-patch">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-0-1">
+                    <span class="roadmap-dot" aria-hidden="true"></span>
+                    <span class="roadmap-stop-label">
+                        <span class="roadmap-version">3.0.1</span>
+                        <span class="roadmap-status">Available now</span>
+                    </span>
+                </button>
+                <p class="roadmap-summary">Steadier scrubbing, finished books that start over, and a quicker Mini Player.</p>
+                <div class="tile roadmap-changelog" id="changelog-3-0-1" role="region" aria-labelledby="changelog-3-0-1-title">
+                    <h2 class="tile-title" id="changelog-3-0-1-title">What's new in Novelwave 3.0.1</h2>
+                    <div class="roadmap-groups">
+                        <section class="roadmap-group">
+                            <h3>Fixes</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Steady scrubbing.</span> The progress bar no longer jumps back while you drag it during playback.</li>
+                                <li><span class="roadmap-change-title">Finished books start over.</span> Playing an audiobook marked as finished starts it from the beginning, instead of ending straight away and closing the Player.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>Improvements</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">An instant Mini Player cover.</span> The cover appears straight away, without a placeholder flashing first.</li>
+                                <li><span class="roadmap-change-title">Smoother while listening.</span> The tab bar and Mini Player no longer redraw every second during playback.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </li>
+            <li class="roadmap-stop is-next">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-1" data-open-by-default>
+                    <span class="roadmap-dot" aria-hidden="true"></span>
+                    <span class="roadmap-stop-label">
+                        <span class="roadmap-version">3.1</span>
+                        <span class="roadmap-status">In development</span>
+                    </span>
+                </button>
+                <p class="roadmap-summary">CarPlay, Siri and Shortcuts, and Live Activities on the Lock Screen.</p>
+                <div class="tile roadmap-changelog" id="changelog-3-1" role="region" aria-labelledby="changelog-3-1-title">
+                    <h2 class="tile-title" id="changelog-3-1-title">Coming in Novelwave 3.1</h2>
+                    <div class="roadmap-groups">
+                        <section class="roadmap-group">
+                            <h3>In the car and hands-free</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">CarPlay.</span> Browse your library and pick up where you left off from your car's display.</li>
+                                <li><span class="roadmap-change-title">Siri.</span> Ask Siri to resume your audiobook, skip ahead or set a sleep timer.</li>
+                                <li><span class="roadmap-change-title">Shortcuts.</span> Novelwave actions in the Shortcuts app, for your own automations.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>On your iPhone</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Open with Novelwave.</span> Audio files you open from Files, Mail or Safari go straight to Novelwave.</li>
+                                <li><span class="roadmap-change-title">Lock Screen activity.</span> What's playing, live on the Lock Screen and in the Dynamic Island.</li>
+                                <li><span class="roadmap-change-title">A sleep timer Live Activity.</span> Watch the sleep timer count down without opening the app.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </li>
+            <li class="roadmap-stop is-later">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-later">
+                    <span class="roadmap-dot" aria-hidden="true"></span>
+                    <span class="roadmap-stop-label">
+                        <span class="roadmap-version">Later</span>
+                        <span class="roadmap-status">On the horizon</span>
+                    </span>
+                </button>
+                <p class="roadmap-summary">Novelwave on iPad, Mac and Apple Watch, more places for your books, listening stats with levels to earn, and more languages.</p>
+                <div class="tile roadmap-changelog" id="changelog-later" role="region" aria-labelledby="changelog-later-title">
+                    <h2 class="tile-title" id="changelog-later-title">Further down the road</h2>
+                    <div class="roadmap-groups">
+                        <section class="roadmap-group">
+                            <h3>Beyond iPhone</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">iPad.</span> A layout made for the bigger screen.</li>
+                                <li><span class="roadmap-change-title">Mac.</span> Listen at your desk and manage a large library with a keyboard and pointer.</li>
+                                <li><span class="roadmap-change-title">Apple Watch.</span> Control playback and set a sleep timer from your wrist.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>More places for your books</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Dropbox.</span> Bring in audiobooks from your Dropbox.</li>
+                                <li><span class="roadmap-change-title">Google Drive.</span> Bring in audiobooks from your Google Drive.</li>
+                                <li><span class="roadmap-change-title">Audiobookshelf.</span> Connect Novelwave to your Audiobookshelf server.</li>
+                                <li><span class="roadmap-change-title">Jellyfin.</span> Connect Novelwave to your Jellyfin server.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>Your listening</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Listening stats.</span> See how much you've listened, day by day and book by book.</li>
+                                <li><span class="roadmap-change-title">Levels and experience.</span> Earn experience as you listen and level up along the way.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>In your language</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">More languages.</span> Use Novelwave in your own language, not just English.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+        <p class="roadmap-note">Missing something you'd love to see? <a href="mailto:mihaipetrenco@icloud.com?subject=Novelwave%20Feature%20Request">Suggest a feature</a>.</p>
+    </main>
+
+    <footer class="site-footer container">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Support and legal">
+            <ul class="footer-links">
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </nav>
+        <p>© 2026 Novelwave. Made with ❤️ by Mihai Petrenco.</p>
+    </footer>
+</body>
+</html>

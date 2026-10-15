@@ -1,98 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="How Novelwave handles your data: no accounts, ads, analytics or tracking. Your library stays on your devices and in your own iCloud account.">
+    <title>Privacy Policy — Novelwave</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <title>Privacy Policy</title>
+    <header class="site-header">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Main">
+            <ul class="header-links">
+                <li><a href="roadmap.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
+            <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
 
-        <link rel="stylesheet" href="resources/css/header.css">
-        <link rel="stylesheet" href="resources/css/shared.css">
-        <link rel="stylesheet" href="resources/css/footer.css">
-        <link rel="stylesheet" href="resources/css/privacy.css">
-
-        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-        <link rel="icon" href="resources/favicon/favicon.ico">
-        <link rel="manifest" href="resources/favicon/site.webmanifest">
-
-    </head>
-    
-    <body>
-
-        <!-- HEADER -->
-        <header class="app__header">
-            <a class="app__header__link" href="/">
-                <img class="app__header__icon" src="resources/icons/icon.novelwave.png" alt="Novelwave app icon">
-                <p class="app__header__name">Novelwave</p>
-            </a>
+    <main class="page container" id="main">
+        <header class="page-header">
+            <p class="eyebrow">Legal</p>
+            <h1 class="section-title">Privacy Policy</h1>
+            <p class="page-meta">Last updated October 14, 2026</p>
         </header>
 
-        <!-- MAIN -->
-        <main>
-            <section class="privacy">
-                <h1 class="privacy__title">Privacy Policy</h1>
-                <p class="privacy__effective-date">Last Updated On: <span class="privacy__effective-date--date">January 14, 2025</span></p>
-                <div class="privacy__content">
+        <section class="tile summary-card" aria-labelledby="summary-title">
+            <h2 class="tile-title" id="summary-title">In short</h2>
+            <ul>
+                <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>We don't collect, sell or share your personal data.</li>
+                <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>There are no accounts, ads, analytics or tracking.</li>
+                <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Your library stays on your devices and in your own iCloud account.</li>
+            </ul>
+        </section>
 
-                    <p>
-                        Novelwave and its developer are committed to protecting your privacy. 
-                        This Privacy Policy outlines how your data is handled while using the Novelwave iOS application.
-                    </p>
-                    
-                    <hr>
+        <article class="prose">
+            <p>Novelwave is an audiobook player for iPhone, developed by Mihai Petrenco (“we”, “us”). This policy explains what happens to your information when you use the Novelwave app and this website.</p>
 
-                    <h3>1. Data Collection and Use</h3>
-                    
-                    <p>
-                        The Novelwave application is completely offline and does not collect, store, or transmit any user data.
-                        <ul>
-                            <li>
-                                <strong>• Personal Information Collection:</strong><br />We do not collect or process any personally identifiable information (PII).
-                            </li> 
-                            <li>
-                                <strong>• No Usage Tracking:</strong><br />Our app does not track your activity or usage patterns.
-                            </li>
-                        </ul>
-                    </p>
-                    
-                    <hr>
-                    
-                    <h3>2. Third-Party Dependencies</h3>
-                    <p>Our application does not rely on any third-party services, libraries, or tools. This ensures your data is never shared with external providers or third parties.</p>
+            <h2>Information we collect</h2>
+            <p>None. The app doesn't send us any information about you or how you use it. It contains no analytics, advertising or crash-reporting services, and it doesn't track you across apps or websites.</p>
 
-                    <hr>
+            <h2>Data stored on your device</h2>
+            <p>To work as an audiobook player, Novelwave keeps the following on your iPhone:</p>
+            <ul>
+                <li>the audio files you import, along with their details and artwork;</li>
+                <li>your shelves and how your library is organized;</li>
+                <li>your listening progress, bookmarks and the notes you add to them;</li>
+                <li>your settings, such as skip durations and appearance.</li>
+            </ul>
+            <p>This data stays in the app's storage on your device. We have no access to it.</p>
 
-                    <h3>3. Data Security</h3>
-                    <p>As no data is collected or transmitted, there are no associated risks of data breaches or unauthorized access. Your information remains secure on your device.</p>
+            <h2>iCloud and sync</h2>
+            <p>If you're signed in to iCloud, Novelwave syncs your library between your devices through Apple's CloudKit. This includes your shelves, audiobook details, chapters, bookmarks and notes, and listening progress. It's stored in the private database of your own iCloud account, which we can't access.</p>
+            <p>If you connect iCloud Drive, Novelwave creates its own folder there for your audiobooks. The app can only see the files inside that folder and nothing else in your iCloud Drive.</p>
+            <p>Data in your iCloud account is handled by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-                    <hr>
+            <h2>Permissions</h2>
+            <h3>Notifications</h3>
+            <p>Novelwave can let you know when an audiobook finishes downloading, or when a download fails. These notifications are created on your device.</p>
+            <h3>Photos and files</h3>
+            <p>When you choose artwork from Photos, the system picker gives Novelwave only the image you select. It never has access to the rest of your photo library. The same goes for files: the app only sees the files and folders you choose.</p>
 
-                    <h3>4. User Control</h3>
-                    <p>All data related to audiobooks and app settings is stored locally on your device. You have full control over managing, editing, or deleting this data.<br/ ><br/ >If you decide to delete the application, all related data and settings are permanently erased from your device.</p>
-                    
-                    <hr>
+            <h2>When you contact us</h2>
+            <p>If you email us for support, feedback or a beta invitation, we receive your email address and whatever you choose to include. We use it only to reply to you, and we don't keep it longer than we need to.</p>
+            <p>If you join the beta through TestFlight, Apple may share information with us, such as your email address and crash reports, as described in Apple's TestFlight terms.</p>
 
-                    <h3>5. Changes to This Privacy Policy</h3>
-                    <p>As the application evolves with new features, this Privacy Policy may be updated from time to time. Updates will be made available within the app, and the “Last Updated On” date will be revised accordingly.</p>
+            <h2>This website</h2>
+            <p>This website uses no cookies, analytics or third-party services, and its fonts are hosted with the site. If you choose light or dark mode, that choice is saved in your browser's storage on your device so the site remembers it. Our hosting provider may process standard technical information, such as IP addresses, in order to deliver the site.</p>
 
-                    <hr>
+            <h2>Children</h2>
+            <p>Novelwave doesn't collect personal information from anyone, including children.</p>
 
-                    <h3>6. Contact Us</h3>
-                    <p>If you have questions about this Privacy Policy or your privacy rights, please feel free to get in touch with me at: <a href="mailto:mihaipetrenco@icloud.com">mihaipetrenco@icloud.com</a></p>
-                    
-                </div>
-            </section>
-        </main>
+            <h2>Your choices</h2>
+            <ul>
+                <li><strong>Export your library</strong> from Profile to keep a complete copy in Files.</li>
+                <li><strong>Reset your library</strong> from Profile to permanently remove all shelves, audiobooks, bookmarks and progress from all your devices.</li>
+                <li><strong>Manage iCloud data</strong> for Novelwave in the Settings app, under your name and iCloud.</li>
+                <li><strong>Delete the app</strong> to remove its data from your device.</li>
+            </ul>
 
-        <!-- FOOTER -->
-        <footer class="app__footer">
-            <a class="app__footer__link app__footer__link--support" href="/support">Support</a>
-            <div class="app__footer__divider"></div>
-            <a class="app__footer__link app__footer__link--privacy-policy" href="/privacy">Privacy Policy</a>
-            <div class="app__footer__divider"></div>
-            <a class="app__footer__link app__footer__link--terms-and-conditions" href="/terms">Terms & Conditions</a>
-        </footer>
-    </body>
+            <h2>Changes to this policy</h2>
+            <p>If this policy changes, we'll update it on this page and change the date at the top.</p>
+
+            <h2>Contact</h2>
+            <p>Questions about privacy? Email <a href="mailto:mihaipetrenco@icloud.com?subject=Novelwave%20Privacy">mihaipetrenco@icloud.com</a>.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer container">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Support and legal">
+            <ul class="footer-links">
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </nav>
+        <p>© 2026 Novelwave. Made with ❤️ by Mihai Petrenco.</p>
+    </footer>
+</body>
 </html>

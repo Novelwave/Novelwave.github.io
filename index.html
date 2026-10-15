@@ -1,70 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Novelwave is the ultimate audiobook player for iPhone. Organize your library, track your progress and pick up right where you left off.">
+    <title>Novelwave: Your ultimate audiobook player</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Novelwave">
+    <meta property="og:title" content="Novelwave: Your ultimate audiobook player">
+    <meta property="og:description" content="Novelwave is the ultimate audiobook player for iPhone. Organize your library, track your progress and pick up right where you left off.">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
+    <script src="hero.js" defer></script>
+    <script src="tour.js" defer></script>
+</head>
+<body>
+    <svg class="icon-sprite" aria-hidden="true">
+        <symbol id="icon-shelves" viewBox="0 0 24 24"><path d="M20 10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2.5a1 1 0 0 1-.8-.4l-.9-1.2A1 1 0 0 0 15 3h-2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z"/><path d="M20 21a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-2.9a1 1 0 0 1-.88-.55l-.42-.85a1 1 0 0 0-.92-.6H13a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z"/><path d="M3 5a2 2 0 0 0 2 2h3"/><path d="M3 3v13a2 2 0 0 0 2 2h3"/></symbol>
+        <symbol id="icon-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+        <symbol id="icon-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
+        <symbol id="icon-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+        <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+        <symbol id="icon-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+        <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+        <symbol id="icon-cloud-download" viewBox="0 0 24 24"><path d="M12 13v8l-4-4"/><path d="m12 21 4-4"/><path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"/></symbol>
+        <symbol id="icon-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="3"/><path d="M12 18h.01"/></symbol>
+        <symbol id="icon-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+        <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+        <symbol id="icon-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+        <symbol id="icon-export" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
+        <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+        <symbol id="icon-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 18a6 6 0 0 0 0-12v12z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/></symbol>
+        <symbol id="icon-rewind" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+        <symbol id="icon-forward" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+    </svg>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <canvas class="dot-grid" aria-hidden="true"></canvas>
 
-        <title>Novelwave - Audiobook Player</title>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <link rel="stylesheet" href="resources/css/index.css">
-        <link rel="stylesheet" href="resources/css/shared.css">
-        <link rel="stylesheet" href="resources/css/header.css">
-        <link rel="stylesheet" href="resources/css/footer.css">
+    <header class="site-header">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Main">
+            <ul class="header-links">
+                <li><a href="roadmap.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
+            <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <nav class="tour-player" aria-label="Tour chapters" hidden>
+        <a class="tour-player-now" href="#tour">
+            <span class="tour-player-numeral" aria-hidden="true" data-tour-numeral>I</span>
+            <span class="tour-player-text">
+                <span class="tour-player-label" data-tour-label>Chapter I</span>
+                <span class="tour-player-title" data-tour-title>A place for every book</span>
+                <span class="tour-player-progress" aria-hidden="true"></span>
+                <span class="visually-hidden">, back to contents</span>
+            </span>
+        </a>
+        <a class="tour-player-skip" data-tour-previous aria-label="Previous chapter">
+            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
+        </a>
+        <a class="tour-player-skip" data-tour-next aria-label="Next chapter">
+            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
+        </a>
+    </nav>
 
-        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-        <link rel="icon" href="resources/favicon/favicon.ico">
-        <link rel="manifest" href="resources/favicon/site.webmanifest">
-    </head>
-
-    <body>
-
-        <!-- HEADER -->
-        <header class="app__header">
-            <a class="app__header__link" href="/">
-                <img class="app__header__icon" src="resources/icons/icon.novelwave.png" alt="Novelwave app icon">
-                <p class="app__header__name">Novelwave</p>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <h1 class="hero-title" id="hero-title">Your <span class="accent">ultimate</span> audiobook player.</h1>
+                <div class="hero-actions">
+                    <a class="app-store-button" href="https://apps.apple.com/app/id6720100886">
+                        <picture>
+                            <source srcset="images/download_light.svg" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <img src="images/download_dark.svg" alt="Download on the App Store" width="120" height="40">
+                        </picture>
+                    </a>
+                    <a class="tour-button" href="#tour">Take the tour</a>
+                </div>
+            </div>
+            <div class="hero-devices">
+                <div class="device device-back">
+                    <picture>
+                        <source srcset="images/dark-device-back.avif 1x, images/dark-device-back@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                        <source srcset="images/dark-device-back.png 1x, images/dark-device-back@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                        <source srcset="images/light-device-back.avif 1x, images/light-device-back@2x.avif 2x" type="image/avif">
+                        <img class="device-image" src="images/light-device-back.png" srcset="images/light-device-back.png 1x, images/light-device-back@2x.png 2x" alt="The Novelwave player playing an audiobook" width="385" height="776" decoding="async">
+                    </picture>
+                </div>
+                <picture>
+                    <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                    <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                    <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
+                    <img class="device device-front" src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="The Novelwave library listing audiobooks with their listening progress" width="385" height="776" fetchpriority="high">
+                </picture>
+            </div>
+            <a class="scroll-cue" href="#tour" aria-hidden="true" tabindex="-1">
+                <span class="scroll-cue-label">Scroll to begin</span>
+                <span class="scroll-cue-line"></span>
             </a>
-        </header>
+        </section>
 
-        <!-- LANDING -->
-        <main class="landing">
-            <h1 class="landing__title">
-                Your <span class="landing__title--highlighted">ultimate</span> audiobook player!</span>
-            </h1>
-            <p class="landing__subtitle">
-                Import, customize, and enjoy your DRM-free audiobooks offline with Novelwave.
-            </p>
-
-            <a class="landing__download" href="https://apps.apple.com/app/id6720100886">
-                <img class="landing__download__logo" src="resources/vectors/vector.apple.svg" alt="Apple Logo">
-                View in App Store
-            </a>
-            
-            <section class="landing__images">
-                <img class="landing__image landing__image--bookmarks" src="resources/images/image.bookmarks.png" alt="Bookmark feature preview">
-                <img class="landing__image landing__image--playback-speed" src="resources/images/image.playbackSpeed.png" alt="Playback speed feature preview">
-                <img class="landing__image landing__image--library" src="resources/images/image.library.png" alt="Library view preview">
-                <img class="landing__image landing__image--player" src="resources/images/image.player.png" alt="Player feature preview">
-                <img class="landing__image landing__image--now-playing" src="resources/images/image.nowPlaying.png" alt="Now playing screen preview">
+        <div class="tour">
+            <section class="tour-intro container" id="tour" aria-labelledby="tour-title">
+                <div class="tour-intro-copy reveal">
+                    <p class="eyebrow">The tour</p>
+                    <h2 class="section-title" id="tour-title">Every feature, <span class="accent">chapter</span> by chapter.</h2>
+                    <p class="lede">Novelwave is made for books, not podcasts or playlists. Seven short chapters cover everything it can do, from the first import to the last page.</p>
+                </div>
+                <nav class="contents reveal" aria-labelledby="contents-title">
+                    <h3 class="contents-title" id="contents-title">Contents</h3>
+                    <ol class="contents-list" role="list">
+                        <li><a href="#library"><span class="contents-numeral">I</span><span class="contents-name">A place for every book</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Library</span></a></li>
+                        <li><a href="#player"><span class="contents-numeral">II</span><span class="contents-name">Listening, exactly your way</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Player</span></a></li>
+                        <li><a href="#import"><span class="contents-numeral">III</span><span class="contents-name">However your books arrive</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Import</span></a></li>
+                        <li><a href="#sync"><span class="contents-numeral">IV</span><span class="contents-name">Your library, everywhere at once</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Sync</span></a></li>
+                        <li><a href="#details"><span class="contents-numeral">V</span><span class="contents-name">Make every book look the part</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Metadata</span></a></li>
+                        <li><a href="#extras"><span class="contents-numeral">VI</span><span class="contents-name">The little things, done properly</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Extras</span></a></li>
+                        <li><a href="#gallery"><span class="contents-numeral">VII</span><span class="contents-name">See it for yourself</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Gallery</span></a></li>
+                    </ol>
+                </nav>
             </section>
-        </main>
 
-        <!-- FOOTER -->
-        <footer class="app__footer">
-            <a class="app__footer__link app__footer__link--support" href="/support">Support</a>
-            <div class="app__footer__divider"></div>
-            <a class="app__footer__link app__footer__link--privacy-policy" href="/privacy">Privacy Policy</a>
-            <div class="app__footer__divider"></div>
-            <a class="app__footer__link app__footer__link--terms-and-conditions" href="/terms">Terms & Conditions</a>
-        </footer>
+            <section class="chapter container" id="library" aria-labelledby="library-title" data-numeral="I" data-title="A place for every book">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">I</span> Library</p>
+                    <h2 class="section-title" id="library-title">A place for <span class="accent">every</span> book.</h2>
+                    <p class="lede">Gather audiobooks into shelves, then tuck shelves inside other shelves, as deep as your collection needs. Sorting, filters and search keep any book only moments away.</p>
+                    <dl class="specs">
+                        <div><dt>Shelves</dt><dd>Nested, as deep as you like</dd></div>
+                        <div><dt>Sort by</dt><dd>Title, date added or date updated</dd></div>
+                        <div><dt>Filter</dt><dd>In progress, not started, finished, downloaded</dd></div>
+                        <div><dt>Search</dt><dd>Titles, authors and shelves</dd></div>
+                    </dl>
+                </div>
+                <div class="bento">
+                    <figure class="tile tile-device reveal">
+                        <picture>
+                            <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
+                            <img src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Shelves within shelves</h3>
+                        <p class="tile-text">Organize by author, series or mood, at any depth.</p>
+                        <ol class="shelf-tree" aria-label="Example shelf hierarchy">
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-shelves"/></svg><span>Library</span></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg><span>Classics</span><span class="shelf-count">24 items</span></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg><span>Russian</span><span class="shelf-count">8 items</span></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg><span>Tolstoy</span><span class="shelf-count">3 items</span></li>
+                        </ol>
+                    </article>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Filters that think ahead</h3>
+                        <p class="tile-text">See just what you're reading, or what's waiting.</p>
+                        <ul class="chips" aria-label="Library filters">
+                            <li class="chip">All</li>
+                            <li class="chip is-selected">In Progress</li>
+                            <li class="chip">Not Started</li>
+                            <li class="chip">Finished</li>
+                            <li class="chip">Downloaded</li>
+                        </ul>
+                    </article>
+                    <article class="tile tile-wide reveal">
+                        <div class="tile-heading">
+                            <h3 class="tile-title">Find anything, instantly</h3>
+                            <p class="tile-text">Search across titles, authors and shelves at once.</p>
+                        </div>
+                        <div class="search-demo" aria-hidden="true">
+                            <div class="search-field">
+                                <svg class="icon"><use href="#icon-search"/></svg>
+                                <span class="search-query">Austen</span>
+                            </div>
+                            <ul class="search-results">
+                                <li><span class="cover cover-pride"><span class="cover-title">Pride and Prejudice</span></span><span><strong>Pride and Prejudice</strong>Jane Austen</span></li>
+                                <li><span class="cover cover-emma"><span class="cover-title">Emma</span></span><span><strong>Emma</strong>Jane Austen</span></li>
+                                <li><span class="search-shelf"><svg class="icon"><use href="#icon-folder"/></svg></span><span><strong>Austen Collection</strong>Shelf · 6 items</span></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-    </body>
+            <section class="chapter container" id="player" aria-labelledby="player-title" data-numeral="II" data-title="Listening, exactly your way">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">II</span> Player</p>
+                    <h2 class="section-title" id="player-title">Listening, <span class="accent">exactly</span> your way.</h2>
+                    <p class="lede">Set the pace anywhere from half speed to six times faster, let the sleep timer wait for the end of the chapter, and leave bookmarks with notes on the passages worth returning to.</p>
+                    <dl class="specs">
+                        <div><dt>Speed</dt><dd>0.5× to 6×, in 0.05× steps</dd></div>
+                        <div><dt>Sleep timer</dt><dd>5 to 90 minutes, or end of chapter</dd></div>
+                        <div><dt>Skip</dt><dd>Back and forward, 5 to 45 seconds</dd></div>
+                        <div><dt>Rewind on pause</dt><dd>Never lose the thread</dd></div>
+                        <div><dt>Interruptions</dt><dd>Resumes after Siri, calls and alarms</dd></div>
+                    </dl>
+                </div>
+                <div class="bento">
+                    <article class="tile tile-wide speed-demo reveal">
+                        <div class="tile-heading">
+                            <h3 class="tile-title">Speed controls</h3>
+                            <p class="tile-text">Try it. Moby-Dick has never gone by so fast.</p>
+                        </div>
+                        <div class="speed-readout">
+                            <output class="speed-value" for="speed-input" data-speed-value>1.0×</output>
+                            <p class="speed-remaining"><span data-speed-remaining>21h 4m</span> left at this speed</p>
+                        </div>
+                        <div class="speed-control">
+                            <button class="round-button" type="button" data-speed-step="-1" aria-label="Decrease speed">
+                                <svg class="icon" aria-hidden="true"><use href="#icon-minus"/></svg>
+                            </button>
+                            <label class="visually-hidden" for="speed-input">Playback speed</label>
+                            <input class="speed-slider" id="speed-input" type="range" min="0.5" max="6" step="0.05" value="1">
+                            <button class="round-button" type="button" data-speed-step="1" aria-label="Increase speed">
+                                <svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg>
+                            </button>
+                        </div>
+                    </article>
+                    <figure class="tile tile-device reveal">
+                        <picture>
+                            <source srcset="images/dark-device-player.avif 1x, images/dark-device-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/dark-device-player.png 1x, images/dark-device-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/light-device-player.avif 1x, images/light-device-player@2x.avif 2x" type="image/avif">
+                            <img src="images/light-device-player.png" srcset="images/light-device-player.png 1x, images/light-device-player@2x.png 2x" alt="" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Sleep timer</h3>
+                        <p class="tile-text">Drift off at the end of a chapter, not mid-sentence.</p>
+                        <div class="sleep-demo" aria-hidden="true">
+                            <p class="sleep-countdown"><svg class="icon"><use href="#icon-moon"/></svg>Sleeping in <span>12:41</span></p>
+                            <ul class="option-list">
+                                <li>15 minutes</li>
+                                <li>30 minutes</li>
+                                <li class="is-selected">End of Chapter<svg class="icon"><use href="#icon-check"/></svg></li>
+                                <li>End of File</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Bookmarks with notes</h3>
+                        <p class="tile-text">Name them, annotate them, find them again.</p>
+                        <div class="bookmark-demo" aria-hidden="true">
+                            <svg class="icon"><use href="#icon-bookmark"/></svg>
+                            <div>
+                                <p class="bookmark-meta">Loomings · 00:00:42</p>
+                                <p class="bookmark-note">“Call me Ishmael.” Where it all begins.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
+            <section class="chapter container" id="import" aria-labelledby="import-title" data-numeral="III" data-title="However your books arrive">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">III</span> Import</p>
+                    <h2 class="section-title" id="import-title">However your books <span class="accent">arrive</span>.</h2>
+                    <p class="lede">Bring in audio files from your iPhone or from Novelwave's own folder in iCloud Drive. Pick as many as you like, then keep them as separate audiobooks or merge them into one.</p>
+                    <dl class="specs">
+                        <div><dt>Sources</dt><dd>Files and iCloud Drive</dd></div>
+                        <div><dt>Save as</dt><dd>Separate books, or one merged book</dd></div>
+                        <div><dt>Destination</dt><dd>Any shelf, or a new one on the spot</dd></div>
+                        <div><dt>Covers</dt><dd>Embedded, Photos, Files or clipboard</dd></div>
+                    </dl>
+                </div>
+                <div class="bento">
+                    <article class="tile tile-wide import-demo reveal">
+                        <div class="tile-heading">
+                            <h3 class="tile-title">Separate, or merged</h3>
+                            <p class="tile-text">Four parts of one book become one audiobook, with one cover and one progress bar.</p>
+                        </div>
+                        <fieldset class="segmented">
+                            <legend class="visually-hidden">Save imported files as</legend>
+                            <input class="visually-hidden" type="radio" name="save-as" id="save-separately" value="separately">
+                            <label for="save-separately">Save Separately</label>
+                            <input class="visually-hidden" type="radio" name="save-as" id="save-merged" value="merged" checked>
+                            <label for="save-merged">Merge Into One</label>
+                        </fieldset>
+                        <div class="import-flow">
+                            <ul class="import-files" aria-label="Selected files">
+                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 1.m4a<span>5h 21m</span></li>
+                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 2.m4a<span>5h 9m</span></li>
+                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 3.m4a<span>5h 30m</span></li>
+                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 4.m4a<span>5h 4m</span></li>
+                            </ul>
+                            <span class="import-connector" aria-hidden="true"></span>
+                            <div class="import-result">
+                                <div class="import-merged">
+                                    <span class="cover cover-moby" aria-hidden="true"><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
+                                    <p><strong>Moby-Dick</strong>Herman Melville<span>One audiobook · 21h 4m</span></p>
+                                </div>
+                                <ul class="import-separate" aria-label="Resulting audiobooks">
+                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 1</li>
+                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 2</li>
+                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 3</li>
+                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 4</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">From where they live</h3>
+                        <p class="tile-text">Import from Files, or connect iCloud Drive and keep books there until you play them.</p>
+                        <ul class="source-list" aria-label="Import sources">
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg>Local Files</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-cloud"/></svg>iCloud Drive<span class="status-dot">Connected</span></li>
+                        </ul>
+                    </article>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Straight to the right shelf</h3>
+                        <p class="tile-text">Choose where new books land, or create a shelf without leaving the import.</p>
+                        <ul class="option-list" aria-label="Example destinations">
+                            <li>Library</li>
+                            <li class="is-selected">Classics<svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></li>
+                            <li class="option-new"><svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg>New Shelf</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="chapter container" id="sync" aria-labelledby="sync-title" data-numeral="IV" data-title="Your library, everywhere at once">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">IV</span> Sync</p>
+                    <h2 class="section-title" id="sync-title">Your library, <span class="accent">everywhere</span> at once.</h2>
+                    <p class="lede">Shelves, progress, chapters and bookmarks sync privately through your iCloud account with CloudKit. Start a chapter on the train and finish it at home, right where you left off.</p>
+                    <dl class="specs">
+                        <div><dt>In sync</dt><dd>Shelves, books, progress, bookmarks</dd></div>
+                        <div><dt>Powered by</dt><dd>iCloud and CloudKit</dd></div>
+                        <div><dt>Storage</dt><dd>Books download when you play them</dd></div>
+                        <div><dt>Privacy</dt><dd>Novelwave sees only its own folder</dd></div>
+                    </dl>
+                </div>
+                <div class="bento">
+                    <article class="tile tile-wide sync-demo reveal">
+                        <div class="tile-heading">
+                            <h3 class="tile-title">Pick up where you left off</h3>
+                            <p class="tile-text">Your place in every book follows you to each device on your iCloud account.</p>
+                        </div>
+                        <div class="sync-story" aria-hidden="true">
+                            <div class="sync-device">
+                                <p class="sync-moment"><svg class="icon"><use href="#icon-phone"/></svg>On the train · 8:12</p>
+                                <div class="sync-book">
+                                    <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span></span>
+                                    <p><strong>Moby-Dick</strong>Cetology</p>
+                                </div>
+                                <span class="progress-bar" style="--progress: 41%"></span>
+                            </div>
+                            <span class="sync-path"><svg class="icon"><use href="#icon-cloud"/></svg></span>
+                            <div class="sync-device">
+                                <p class="sync-moment"><svg class="icon"><use href="#icon-phone"/></svg>At home · 18:40</p>
+                                <div class="sync-book">
+                                    <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span></span>
+                                    <p><strong>Moby-Dick</strong>Cetology</p>
+                                </div>
+                                <span class="progress-bar" style="--progress: 41%"></span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg></span>
+                        <h3 class="tile-title">Private by design</h3>
+                        <p class="tile-text">Novelwave creates its own folder in your iCloud Drive and can only see the files inside it. Nothing else.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud-download"/></svg></span>
+                        <h3 class="tile-title">Light on storage</h3>
+                        <p class="tile-text">Books stay in iCloud until you press play. Download, pause or remove any of them, whenever you like.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="chapter container" id="details" aria-labelledby="details-title" data-numeral="V" data-title="Make every book look the part">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">V</span> Metadata</p>
+                    <h2 class="section-title" id="details-title">Make every book look <span class="accent">the part</span>.</h2>
+                    <p class="lede">Fix a title, credit the right author and write a description. Fill in the genre, composer and release year, then give the book the cover it deserves.</p>
+                    <dl class="specs">
+                        <div><dt>Details</dt><dd>Title, author and description</dd></div>
+                        <div><dt>Metadata</dt><dd>Genre, composer and release year</dd></div>
+                        <div><dt>Artwork</dt><dd>Photos, Files or the clipboard</dd></div>
+                        <div><dt>Anywhere</dt><dd>Even books that aren't downloaded</dd></div>
+                    </dl>
+                </div>
+                <div class="bento">
+                    <article class="tile tile-wide edit-demo reveal">
+                        <h3 class="visually-hidden">Edit audiobook</h3>
+                        <div class="edit-cover">
+                            <button class="cover-button" type="button" data-cover-cycle aria-label="Change the example cover">
+                                <span class="cover cover-moby" data-cover><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
+                            </button>
+                            <p class="tile-text">Tap the cover to change it.</p>
+                        </div>
+                        <dl class="edit-fields">
+                            <div class="edit-group">
+                                <div><dt>Title</dt><dd>Moby-Dick; or, The Whale</dd></div>
+                                <div><dt>Author</dt><dd>Herman Melville</dd></div>
+                            </div>
+                            <div class="edit-group">
+                                <div><dt>Genre</dt><dd>Adventure</dd></div>
+                                <div><dt>Composer</dt><dd class="is-empty">Not Set</dd></div>
+                                <div><dt>Release Year</dt><dd>1851</dd></div>
+                            </div>
+                            <div class="edit-group">
+                                <div class="edit-description"><dt>Description</dt><dd>The obsessive voyage of the Pequod and its captain, Ahab, in pursuit of the white whale.</dd></div>
+                            </div>
+                        </dl>
+                    </article>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Artwork from anywhere</h3>
+                        <p class="tile-text">Or reset to the cover embedded in the file.</p>
+                        <ul class="source-list" aria-label="Artwork sources">
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-image"/></svg>Choose from Photos…</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg>Choose from Files…</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-clipboard"/></svg>Paste from Clipboard</li>
+                        </ul>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud"/></svg></span>
+                        <h3 class="tile-title">Edit before you download</h3>
+                        <p class="tile-text">Books still waiting in iCloud can be edited and organized like any other.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="chapter chapter-wide container" id="extras" aria-labelledby="extras-title" data-numeral="VI" data-title="The little things, done properly">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">VI</span> Extras</p>
+                    <h2 class="section-title" id="extras-title">The little things, done <span class="accent">properly</span>.</h2>
+                    <p class="lede">Control playback without reaching for your phone, keep the current book on your Home Screen, and keep your library as tidy as your shelves.</p>
+                </div>
+                <div class="bento bento-three">
+                    <article class="tile tile-wide widget-tile reveal">
+                        <div class="tile-heading">
+                            <h3 class="tile-title">Now Playing widgets</h3>
+                            <p class="tile-text">See and control what you're listening to, right from your Home Screen.</p>
+                        </div>
+                        <div class="widgets" aria-hidden="true">
+                            <div class="widget widget-small">
+                                <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
+                                <div class="widget-small-bar">
+                                    <span>Moby-Dick</span>
+                                    <span class="widget-play"><svg class="icon"><use href="#icon-play"/></svg></span>
+                                </div>
+                            </div>
+                            <div class="widget widget-medium">
+                                <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
+                                <div class="widget-medium-body">
+                                    <p><strong>Moby-Dick</strong>Herman Melville</p>
+                                    <div class="widget-controls">
+                                        <span class="widget-skip"><svg class="icon"><use href="#icon-rewind"/></svg><span>15</span></span>
+                                        <span class="widget-play"><svg class="icon"><use href="#icon-pause"/></svg></span>
+                                        <span class="widget-skip"><svg class="icon"><use href="#icon-forward"/></svg><span>30</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-headphones"/></svg></span>
+                        <h3 class="tile-title">Headphone controls</h3>
+                        <p class="tile-text">Play, pause and skip from your AirPods or headset.</p>
+                        <ul class="press-list" aria-label="Headphone presses">
+                            <li><span class="press-dots" aria-hidden="true"><i></i></span>Play or pause</li>
+                            <li><span class="press-dots" aria-hidden="true"><i></i><i></i></span>Skip forward</li>
+                            <li><span class="press-dots" aria-hidden="true"><i></i><i></i><i></i></span>Skip back</li>
+                        </ul>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg></span>
+                        <h3 class="tile-title">Lock Screen and Control Center</h3>
+                        <p class="tile-text">Play, pause, skip and scrub through a chapter without unlocking.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-export"/></svg></span>
+                        <h3 class="tile-title">Export to Files</h3>
+                        <p class="tile-text">Copy a single audiobook, or your entire library, to any folder in Files.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-sparkles"/></svg></span>
+                        <h3 class="tile-title">Recover storage</h3>
+                        <p class="tile-text">Novelwave finds files nothing uses any more and clears them away, without touching your books.</p>
+                    </article>
+                    <article class="tile tile-wide theme-tile reveal">
+                        <div class="tile-heading">
+                            <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-contrast"/></svg></span>
+                            <h3 class="tile-title">Light, dark or system</h3>
+                            <p class="tile-text">Novelwave follows your iPhone, or your mood. So does this page: try the switch in the corner.</p>
+                        </div>
+                        <div class="theme-swatches" aria-hidden="true">
+                            <span class="theme-swatch theme-swatch-light">Aa</span>
+                            <span class="theme-swatch theme-swatch-dark">Aa</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="gallery" id="gallery" aria-labelledby="gallery-title" data-numeral="VII" data-title="See it for yourself">
+                <div class="gallery-header container reveal">
+                    <div>
+                        <p class="eyebrow"><span class="chapter-numeral">VII</span> A closer look</p>
+                        <h2 class="section-title" id="gallery-title">See it for <span class="accent">yourself</span>.</h2>
+                    </div>
+                    <div class="gallery-controls">
+                        <button class="round-button" type="button" data-gallery-previous aria-controls="gallery-track" aria-label="Previous screenshots">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
+                        </button>
+                        <button class="round-button" type="button" data-gallery-next aria-controls="gallery-track" aria-label="Next screenshots">
+                            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <ol class="gallery-track" id="gallery-track" role="list" aria-label="App screenshots" tabindex="0">
+                    <li class="gallery-item">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/gallery/dark-bookmarks.avif 1x, images/gallery/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/dark-bookmarks.png 1x, images/gallery/dark-bookmarks@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/light-bookmarks.avif 1x, images/gallery/light-bookmarks@2x.avif 2x" type="image/avif">
+                                <img src="images/gallery/light-bookmarks.png" srcset="images/gallery/light-bookmarks.png 1x, images/gallery/light-bookmarks@2x.png 2x" alt="The bookmarks list, with each bookmark's note grouped under its file" width="385" height="776" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Chapters and bookmarks</strong>Jump to any chapter, or back to a moment you saved.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/gallery/dark-speed.avif 1x, images/gallery/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/dark-speed.png 1x, images/gallery/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/light-speed.avif 1x, images/gallery/light-speed@2x.avif 2x" type="image/avif">
+                                <img src="images/gallery/light-speed.png" srcset="images/gallery/light-speed.png 1x, images/gallery/light-speed@2x.png 2x" alt="The speed sheet set to 1.5×, showing how long the rest of the book takes at that speed" width="385" height="776" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Speed controls</strong>Find your pace, anywhere from 0.5× to 6×.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/gallery/dark-sleep.avif 1x, images/gallery/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/dark-sleep.png 1x, images/gallery/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/light-sleep.avif 1x, images/gallery/light-sleep@2x.avif 2x" type="image/avif">
+                                <img src="images/gallery/light-sleep.png" srcset="images/gallery/light-sleep.png 1x, images/gallery/light-sleep@2x.png 2x" alt="The sleep timer menu over the Player, from End of Chapter down to 5 minutes" width="385" height="776" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Sleep timer</strong>Drift off at the end of a chapter, not mid-sentence.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/gallery/dark-edit.avif 1x, images/gallery/dark-edit@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/dark-edit.png 1x, images/gallery/dark-edit@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/light-edit.avif 1x, images/gallery/light-edit@2x.avif 2x" type="image/avif">
+                                <img src="images/gallery/light-edit.png" srcset="images/gallery/light-edit.png 1x, images/gallery/light-edit@2x.png 2x" alt="Edit Audiobook, with the cover, title and author ready to change" width="385" height="776" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Edit Audiobook</strong>Titles, authors, descriptions and covers, your way.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/gallery/dark-settings.avif 1x, images/gallery/dark-settings@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/dark-settings.png 1x, images/gallery/dark-settings@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/light-settings.avif 1x, images/gallery/light-settings@2x.avif 2x" type="image/avif">
+                                <img src="images/gallery/light-settings.png" srcset="images/gallery/light-settings.png 1x, images/gallery/light-settings@2x.png 2x" alt="The Profile tab, with Settings, Sources, storage tools and feedback options" width="385" height="776" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Profile</strong>Settings, sources, storage and feedback, all in one place.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/gallery/dark-widgets.avif 1x, images/gallery/dark-widgets@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/dark-widgets.png 1x, images/gallery/dark-widgets@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/gallery/light-widgets.avif 1x, images/gallery/light-widgets@2x.avif 2x" type="image/avif">
+                                <img src="images/gallery/light-widgets.png" srcset="images/gallery/light-widgets.png 1x, images/gallery/light-widgets@2x.png 2x" alt="The medium and small Now Playing widgets on the Home Screen" width="385" height="776" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Home Screen widgets</strong>Your current book, always a tap away.</figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+        </div>
+
+        <section class="epilogue container" id="download" aria-labelledby="download-title">
+            <div class="reveal">
+                <p class="eyebrow">Epilogue</p>
+                <h2 class="epilogue-title" id="download-title">Your next <span class="accent">chapter</span> starts here.</h2>
+                <div class="hero-actions">
+                    <a class="app-store-button" href="https://apps.apple.com/app/id6720100886">
+                        <picture>
+                            <source srcset="images/download_light.svg" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <img src="images/download_dark.svg" alt="Download on the App Store" width="120" height="40" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+                <p class="epilogue-note">For iPhone. Requires iOS 17 or later.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Support and legal">
+            <ul class="footer-links">
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </nav>
+        <p>© 2026 Novelwave. Made with ❤️ by Mihai Petrenco.</p>
+        <a class="footer-link" href="#main">Back to top</a>
+    </footer>
+</body>
 </html>

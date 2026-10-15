@@ -1,145 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Get help with Novelwave: answers to common questions about importing, syncing, playback and storage, and how to get in touch.">
+    <title>Support — Novelwave</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="theme.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <title>Support</title>
+    <header class="site-header">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Main">
+            <ul class="header-links">
+                <li><a href="roadmap.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
+            <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
 
-        <link rel="stylesheet" href="resources/css/header.css">
-        <link rel="stylesheet" href="resources/css/shared.css">
-        <link rel="stylesheet" href="resources/css/footer.css">
-        <link rel="stylesheet" href="resources/css/support.css">
-
-        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
-        <link rel="icon" href="resources/favicon/favicon.ico">
-        <link rel="manifest" href="resources/favicon/site.webmanifest">
-
-    </head>
-
-    <body>
-
-        <!-- HEADER -->
-        <header class="app__header">
-            <a class="app__header__link" href="/">
-                <img class="app__header__icon" src="resources/icons/icon.novelwave.png" alt="Novelwave app icon">
-                <p class="app__header__name">Novelwave</p>
-            </a>
+    <main class="page container" id="main">
+        <header class="page-header">
+            <p class="eyebrow">Support</p>
+            <h1 class="section-title">How can we <span class="accent">help</span>?</h1>
+            <p class="lede">Most answers are below. If you can't find yours, get in touch and we'll get back to you.</p>
         </header>
 
-        <!-- MAIN -->
-        <main>
-            <section class="support">
-                <h1 class="support__title">Support</h1>
-                <p class="support__effective-date">Last Updated On: <span class="support__effective-date--date">January 20, 2025</span></p>
+        <section class="support-cards" aria-label="Ways to get in touch">
+            <a class="tile support-card" href="mailto:mihaipetrenco@icloud.com?subject=Novelwave%20Support">
+                <span class="tile-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                <h2 class="tile-title">Email support</h2>
+                <p class="tile-text">Describe what happened, and include your iPhone model and iOS version if you can.</p>
+                <span class="support-card-action">mihaipetrenco@icloud.com</span>
+            </a>
+            <a class="tile support-card" href="mailto:mihaipetrenco@icloud.com?subject=Novelwave%20Beta%20Tester%20Request">
+                <span class="tile-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></span>
+                <h2 class="tile-title">Become a beta tester</h2>
+                <p class="tile-text">Try new features before anyone else through TestFlight, and help shape what comes next.</p>
+                <span class="support-card-action">Request an invitation</span>
+            </a>
+            <a class="tile support-card" href="https://apps.apple.com/app/id6720100886?action=write-review">
+                <span class="tile-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></span>
+                <h2 class="tile-title">Leave a review</h2>
+                <p class="tile-text">Enjoying Novelwave? A review on the App Store helps other listeners find it.</p>
+                <span class="support-card-action">Write a review</span>
+            </a>
+        </section>
 
-                <div class="support__picker">
-                    <button class="support__button support__button--active" data-section="faq">FAQ</button>
-                    <button class="support__button" data-section="troubleshoot">Troubleshooting</button>
-                  </div>
-
-                <div class="support__content support__content--faq">
-                    <div class="support__topic">
-                        <p class="support__question">• How do I import audiobooks into Novelwave?</p>
-                        <p>You can import audiobooks in 2 ways:</p>
-                        <ul>
-                            <li>1. Using the dedicated "Import" button inside the app.</li>
-                            <li>2. Using the native iOS "Open With" share menu.</li>
-                        </ul>
+        <div class="faq">
+            <section class="faq-group" aria-labelledby="faq-start">
+                <h2 id="faq-start">Getting started</h2>
+                <details>
+                    <summary>What do I need to use Novelwave?</summary>
+                    <div class="faq-answer"><p>An iPhone running iOS 17 or later. To sync your library between devices, sign in to iCloud on each of them.</p></div>
+                </details>
+                <details>
+                    <summary>How do I add audiobooks?</summary>
+                    <div class="faq-answer">
+                        <p>In Library, tap + and choose Local Files or iCloud Drive, then pick as many audio files as you like.</p>
+                        <p>When you save, choose Save Separately to make each file its own audiobook, or Merge Into One Audiobook to combine them, with your own title, author and cover. You can also choose which shelf they go to.</p>
                     </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question">• What audiobook formats are supported?</p>
-                        <p>Novelwave supports all standard audio formats, as well as MPEG-4 video formats. This ensures that audiobooks converted from M4A to MP4 can still be imported and played correctly. However, please note that Novelwave is not intended to function as a video player.</p>
-                    </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question">• How can I merge separate audio files into a single audiobook?</p>
-                        <p>When importing audiobooks, you can choose the “Merge Chapters” option. This feature enables you to combine multiple audio files into a single audiobook entry, with each file designated as a chapter.</p>
-                    </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question">• Can Novelwave play DRM-protected audiobooks?</p>
-                        <p>No, Novelwave is designed for DRM-free audiobooks only. Please ensure that your audiobooks are free of any digital rights management (DRM) restrictions.</p>
-                    </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question">• Where are my audiobooks stored?</p>
-                        <p>Your audiobooks are stored locally on your device. The app does not collect or transmit any data.</p>
-                    </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question">• How can I export my audiobooks/collections?</p>
-                        <p>To export your audiobooks outside of Novelwave, follow these steps:</p>
-                        <ul>
-                            <li>1. Tap on the "Edit" button next to the search field to enter "Edit Mode".</li>
-                            <li>2. Select the audiobooks/collections that you want to export.</li>
-                            <li>3. In the context menu, tap on the "Share" button, which will open the native iOS share menu.</li>
-                            <li>4. Pick the destination where you want to share your audiobooks.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="support__content support__content--troubleshoot">
-                    <div class="support__topic">
-                        <p class="support__question">• Importing an audiobook fails with a "File already exists" error.</p>
-                        <p>Every audiobook you import is copied in the app's private Documents directory. The file name is preserved as is. This means that multiple audio files with the same name cannot be added to the same collection.</p>
-                        <ul>
-                            <li>1. If the collection contains an audiobook with the same file name, try renaming the file before importing.</li>
-                            <li>2. If you're certain that the collection does not have an audiobook with the same file name, please refer to <a href="#state-issue">Novelwave does not reflect the correct state of my audiobook collection.</a></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question">• Creating a collection fails with a "Directory already exists" error.</p>
-                        <p>Collections are represented as folders in the app's private Documents directory. The folder name matches the collection name you specified during creation. This means that multiple child collections with the same name cannot be created in the same parent collection.</p>
-                        <ul>
-                            <li>1. If the parent collection contains a child collection with the same name, try picking a different collection name.</li>
-                            <li>2. If you're certain that the parent collection does not have a child collection with the same name, please refer to <a href="#state-issue">Novelwave does not reflect the correct state of my audiobook collection.</a></li>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="support__topic">
-                        <p class="support__question" id="state-issue">• Novelwave does not reflect the correct state of my audiobook collection.</p>
-                        <p>Bad news. This is a bug in the application itself and should have never happened.<br><br>In short, the application got out of sync with the Documents folder and does not reflect the correct data. Unfortunately, at this point, the only solution is to reinstall the app and start from a blank slate.<br><br><strong>Please make sure to export your existing audiobooks/collections before deleting the app as they will be deleted together with the app itself.</strong><br><br>A built-in file sync feature is being planned which will ensure that even if this somehow happens in the future, you will be able to easily recover without losing any progress.</p>
-                    </div>
-                    <hr>
-                </div>
+                </details>
+                <details>
+                    <summary>Which file formats are supported?</summary>
+                    <div class="faq-answer"><p>Common audiobook and audio formats, including M4B, M4A and MP3. If a file has chapters, Novelwave shows them in the player.</p></div>
+                </details>
+                <details>
+                    <summary>How do I import from iCloud Drive?</summary>
+                    <div class="faq-answer"><p>Go to Profile, then Sources, and connect iCloud Drive. Novelwave creates its own folder in your iCloud Drive. Put your audiobooks in that folder using the Files app, then import them from iCloud Drive in Library.</p></div>
+                </details>
             </section>
 
-            <p class="support__footnote">For any questions or feedback, please feel free to get in touch with me at <a href="mailto:mihaipetrenco@icloud.com">mihaipetrenco@icloud.com</a> and I'll get back to you as soon as possible!<br><br>Thank you for trying out Novelwave ❤️!</p>
-        </main>
+            <section class="faq-group" aria-labelledby="faq-library">
+                <h2 id="faq-library">Library and sync</h2>
+                <details>
+                    <summary>How do I organize my library?</summary>
+                    <div class="faq-answer">
+                        <p>Create shelves with the shelf button in Library, and put shelves inside other shelves as deep as you like. Swipe on an audiobook to move it, mark it as finished, reset its progress and more.</p>
+                        <p>To sort, filter or move several audiobooks at once, use the ⋯ menu.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>How does sync work?</summary>
+                    <div class="faq-answer"><p>Your shelves, audiobook details, chapters, bookmarks and listening progress sync through iCloud to every device signed in to the same Apple Account. Each device downloads its own copy of an audiobook's audio when you play it.</p></div>
+                </details>
+                <details>
+                    <summary>Why does an audiobook say it isn't on this device?</summary>
+                    <div class="faq-answer"><p>Its audio is stored in iCloud and hasn't been downloaded to this iPhone yet. Tap it to download it. In the meantime, you can still edit and organize it.</p></div>
+                </details>
+                <details>
+                    <summary>Why are some details missing from a book I imported from iCloud Drive?</summary>
+                    <div class="faq-answer"><p>An audiobook's full details become available after its first download finishes. They stay available even if you remove the download later.</p></div>
+                </details>
+            </section>
 
-        <!-- FOOTER -->
-        <footer class="app__footer">
-            <a class="app__footer__link app__footer__link--support" href="/support">Support</a>
-            <div class="app__footer__divider"></div>
-            <a class="app__footer__link app__footer__link--privacy-policy" href="/privacy">Privacy Policy</a>
-            <div class="app__footer__divider"></div>
-            <a class="app__footer__link app__footer__link--terms-and-conditions" href="/terms">Terms & Conditions</a>
-        </footer>
-    </body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".support__button");
-            const sections = document.querySelectorAll(".support__content");
+            <section class="faq-group" aria-labelledby="faq-playback">
+                <h2 id="faq-playback">Playback</h2>
+                <details>
+                    <summary>How do I change the playback speed?</summary>
+                    <div class="faq-answer"><p>In the player, tap the speed button at the bottom left. Choose anywhere from 0.5× to 6× for the current audiobook.</p></div>
+                </details>
+                <details>
+                    <summary>How do I set a sleep timer?</summary>
+                    <div class="faq-answer"><p>In the player, tap the moon button. Choose a number of minutes, or stop at the end of the current chapter or file.</p></div>
+                </details>
+                <details>
+                    <summary>How do bookmarks work?</summary>
+                    <div class="faq-answer"><p>Tap the bookmark button in the player to add a bookmark at your current position. You can find, rename and add notes to your bookmarks in the player's chapters and bookmarks list.</p></div>
+                </details>
+                <details>
+                    <summary>Can I change how far rewind and fast-forward skip?</summary>
+                    <div class="faq-answer"><p>Yes. In Profile, open Settings to choose skip durations from 5 to 45 seconds. You'll also find options to rewind a little whenever you pause, resume after interruptions, and start playing as soon as you open an audiobook.</p></div>
+                </details>
+                <details>
+                    <summary>Can I control playback from my headphones?</summary>
+                    <div class="faq-answer"><p>Yes. On compatible headphones, press once to play or pause, twice to skip forward and three times to skip back. You can also control playback from the Lock Screen and Control Center.</p></div>
+                </details>
+                <details>
+                    <summary>How do I add the Now Playing widget?</summary>
+                    <div class="faq-answer"><p>Touch and hold an empty area of your Home Screen, tap Edit, then Add Widget, and search for Novelwave. The widget comes in small and medium sizes.</p></div>
+                </details>
+            </section>
 
-            buttons.forEach(button => {
-                button.addEventListener("click", () => {
-                    buttons.forEach(btn => btn.classList.remove("support__button--active"));
-                    button.classList.add("support__button--active");
-                    const targetSection = button.getAttribute("data-section");
+            <section class="faq-group" aria-labelledby="faq-storage">
+                <h2 id="faq-storage">Storage and data</h2>
+                <details>
+                    <summary>How do I free up space?</summary>
+                    <div class="faq-answer">
+                        <p>Swipe on an audiobook imported from iCloud Drive and remove its download. It stays in your library and can be downloaded again at any time.</p>
+                        <p>You can also use Recover storage in Profile to clear away files Novelwave no longer uses. It doesn't affect your audiobooks.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>How do I back up my library?</summary>
+                    <div class="faq-answer"><p>In Profile, choose Export your library to save a complete copy to any folder in Files. To export a single audiobook, swipe on it and choose Export to Files.</p></div>
+                </details>
+                <details>
+                    <summary>How do I start over?</summary>
+                    <div class="faq-answer"><p>In Profile, choose Reset your library. This permanently removes all shelves, audiobooks, bookmarks and progress from all your devices, and it can't be undone, so export a copy first if you might need it.</p></div>
+                </details>
+            </section>
+        </div>
+    </main>
 
-                    sections.forEach(section => {
-                        if (section.classList.contains(`support__content--${targetSection}`)) {
-                            section.style.display = "block";
-                        } else {
-                            section.style.display = "none";
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <footer class="site-footer container">
+        <a class="site-title" href="./">Novelwave</a>
+        <nav aria-label="Support and legal">
+            <ul class="footer-links">
+                <li><a href="support.html" aria-current="page">Support</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Use</a></li>
+            </ul>
+        </nav>
+        <p>© 2026 Novelwave. Made with ❤️ by Mihai Petrenco.</p>
+    </footer>
+</body>
 </html>
