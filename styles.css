@@ -47,6 +47,7 @@
     --toggle-icon: #BDBDBD;
     --toggle-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
     --wallpaper: linear-gradient(140deg, #F1D7B8, #D98E62 55%, #9C4A2C);
+    --car-bezel: #1A1918;
     --screen-control: #000000;
     --screen-track: #E2E1DF;
     --screen-label: #1C1B1B;
@@ -82,6 +83,7 @@
     --toggle-icon: #939393;
     --toggle-shadow: 0 2px 6px rgb(0 0 0 / 0.35);
     --wallpaper: linear-gradient(140deg, #4A3020, #2A1E17 55%, #171614);
+    --car-bezel: #0B0B0A;
     --screen-control: #FFFFFF;
     --screen-track: #2E2D2B;
     --screen-label: #E5E5E5;
@@ -1259,7 +1261,287 @@ figure {
 }
 
 /* ==========================================================================
-   Chapter III: import
+   Chapter III: hands-free
+   ========================================================================== */
+
+.release-badge {
+    padding: 0.3125rem 0.75rem;
+    border-radius: 999px;
+    background-color: var(--accent-soft);
+    color: var(--accent-strong);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: scale 250ms var(--ease-out-expo);
+}
+
+.carplay-demo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 1.75rem 2rem;
+}
+
+.car-display {
+    position: relative;
+    grid-column: 1 / -1;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    padding-block: 1.5rem 0.75rem;
+}
+
+/* The same rings as the App Store CarPlay screenshot, spreading out from the dashboard. */
+.car-rings {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    z-index: -1;
+    width: 130%;
+    max-width: none;
+    translate: -50% -50%;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1;
+    pointer-events: none;
+    /* Fades out toward the top, so the rings never cross the tile's heading. */
+    mask-image: linear-gradient(to bottom, transparent 18%, #000 42%);
+}
+
+.car-rings circle:nth-child(1) {
+    stroke-opacity: 0.45;
+}
+
+.car-rings circle:nth-child(2) {
+    stroke-opacity: 0.28;
+}
+
+.car-rings circle:nth-child(3) {
+    stroke-opacity: 0.16;
+}
+
+.car-screen {
+    display: grid;
+    width: 100%;
+    max-width: 38rem;
+    padding: 0.625rem;
+    border-radius: 1.75rem;
+    background-color: var(--car-bezel);
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.06), 0 34px 54px -30px rgb(0 0 0 / 0.6);
+}
+
+.car-shot {
+    grid-area: 1 / 1;
+    transition:
+        opacity 400ms var(--reveal-easing),
+        transform 400ms var(--reveal-easing),
+        visibility 400ms;
+}
+
+.car-shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.125rem;
+}
+
+.carplay-demo:has(#carplay-continue:checked) .car-shot-now-playing,
+.carplay-demo:has(#carplay-now-playing:checked) .car-shot-continue {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+.siri-demo {
+    grid-row: span 2;
+}
+
+.siri-requests {
+    margin-block: 1rem 1.5rem;
+    border-block-start: 1px solid var(--surface-border);
+}
+
+.siri-requests button {
+    position: relative;
+    display: grid;
+    gap: 0.25rem;
+    width: 100%;
+    padding: 0.875rem 0 0.875rem 1.75rem;
+    border-block-end: 1px solid var(--surface-border);
+    color: var(--muted);
+    text-align: start;
+    transition:
+        color var(--theme-transition),
+        translate 300ms var(--ease-out-expo);
+}
+
+.siri-requests button::before {
+    content: "“";
+    position: absolute;
+    inset-block-start: 0.625rem;
+    inset-inline-start: 0;
+    color: var(--accent);
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    line-height: 1;
+    opacity: 0.35;
+    transition: opacity var(--theme-transition);
+}
+
+.siri-requests button[aria-pressed="true"] {
+    color: var(--foreground);
+}
+
+.siri-requests button[aria-pressed="true"]::before {
+    opacity: 1;
+}
+
+.siri-phrase {
+    font-family: var(--font-serif);
+    font-size: 1.3125rem;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+.siri-app {
+    color: var(--muted);
+    font-size: 0.8125rem;
+}
+
+.siri-reply {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    min-height: 4rem;
+    margin-block-start: auto;
+    padding: 0.875rem 1.125rem 0.875rem 0.875rem;
+    border-radius: 1.25rem;
+    background-color: var(--fill);
+    font-size: 0.9375rem;
+}
+
+.siri-reply.is-spoken p::before {
+    content: "“";
+}
+
+.siri-reply.is-spoken p::after {
+    content: "”";
+}
+
+/* A listening orb drawn in the accent's warm tones rather than Apple's own Siri colors. */
+.siri-orb {
+    flex: none;
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #F4AF60, #C97248, #D9677F, #8E73D9, #F4AF60);
+    box-shadow: inset 0 0 0 0.25rem rgb(255 255 255 / 0.35), 0 0 1.25rem -0.25rem var(--accent);
+    animation: orb-turn 6s linear infinite;
+}
+
+.tile .release-badge {
+    justify-self: start;
+    align-self: flex-start;
+    margin-block-end: 0.5rem;
+}
+
+.glance-demo {
+    background-image: radial-gradient(90% 60% at 50% 100%, var(--accent-soft), transparent 70%);
+}
+
+/* The two phones sit a little out of step, like the hero's devices. */
+.glance-devices {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 15rem));
+    justify-content: center;
+    gap: 1.5rem;
+    margin-block-start: 1.5rem;
+}
+
+.glance-device {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.glance-device:nth-child(2) {
+    margin-block-start: 3rem;
+}
+
+.glance-device img {
+    width: 100%;
+    height: auto;
+}
+
+.glance-device figcaption {
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.shortcuts-demo .tile-heading {
+    margin-block-end: 1.25rem;
+}
+
+.shortcut-flow {
+    display: grid;
+    gap: 0.625rem;
+    margin-block-start: auto;
+}
+
+.shortcut-flow li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.875rem 0.625rem 0.625rem;
+    border-radius: 1rem;
+    background-color: var(--fill);
+    font-size: 0.875rem;
+}
+
+.shortcut-flow li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-start: 1.5625rem;
+    width: 2px;
+    height: 0.625rem;
+    background-color: var(--track);
+}
+
+.shortcut-flow .icon {
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 0.4375rem;
+    border-radius: 0.5rem;
+    background-color: var(--accent);
+    color: var(--on-accent);
+    stroke-width: 2;
+}
+
+.shortcut-flow strong {
+    padding: 0.125rem 0.4375rem;
+    border-radius: 0.4375rem;
+    background-color: var(--accent-soft);
+    color: var(--accent-strong);
+    font-weight: 600;
+}
+
+.shortcut-flow .shortcut-trigger {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px var(--surface-border);
+}
+
+.shortcut-trigger .icon {
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
+/* ==========================================================================
+   Chapter IV: import
    ========================================================================== */
 
 .import-demo {
@@ -1437,7 +1719,7 @@ figure {
 }
 
 /* ==========================================================================
-   Chapter IV: sync
+   Chapter V: sync
    ========================================================================== */
 
 .sync-story {
@@ -1534,7 +1816,7 @@ figure {
 }
 
 /* ==========================================================================
-   Chapter V: metadata
+   Chapter VI: metadata
    ========================================================================== */
 
 .edit-demo {
@@ -1611,7 +1893,7 @@ figure {
 }
 
 /* ==========================================================================
-   Chapter VI: extras
+   Chapter VII: extras
    ========================================================================== */
 
 .bento-three .widget-tile {
@@ -2634,6 +2916,15 @@ figure {
         scale: 1.04;
     }
 
+    .release-badge:hover {
+        scale: 1.06;
+    }
+
+    .siri-requests button:hover {
+        color: var(--foreground);
+        translate: 0.25rem 0;
+    }
+
     .scroll-cue:hover {
         scale: 1.06;
     }
@@ -2682,8 +2973,13 @@ figure {
 }
 
 .segmented label:active,
-.scroll-cue:active {
+.scroll-cue:active,
+.release-badge:active {
     scale: 0.96;
+}
+
+.siri-requests button:active {
+    translate: 0.125rem 0;
 }
 
 .cover-button:active {
@@ -2697,6 +2993,12 @@ figure {
 /* ==========================================================================
    Motion
    ========================================================================== */
+
+@keyframes orb-turn {
+    to {
+        rotate: 1turn;
+    }
+}
 
 @keyframes caret-blink {
     50% {
@@ -3034,6 +3336,18 @@ figure {
         border-radius: 1.5rem;
     }
 
+    .siri-demo {
+        grid-row: auto;
+    }
+
+    .glance-devices {
+        gap: 0.75rem;
+    }
+
+    .glance-device:nth-child(2) {
+        margin-block-start: 1.5rem;
+    }
+
     .tile-device {
         grid-row: auto;
         min-height: 26rem;
@@ -3074,6 +3388,7 @@ figure {
         text-align: start;
     }
 
+    .carplay-demo,
     .import-demo,
     .import-flow,
     .sync-story,

@@ -6,6 +6,7 @@
     setUpTourPlayer();
     setUpSpeedDemo();
     setUpCoverDemo();
+    setUpSiriDemo();
     setUpGallery();
 
     // Every refresh opens on the hero, so its opening sequence always plays: the browser stops
@@ -81,7 +82,7 @@
         const tour = document.querySelector(".tour");
         const contents = document.getElementById("tour");
         const epilogue = document.getElementById("download");
-        // Every numbered section of the tour, the gallery (chapter VII) included.
+        // Every numbered section of the tour, the gallery (chapter VIII) included.
         const chapters = tour ? [...tour.querySelectorAll("[data-numeral]")] : [];
 
         if (!player || !tour || !contents || !epilogue || chapters.length === 0) {
@@ -241,6 +242,41 @@
                     { duration: 450, easing: "cubic-bezier(0.2, 0.7, 0.2, 1)" }
                 );
             }
+        });
+    }
+
+    // Plays back what each Siri request does: the chosen request lights up, and the reply below
+    // shows Siri's spoken answer in quotes, or what happens in the book when Siri just acts.
+    function setUpSiriDemo() {
+        const buttons = [...document.querySelectorAll("[data-siri-reply]")];
+        const output = document.querySelector("[data-siri-output]");
+        const reply = output?.closest(".siri-reply");
+        const orb = reply?.querySelector(".siri-orb");
+
+        if (buttons.length === 0 || !output || !reply) {
+            return;
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                buttons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+                output.textContent = button.dataset.siriReply;
+                reply.classList.toggle("is-spoken", button.hasAttribute("data-siri-spoken"));
+
+                if (!reducedMotion.matches) {
+                    output.animate(
+                        [
+                            { transform: "translateY(0.375rem)", opacity: 0 },
+                            { transform: "none", opacity: 1 }
+                        ],
+                        { duration: 350, easing: "cubic-bezier(0.2, 0.7, 0.2, 1)" }
+                    );
+                    orb?.animate(
+                        [{ scale: 1 }, { scale: 1.25 }, { scale: 1 }],
+                        { duration: 600, easing: "cubic-bezier(0.16, 1, 0.3, 1)" }
+                    );
+                }
+            });
         });
     }
 
