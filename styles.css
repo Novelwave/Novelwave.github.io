@@ -1481,6 +1481,41 @@ figure {
     font-weight: 500;
 }
 
+.watch-demo {
+    background-image: radial-gradient(90% 60% at 50% 100%, var(--accent-soft), transparent 70%);
+}
+
+/* Three watches, the Player in front and a little lower, like the hero's devices. */
+.watch-devices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 11rem));
+    justify-content: center;
+    gap: 1.5rem;
+    margin-block-start: 1.5rem;
+}
+
+.watch-device {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+}
+
+.watch-device:nth-child(2) {
+    margin-block-start: 2.5rem;
+}
+
+.watch-device img {
+    width: 100%;
+    height: auto;
+}
+
+.watch-device figcaption {
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
 .shortcuts-demo .tile-heading {
     margin-block-end: 1.25rem;
 }
@@ -3345,6 +3380,14 @@ figure {
     }
 
     .glance-device:nth-child(2) {
+        margin-block-start: 1.5rem;
+    }
+
+    .watch-devices {
+        gap: 0.5rem;
+    }
+
+    .watch-device:nth-child(2) {
         margin-block-start: 1.5rem;
     }
 

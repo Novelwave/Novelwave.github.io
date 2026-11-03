@@ -82,7 +82,7 @@
         const tour = document.querySelector(".tour");
         const contents = document.getElementById("tour");
         const epilogue = document.getElementById("download");
-        // Every numbered section of the tour, the gallery (chapter VIII) included.
+        // Every numbered section of the tour, the gallery (chapter IX) included.
         const chapters = tour ? [...tour.querySelectorAll("[data-numeral]")] : [];
 
         if (!player || !tour || !contents || !epilogue || chapters.length === 0) {
