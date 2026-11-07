@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Novelwave is the ultimate audiobook player for iPhone. Organize your library, track your progress and pick up right where you left off.">
+    <meta name="description" content="Novelwave is a free audiobook player for iPhone and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
     <title>Novelwave: Your ultimate audiobook player</title>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Novelwave">
     <meta property="og:title" content="Novelwave: Your ultimate audiobook player">
-    <meta property="og:description" content="Novelwave is the ultimate audiobook player for iPhone. Organize your library, track your progress and pick up right where you left off.">
+    <meta property="og:description" content="Novelwave is a free audiobook player for iPhone and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
+    <meta property="og:url" content="https://www.novelwave.app/">
+    <meta property="og:image" content="https://www.novelwave.app/images/social-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Novelwave on iPhone and Apple Watch, with the words Your ultimate audiobook player">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16">
     <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
@@ -46,6 +52,8 @@
         <symbol id="icon-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
         <symbol id="icon-watch" viewBox="0 0 24 24"><rect width="12" height="14" x="6" y="5" rx="3"/><path d="M9 5l.5-3h5l.5 3"/><path d="M9 19l.5 3h5l.5-3"/><path d="M18 10h1"/></symbol>
         <symbol id="icon-mic" viewBox="0 0 24 24"><rect width="6" height="12" x="9" y="2" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+        <symbol id="icon-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
         <symbol id="icon-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
         <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
         <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
@@ -103,6 +111,7 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
                 <h1 class="hero-title" id="hero-title">Your <span class="accent">ultimate</span> audiobook player.</h1>
+                <p class="hero-lede">Free for iPhone and Apple Watch. Play the M4B, MP3 and Opus audiobooks you already own.</p>
                 <div class="hero-actions">
                     <a class="app-store-button" href="https://apps.apple.com/app/id6720100886">
                         <picture>
@@ -140,7 +149,7 @@
                 <div class="tour-intro-copy reveal">
                     <p class="eyebrow">The tour</p>
                     <h2 class="section-title" id="tour-title">Every feature, <span class="accent">chapter</span> by chapter.</h2>
-                    <p class="lede">Novelwave is made for books, not podcasts or playlists. Nine short chapters cover everything it can do, from the first import to the last page.</p>
+                    <p class="lede">Novelwave is made for books, not podcasts or playlists. Ten short chapters cover everything it can do, from the first import to the last page.</p>
                 </div>
                 <nav class="contents reveal" aria-labelledby="contents-title">
                     <h3 class="contents-title" id="contents-title">Contents</h3>
@@ -149,11 +158,12 @@
                         <li><a href="#player"><span class="contents-numeral">II</span><span class="contents-name">Listening, exactly your way</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Player</span></a></li>
                         <li><a href="#hands-free"><span class="contents-numeral">III</span><span class="contents-name">Take it on the road</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Hands-free</span></a></li>
                         <li><a href="#watch"><span class="contents-numeral">IV</span><span class="contents-name">Your book, on your wrist</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Apple Watch</span></a></li>
-                        <li><a href="#import"><span class="contents-numeral">V</span><span class="contents-name">However your books arrive</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Import</span></a></li>
-                        <li><a href="#sync"><span class="contents-numeral">VI</span><span class="contents-name">Your library, everywhere at once</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Sync</span></a></li>
-                        <li><a href="#details"><span class="contents-numeral">VII</span><span class="contents-name">Make every book look the part</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Metadata</span></a></li>
-                        <li><a href="#extras"><span class="contents-numeral">VIII</span><span class="contents-name">The little things, done properly</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Extras</span></a></li>
-                        <li><a href="#gallery"><span class="contents-numeral">IX</span><span class="contents-name">See it for yourself</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Gallery</span></a></li>
+                        <li><a href="#stats"><span class="contents-numeral">V</span><span class="contents-name">Every hour, accounted for</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Stats</span></a></li>
+                        <li><a href="#import"><span class="contents-numeral">VI</span><span class="contents-name">However your books arrive</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Import</span></a></li>
+                        <li><a href="#sync"><span class="contents-numeral">VII</span><span class="contents-name">Your library, everywhere at once</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Sync</span></a></li>
+                        <li><a href="#details"><span class="contents-numeral">VIII</span><span class="contents-name">Make every book look the part</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Metadata</span></a></li>
+                        <li><a href="#extras"><span class="contents-numeral">IX</span><span class="contents-name">The little things, done properly</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Extras</span></a></li>
+                        <li><a href="#gallery"><span class="contents-numeral">X</span><span class="contents-name">See it for yourself</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Gallery</span></a></li>
                     </ol>
                 </nav>
             </section>
@@ -291,7 +301,7 @@
 
             <section class="chapter container" id="hands-free" aria-labelledby="hands-free-title" data-numeral="III" data-title="Take it on the road">
                 <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">III</span> Hands-free <a class="release-badge" href="roadmap.html">New in 3.1</a></p>
+                    <p class="eyebrow"><span class="chapter-numeral">III</span> Hands-free</p>
                     <h2 class="section-title" id="hands-free-title">Take it on the <span class="accent">road</span>.</h2>
                     <p class="lede">Novelwave rides along in CarPlay, answers when you ask Siri, and hands every control to Shortcuts, Control Center and the Lock Screen. Keep your hands on the wheel and your place in the book.</p>
                     <dl class="specs">
@@ -306,7 +316,6 @@
                 <div class="bento">
                     <article class="tile tile-wide carplay-demo reveal">
                         <div class="tile-heading">
-                            <span class="release-badge">New in 3.1</span>
                             <h3 class="tile-title">CarPlay</h3>
                             <p class="tile-text">Cover cards show the time left on every book, and Now Playing keeps skip, speed and chapters in reach.</p>
                         </div>
@@ -339,9 +348,8 @@
                     </article>
                     <article class="tile siri-demo reveal">
                         <div class="tile-heading">
-                            <span class="release-badge">New in 3.1</span>
                             <h3 class="tile-title">Just ask Siri</h3>
-                            <p class="tile-text">Tap a request to hear what happens.</p>
+                            <p class="tile-text">Tap a request to hear what happens. With Apple Intelligence on iOS 27, just say “Play Moby-Dick”.</p>
                         </div>
                         <ul class="siri-requests" aria-label="Things to ask Siri">
                             <li><button type="button" aria-pressed="true" data-siri-reply="Moby-Dick picks up right where you left off."><span class="siri-phrase">Resume my audiobook</span><span class="siri-app">in Novelwave</span></button></li>
@@ -358,7 +366,6 @@
                     </article>
                     <article class="tile shortcuts-demo reveal">
                         <div class="tile-heading">
-                            <span class="release-badge">New in 3.1</span>
                             <h3 class="tile-title">Shortcuts</h3>
                             <p class="tile-text">Every control is an action, ready for your own automations.</p>
                         </div>
@@ -368,15 +375,8 @@
                             <li><svg class="icon" aria-hidden="true"><use href="#icon-gauge"/></svg><span>Set Playback Speed to <strong>1.25×</strong></span></li>
                         </ol>
                     </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-sparkles"/></svg></span>
-                        <span class="release-badge">New in 3.1</span>
-                        <h3 class="tile-title">Ask for a book by name</h3>
-                        <p class="tile-text">With Apple Intelligence on iOS 27, say “Play Moby-Dick” and Siri knows where to find it.</p>
-                    </article>
                     <article class="tile tile-wide glance-demo reveal">
                         <div class="tile-heading">
-                            <span class="release-badge">New in 3.1</span>
                             <h3 class="tile-title">Without opening the app</h3>
                             <p class="tile-text">Watch the sleep timer count down on the Lock Screen, or play, pause and set a timer from Control Center.</p>
                         </div>
@@ -410,14 +410,13 @@
                         <div><dt>Remote</dt><dd>Play, skip and speed on your iPhone</dd></div>
                         <div><dt>Player</dt><dd>Speed, sleep timer, chapters and bookmarks</dd></div>
                         <div><dt>Library</dt><dd>Synced through iCloud</dd></div>
-                        <div><dt>Watch face</dt><dd>Complications for the book you're on</dd></div>
+                        <div><dt>Watch face</dt><dd>Complication and Smart Stack widget</dd></div>
                         <div><dt>Requires</dt><dd>watchOS 11 or later</dd></div>
                     </dl>
                 </div>
                 <div class="bento">
                     <article class="tile tile-wide watch-demo reveal">
                         <div class="tile-heading">
-                            <span class="release-badge">New in 3.2</span>
                             <h3 class="tile-title">Everything in reach</h3>
                             <p class="tile-text">Browse your books, play one, and change speed, set a sleep timer or jump to a chapter, all from the watch.</p>
                         </div>
@@ -453,40 +452,182 @@
                     </article>
                     <article class="tile reveal">
                         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg></span>
-                        <span class="release-badge">New in 3.2</span>
                         <h3 class="tile-title">Pick up on either device</h3>
                         <p class="tile-text">Start a chapter on your iPhone and finish it on the watch, or the other way round.</p>
                     </article>
                     <article class="tile reveal">
                         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-mic"/></svg></span>
-                        <span class="release-badge">New in 3.2</span>
                         <h3 class="tile-title">Bookmarks you can say</h3>
                         <p class="tile-text">Mark a moment and dictate a note to go with it, without reaching for your phone.</p>
                     </article>
                     <article class="tile reveal">
                         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud-download"/></svg></span>
-                        <span class="release-badge">New in 3.2</span>
                         <h3 class="tile-title">Downloads you can manage</h3>
-                        <p class="tile-text">Put the next book on the watch before a run, and see which ones are taking up space.</p>
+                        <p class="tile-text">Put the next book on the watch before a run, pause a transfer, and see from your iPhone what's taking up space.</p>
                     </article>
                     <article class="tile reveal">
                         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-watch"/></svg></span>
-                        <span class="release-badge">New in 3.2</span>
                         <h3 class="tile-title">On the watch face</h3>
-                        <p class="tile-text">A complication keeps the book you're listening to one tap away.</p>
+                        <p class="tile-text">A Now Playing complication and a Smart Stack widget keep your book one tap away.</p>
                     </article>
                 </div>
             </section>
 
-            <section class="chapter container" id="import" aria-labelledby="import-title" data-numeral="V" data-title="However your books arrive">
+            <section class="chapter container" id="stats" aria-labelledby="stats-title" data-numeral="V" data-title="Every hour, accounted for">
                 <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">V</span> Import</p>
-                    <h2 class="section-title" id="import-title">However your books <span class="accent">arrive</span>.</h2>
-                    <p class="lede">Bring in audio files from your iPhone or from Novelwave's own folder in iCloud Drive. Pick as many as you like, then keep them as separate audiobooks or merge them into one.</p>
+                    <p class="eyebrow"><span class="chapter-numeral">V</span> Listening Stats <a class="release-badge" href="roadmap.html">New in 3.2</a></p>
+                    <h2 class="section-title" id="stats-title">Every hour, <span class="accent">accounted</span> for.</h2>
+                    <p class="lede">See how long you've listened by week, month and year, the books you finished and the ones still going, and the speeds you listened at. Your history syncs privately through iCloud, the watch included.</p>
                     <dl class="specs">
-                        <div><dt>Sources</dt><dd>Files and iCloud Drive</dd></div>
+                        <div><dt>Periods</dt><dd>Week, month and year</dd></div>
+                        <div><dt>Books</dt><dd>Finished and in progress</dd></div>
+                        <div><dt>Speed</dt><dd>The speeds you listened at</dd></div>
+                        <div><dt>Year in Listening</dt><dd>A look back, every January 1</dd></div>
+                        <div><dt>Sharing</dt><dd>Story-sized cards for any period</dd></div>
+                    </dl>
+                </div>
+                <div class="bento">
+                    <article class="tile tile-wide stats-demo reveal">
+                        <div class="tile-heading">
+                            <h3 class="tile-title">Your listening, at a glance</h3>
+                            <p class="tile-text">Switch the period to see the hours add up.</p>
+                        </div>
+                        <fieldset class="segmented">
+                            <legend class="visually-hidden">Stats period</legend>
+                            <input class="visually-hidden" type="radio" name="stats-period" id="stats-week" value="week" checked>
+                            <label for="stats-week">Week</label>
+                            <input class="visually-hidden" type="radio" name="stats-period" id="stats-month" value="month">
+                            <label for="stats-month">Month</label>
+                            <input class="visually-hidden" type="radio" name="stats-period" id="stats-year" value="year">
+                            <label for="stats-year">Year</label>
+                        </fieldset>
+                        <div class="stats-chart">
+                            <div class="stats-period stats-period-week">
+                                <p class="stats-total"><span class="stats-caption">This week</span>1h 55m<span class="visually-hidden">, listened this week</span></p>
+                                <ol class="stats-bars" aria-hidden="true">
+                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label">M</span></li>
+                                    <li style="--value: 1.00"><span class="stats-bar"></span><span class="stats-label">T</span></li>
+                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label">W</span></li>
+                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label">T</span></li>
+                                    <li style="--value: 0.71"><span class="stats-bar"></span><span class="stats-label">F</span></li>
+                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label">S</span></li>
+                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label">S</span></li>
+                                </ol>
+                                <dl class="stats-summary">
+                                    <div><dt>Books</dt><dd>2</dd></div>
+                                    <div><dt>Finished</dt><dd>1</dd></div>
+                                    <div><dt>Speed</dt><dd>1.25×</dd></div>
+                                </dl>
+                            </div>
+                            <div class="stats-period stats-period-month">
+                                <p class="stats-total"><span class="stats-caption">This month</span>17h 20m<span class="visually-hidden">, listened this month</span></p>
+                                <ol class="stats-bars" aria-hidden="true">
+                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label">1</span></li>
+                                    <li style="--value: 0.71"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.86"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.36"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label">8</span></li>
+                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.79"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 1.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label">15</span></li>
+                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.93"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.71"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.36"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label">22</span></li>
+                                    <li style="--value: 0.86"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.21"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.79"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label">29</span></li>
+                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label"></span></li>
+                                </ol>
+                                <dl class="stats-summary">
+                                    <div><dt>Books</dt><dd>4</dd></div>
+                                    <div><dt>Finished</dt><dd>2</dd></div>
+                                    <div><dt>Speed</dt><dd>1.3×</dd></div>
+                                </dl>
+                            </div>
+                            <div class="stats-period stats-period-year">
+                                <p class="stats-total"><span class="stats-caption">This year</span>145h<span class="visually-hidden">, listened this year</span></p>
+                                <ol class="stats-bars" aria-hidden="true">
+                                    <li style="--value: 0.41"><span class="stats-bar"></span><span class="stats-label">J</span></li>
+                                    <li style="--value: 0.55"><span class="stats-bar"></span><span class="stats-label">F</span></li>
+                                    <li style="--value: 0.36"><span class="stats-bar"></span><span class="stats-label">M</span></li>
+                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label">A</span></li>
+                                    <li style="--value: 0.73"><span class="stats-bar"></span><span class="stats-label">M</span></li>
+                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label">J</span></li>
+                                    <li style="--value: 0.86"><span class="stats-bar"></span><span class="stats-label">J</span></li>
+                                    <li style="--value: 1.00"><span class="stats-bar"></span><span class="stats-label">A</span></li>
+                                    <li style="--value: 0.59"><span class="stats-bar"></span><span class="stats-label">S</span></li>
+                                    <li style="--value: 0.68"><span class="stats-bar"></span><span class="stats-label">O</span></li>
+                                    <li style="--value: 0.27"><span class="stats-bar"></span><span class="stats-label">N</span></li>
+                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label">D</span></li>
+                                </ol>
+                                <dl class="stats-summary">
+                                    <div><dt>Books</dt><dd>18</dd></div>
+                                    <div><dt>Finished</dt><dd>11</dd></div>
+                                    <div><dt>Speed</dt><dd>1.3×</dd></div>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                    <figure class="tile tile-device reveal">
+                        <picture>
+                            <source srcset="images/gallery/dark-stats.avif 1x, images/gallery/dark-stats@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/gallery/dark-stats.png 1x, images/gallery/dark-stats@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/gallery/light-stats.avif 1x, images/gallery/light-stats@2x.avif 2x" type="image/avif">
+                            <img src="images/gallery/light-stats.png" srcset="images/gallery/light-stats.png 1x, images/gallery/light-stats@2x.png 2x" alt="Listening Stats for one week: 1 hour 55 minutes, a bar for each day, and the week's books" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg></span>
+                        <h3 class="tile-title">Your year in listening</h3>
+                        <p class="tile-text">A look back at the year's books and hours, with a reminder on January 1 when it's ready.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-image"/></svg></span>
+                        <h3 class="tile-title">Share your stats</h3>
+                        <p class="tile-text">Turn any period into a story-sized card that catches the light as you tilt your iPhone, then share it or save it to Photos.</p>
+                    </article>
+                    <article class="tile reveal">
+                        <h3 class="tile-title">Stats that tell the truth</h3>
+                        <p class="tile-text">Fix what the numbers can't know.</p>
+                        <ul class="source-list" aria-label="Ways to correct your stats">
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-eye-off"/></svg>Hide from Stats</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-rewind"/></svg>Mark as Not Finished</li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>Change Finish Date</li>
+                        </ul>
+                    </article>
+                    <article class="tile reveal">
+                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></span>
+                        <h3 class="tile-title">Every hour still counts</h3>
+                        <p class="tile-text">Delete a book you've finished to free up space, and the hours you spent with it stay in your stats.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="chapter container" id="import" aria-labelledby="import-title" data-numeral="VI" data-title="However your books arrive">
+                <div class="chapter-copy reveal">
+                    <p class="eyebrow"><span class="chapter-numeral">VI</span> Import</p>
+                    <h2 class="section-title" id="import-title">However your books <span class="accent">arrive</span>.</h2>
+                    <p class="lede">Tap an audiobook in Files, or share one from another app, and it opens in Novelwave. Bring in as many as you like at once, then keep them as separate audiobooks or merge them into one.</p>
+                    <dl class="specs">
+                        <div><dt>Formats</dt><dd>M4B, M4A, MP3, Opus and MP4</dd></div>
+                        <div><dt>Sources</dt><dd>Files, iCloud Drive and other apps</dd></div>
                         <div><dt>Save as</dt><dd>Separate books, or one merged book</dd></div>
-                        <div><dt>Destination</dt><dd>Any shelf, or a new one on the spot</dd></div>
+                        <div><dt>Destination</dt><dd>The shelf you're on, or any other</dd></div>
                         <div><dt>Covers</dt><dd>Embedded, Photos, Files or clipboard</dd></div>
                     </dl>
                 </div>
@@ -527,27 +668,30 @@
                     </article>
                     <article class="tile reveal">
                         <h3 class="tile-title">From where they live</h3>
-                        <p class="tile-text">Import from Files, or connect iCloud Drive and keep books there until you play them.</p>
+                        <p class="tile-text">Import from Files, keep books in iCloud Drive until you play them, or send them from any app.</p>
                         <ul class="source-list" aria-label="Import sources">
                             <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg>Local Files</li>
                             <li><svg class="icon" aria-hidden="true"><use href="#icon-cloud"/></svg>iCloud Drive<span class="status-dot">Connected</span></li>
+                            <li><svg class="icon" aria-hidden="true"><use href="#icon-export"/></svg>Open with Novelwave</li>
                         </ul>
                     </article>
                     <article class="tile reveal">
-                        <h3 class="tile-title">Straight to the right shelf</h3>
-                        <p class="tile-text">Choose where new books land, or create a shelf without leaving the import.</p>
-                        <ul class="option-list" aria-label="Example destinations">
-                            <li>Library</li>
-                            <li class="is-selected">Classics<svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></li>
-                            <li class="option-new"><svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg>New Shelf</li>
+                        <h3 class="tile-title">The formats you own</h3>
+                        <p class="tile-text">Opus plays natively, without re-encoding, and an MP4 comes in as just its audio.</p>
+                        <ul class="chips" aria-label="Supported formats">
+                            <li class="chip">M4B</li>
+                            <li class="chip">M4A</li>
+                            <li class="chip">MP3</li>
+                            <li class="chip">Opus</li>
+                            <li class="chip">MP4</li>
                         </ul>
                     </article>
                 </div>
             </section>
 
-            <section class="chapter container" id="sync" aria-labelledby="sync-title" data-numeral="VI" data-title="Your library, everywhere at once">
+            <section class="chapter container" id="sync" aria-labelledby="sync-title" data-numeral="VII" data-title="Your library, everywhere at once">
                 <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">VI</span> Sync</p>
+                    <p class="eyebrow"><span class="chapter-numeral">VII</span> Sync</p>
                     <h2 class="section-title" id="sync-title">Your library, <span class="accent">everywhere</span> at once.</h2>
                     <p class="lede">Shelves, progress, chapters and bookmarks sync privately through your iCloud account with CloudKit. Start a chapter on the train and finish it at home, right where you left off.</p>
                     <dl class="specs">
@@ -560,8 +704,8 @@
                 <div class="bento">
                     <article class="tile tile-wide sync-demo reveal">
                         <div class="tile-heading">
-                            <h3 class="tile-title">Pick up where you left off</h3>
-                            <p class="tile-text">Your place in every book follows you to each device on your iCloud account.</p>
+                            <h3 class="tile-title">Your latest place, every time</h3>
+                            <p class="tile-text">Open a book and Novelwave checks iCloud first, so you carry on from wherever you stopped, on any device.</p>
                         </div>
                         <div class="sync-story" aria-hidden="true">
                             <div class="sync-device">
@@ -596,9 +740,9 @@
                 </div>
             </section>
 
-            <section class="chapter container" id="details" aria-labelledby="details-title" data-numeral="VII" data-title="Make every book look the part">
+            <section class="chapter container" id="details" aria-labelledby="details-title" data-numeral="VIII" data-title="Make every book look the part">
                 <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">VII</span> Metadata</p>
+                    <p class="eyebrow"><span class="chapter-numeral">VIII</span> Metadata</p>
                     <h2 class="section-title" id="details-title">Make every book look <span class="accent">the part</span>.</h2>
                     <p class="lede">Fix a title, credit the right author and write a description. Fill in the genre, composer and release year, then give the book the cover it deserves.</p>
                     <dl class="specs">
@@ -649,17 +793,17 @@
                 </div>
             </section>
 
-            <section class="chapter chapter-wide container" id="extras" aria-labelledby="extras-title" data-numeral="VIII" data-title="The little things, done properly">
+            <section class="chapter chapter-wide container" id="extras" aria-labelledby="extras-title" data-numeral="IX" data-title="The little things, done properly">
                 <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">VIII</span> Extras</p>
+                    <p class="eyebrow"><span class="chapter-numeral">IX</span> Extras</p>
                     <h2 class="section-title" id="extras-title">The little things, done <span class="accent">properly</span>.</h2>
-                    <p class="lede">Control playback without reaching for your phone, keep the current book on your Home Screen, and keep your library as tidy as your shelves.</p>
+                    <p class="lede">Keep your books on the Home Screen, control them from your headphones, and keep your library as tidy as your shelves.</p>
                 </div>
                 <div class="bento bento-three">
                     <article class="tile tile-wide widget-tile reveal">
                         <div class="tile-heading">
-                            <h3 class="tile-title">Now Playing widgets</h3>
-                            <p class="tile-text">See and control what you're listening to, right from your Home Screen.</p>
+                            <h3 class="tile-title">A widget for every book</h3>
+                            <p class="tile-text">Let a widget follow whatever's playing, or pin each one to a book of its own.</p>
                         </div>
                         <div class="widgets" aria-hidden="true">
                             <div class="widget widget-small">
@@ -693,11 +837,6 @@
                         </ul>
                     </article>
                     <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg></span>
-                        <h3 class="tile-title">Lock Screen and Control Center</h3>
-                        <p class="tile-text">Play, pause, skip and scrub through a chapter without unlocking.</p>
-                    </article>
-                    <article class="tile reveal">
                         <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-export"/></svg></span>
                         <h3 class="tile-title">Export to Files</h3>
                         <p class="tile-text">Copy a single audiobook, or your entire library, to any folder in Files.</p>
@@ -707,11 +846,11 @@
                         <h3 class="tile-title">Recover storage</h3>
                         <p class="tile-text">Novelwave finds files nothing uses any more and clears them away, without touching your books.</p>
                     </article>
-                    <article class="tile tile-wide theme-tile reveal">
+                    <article class="tile theme-tile reveal">
                         <div class="tile-heading">
                             <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-contrast"/></svg></span>
                             <h3 class="tile-title">Light, dark or system</h3>
-                            <p class="tile-text">Novelwave follows your iPhone, or your mood. So does this page: try the switch in the corner.</p>
+                            <p class="tile-text">Novelwave follows your iPhone, or your mood. So does this page: try the switch at the top.</p>
                         </div>
                         <div class="theme-swatches" aria-hidden="true">
                             <span class="theme-swatch theme-swatch-light">Aa</span>
@@ -721,10 +860,10 @@
                 </div>
             </section>
 
-            <section class="gallery" id="gallery" aria-labelledby="gallery-title" data-numeral="IX" data-title="See it for yourself">
+            <section class="gallery" id="gallery" aria-labelledby="gallery-title" data-numeral="X" data-title="See it for yourself">
                 <div class="gallery-header container reveal">
                     <div>
-                        <p class="eyebrow"><span class="chapter-numeral">IX</span> A closer look</p>
+                        <p class="eyebrow"><span class="chapter-numeral">X</span> A closer look</p>
                         <h2 class="section-title" id="gallery-title">See it for <span class="accent">yourself</span>.</h2>
                     </div>
                     <div class="gallery-controls">
@@ -778,18 +917,7 @@
                                 <source srcset="images/gallery/light-sleep.avif 1x, images/gallery/light-sleep@2x.avif 2x" type="image/avif">
                                 <img src="images/gallery/light-sleep.png" srcset="images/gallery/light-sleep.png 1x, images/gallery/light-sleep@2x.png 2x" alt="The sleep timer menu over the Player, from End of Chapter down to 5 minutes" width="385" height="776" loading="lazy" decoding="async">
                             </picture>
-                            <figcaption><strong>Sleep timer</strong>Drift off at the end of a chapter, not mid-sentence.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/dark-stats.avif 1x, images/gallery/dark-stats@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-stats.png 1x, images/gallery/dark-stats@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-stats.avif 1x, images/gallery/light-stats@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-stats.png" srcset="images/gallery/light-stats.png 1x, images/gallery/light-stats@2x.png 2x" alt="Listening Stats for one week: 1 hour 55 minutes, a bar for each day, and the week's books" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Listening stats</strong>See how much you listened, day by day and book by book.</figcaption>
+                            <figcaption><strong>Sleep timer</strong>From five minutes to the end of the file.</figcaption>
                         </figure>
                     </li>
                     <li class="gallery-item">
@@ -822,7 +950,7 @@
                                 <source srcset="images/gallery/light-widgets.avif 1x, images/gallery/light-widgets@2x.avif 2x" type="image/avif">
                                 <img src="images/gallery/light-widgets.png" srcset="images/gallery/light-widgets.png 1x, images/gallery/light-widgets@2x.png 2x" alt="Two Now Playing widgets on the Home Screen, a medium one for Psycho-Cybernetics and a small one for The Alchemist" width="385" height="776" loading="lazy" decoding="async">
                             </picture>
-                            <figcaption><strong>Home Screen widgets</strong>Your current book, or any book you pin, a tap away.</figcaption>
+                            <figcaption><strong>Home Screen widgets</strong>Your book on the Home Screen, small or medium.</figcaption>
                         </figure>
                     </li>
                     <li class="gallery-item">
