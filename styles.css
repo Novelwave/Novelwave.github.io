@@ -42,9 +42,6 @@
     --track: #C2C1C2;
     --glass: rgb(255 255 255 / 0.9);
     --tile-shadow: 0 1px 2px rgb(23 22 20 / 0.04), 0 24px 48px -32px rgb(23 22 20 / 0.25);
-    --toggle-track: #F5F5F5;
-    --toggle-thumb: #FFFFFF;
-    --toggle-icon: #BDBDBD;
     --toggle-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
     --wallpaper: linear-gradient(140deg, #F1D7B8, #D98E62 55%, #9C4A2C);
     --car-bezel: #1A1918;
@@ -78,9 +75,6 @@
     --track: #575658;
     --glass: rgb(36 34 32 / 0.9);
     --tile-shadow: 0 24px 48px -32px rgb(0 0 0 / 0.6);
-    --toggle-track: #2F2F2F;
-    --toggle-thumb: #1D1D1D;
-    --toggle-icon: #939393;
     --toggle-shadow: 0 2px 6px rgb(0 0 0 / 0.35);
     --wallpaper: linear-gradient(140deg, #4A3020, #2A1E17 55%, #171614);
     --car-bezel: #0B0B0A;
@@ -316,25 +310,27 @@ figure {
 .theme-toggle {
     position: relative;
     display: flex;
-    padding: 0.25rem;
+    padding: 0.1875rem;
+    border: 1px solid var(--surface-border);
     border-radius: 999px;
-    background-color: var(--toggle-track);
-    transition: background-color var(--theme-transition);
+    background-color: var(--fill);
+    transition: background-color var(--theme-transition), border-color var(--theme-transition);
 }
 
 .theme-toggle[hidden] {
     display: none;
 }
 
+/* The thumb is the site's segmented-control selection: the surface color, lifted by a shadow. */
 .theme-toggle::before {
     content: "";
     position: absolute;
-    inset-block-start: 0.25rem;
-    inset-inline-start: 0.25rem;
-    width: 2.75rem;
-    height: 2.75rem;
+    inset-block-start: 0.1875rem;
+    inset-inline-start: 0.1875rem;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
-    background-color: var(--toggle-thumb);
+    background-color: var(--surface);
     box-shadow: var(--toggle-shadow);
     transition:
         transform var(--theme-transition),
@@ -350,10 +346,10 @@ figure {
     position: relative;
     display: grid;
     place-items: center;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
-    color: var(--toggle-icon);
+    color: var(--muted);
     transition: color var(--theme-transition), scale 250ms var(--ease-out-expo);
 }
 
@@ -362,8 +358,8 @@ figure {
 }
 
 .theme-option svg {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.125rem;
+    height: 1.125rem;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.5;
@@ -3135,7 +3131,7 @@ figure {
 }
 
 .theme-option[aria-pressed="true"] {
-    color: var(--accent);
+    color: var(--accent-strong);
 }
 
 /* ==========================================================================
@@ -3340,6 +3336,7 @@ figure {
     .theme-toggle {
         position: static;
         padding: 0;
+        border: 0;
         background-color: transparent;
     }
 
