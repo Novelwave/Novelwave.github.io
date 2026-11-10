@@ -57,7 +57,7 @@
             <p class="eyebrow">Roadmap</p>
             <h1 class="section-title">Where Novelwave is <span class="accent">headed</span></h1>
             <p class="lede">Choose a stop on the map to see what's in it. There are no dates, and plans can change as we learn what listeners need most.</p>
-            <p class="page-meta">Last updated November 7, 2026</p>
+            <p class="page-meta">Last updated November 10, 2026</p>
         </header>
 
         <ol class="roadmap" aria-label="Versions">
@@ -170,12 +170,12 @@
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-current">
-                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2" data-open-by-default>
+            <li class="roadmap-stop is-released">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2">
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
                         <span class="roadmap-version">3.2</span>
-                        <span class="roadmap-status">Available now</span>
+                        <span class="roadmap-status">Released</span>
                     </span>
                 </button>
                 <p class="roadmap-summary">Novelwave on Apple Watch, listening stats and your Year in Listening, a widget for every book, bookmarks you can share, and your latest place on every device.</p>
@@ -249,17 +249,17 @@
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-patch">
-                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2-1">
+            <li class="roadmap-stop is-patch is-current">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2-1" data-open-by-default>
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
                         <span class="roadmap-version">3.2.1</span>
-                        <span class="roadmap-status">Coming soon</span>
+                        <span class="roadmap-status">Available now</span>
                     </span>
                 </button>
                 <p class="roadmap-summary">Steadier playback in the background, and chapters that open where you are.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-2-1" role="region" aria-labelledby="changelog-3-2-1-title">
-                    <h2 class="tile-title" id="changelog-3-2-1-title">Coming in Novelwave 3.2.1</h2>
+                    <h2 class="tile-title" id="changelog-3-2-1-title">What's new in Novelwave 3.2.1</h2>
                     <div class="roadmap-groups">
                         <section class="roadmap-group">
                             <h3>Fixes</h3>
@@ -273,6 +273,31 @@
                     </div>
                 </div>
             </li>
+            <li class="roadmap-stop is-patch">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2-2">
+                    <span class="roadmap-dot" aria-hidden="true"></span>
+                    <span class="roadmap-stop-label">
+                        <span class="roadmap-version">3.2.2</span>
+                        <span class="roadmap-status">Coming soon</span>
+                    </span>
+                </button>
+                <p class="roadmap-summary">Ready for iOS 27.2, a library that always opens, and your place kept when you leave.</p>
+                <div class="tile roadmap-changelog" id="changelog-3-2-2" role="region" aria-labelledby="changelog-3-2-2-title">
+                    <h2 class="tile-title" id="changelog-3-2-2-title">Coming in Novelwave 3.2.2</h2>
+                    <div class="roadmap-groups">
+                        <section class="roadmap-group">
+                            <h3>Fixes</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Ready for iOS 27.2.</span> Novelwave no longer crashes when iCloud syncs on the iOS 27.2 betas.</li>
+                                <li><span class="roadmap-change-title">Always opens.</span> A library from an older version that can't be fully brought across no longer keeps Novelwave from starting, and an iPhone too full to open your library gets a screen that says so, with your library left safe.</li>
+                                <li><span class="roadmap-change-title">Your place, kept.</span> Leaving the app saves where you are, so closing Novelwave mid-listen no longer loses the last half-minute.</li>
+                                <li><span class="roadmap-change-title">Skips that stay put.</span> Long Ogg and variable-bitrate MP3 audiobooks get their true length when they play, so skipping near the end no longer throws you back minutes.</li>
+                                <li><span class="roadmap-change-title">No crash on a broken length.</span> A file that reports an impossible length no longer crashes the Library.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </li>
             <li class="roadmap-stop is-next">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-3">
                     <span class="roadmap-dot" aria-hidden="true"></span>
@@ -281,7 +306,7 @@
                         <span class="roadmap-status">Beta testing</span>
                     </span>
                 </button>
-                <p class="roadmap-summary">Novelwave on iPad, easier imports, larger widgets, a true-black Midnight theme, and seven more languages.</p>
+                <p class="roadmap-summary">Novelwave on iPad, easier imports, private shelves, autoplay, larger widgets, a true-black Midnight theme, and seven more languages.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-3" role="region" aria-labelledby="changelog-3-3-title">
                     <h2 class="tile-title" id="changelog-3-3-title">Coming in Novelwave 3.3</h2>
                     <div class="roadmap-groups">
@@ -301,7 +326,21 @@
                                 <li><span class="roadmap-change-title">Drop files in.</span> Drop audio files or whole folders onto your library on iPhone or iPad to import them.</li>
                                 <li><span class="roadmap-change-title">Whole folders from Files.</span> Choose folders in the import menu, not just files.</li>
                                 <li><span class="roadmap-change-title">Books sorted out for you.</span> A folder becomes one audiobook, or one per subfolder or album when it holds several, listed in series order.</li>
+                                <li><span class="roadmap-change-title">iCloud Drive, rebuilt.</span> Browse every folder, choose folders and files together, search them all and sort the list, with each file's size and date.</li>
+                                <li><span class="roadmap-change-title">Connect as you go.</span> Import from iCloud Drive before connecting it, and Novelwave connects it on the spot instead of sending you to Sources.</li>
                                 <li><span class="roadmap-change-title">See where they landed.</span> The Library scrolls to what you just imported and highlights it for a moment.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>While you listen</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Autoplay next book.</span> When a book ends, the next one on the same shelf starts playing. Turn it on in Settings.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>Kept private</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Private shelves.</span> Hide a shelf behind Face ID. Its audiobooks stay out of search, Stats, Siri, Spotlight, CarPlay, widgets and the watch, and show as “Private Audiobook” on the Lock Screen.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
@@ -314,6 +353,7 @@
                             <h3>Make it yours</h3>
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Midnight.</span> A true-black theme beside Light and Dark, which OLED screens draw with their pixels off.</li>
+                                <li><span class="roadmap-change-title">Grid or list.</span> Show your shelves as a grid of covers or as a list, on iPhone or iPad.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
@@ -340,7 +380,7 @@
                         <span class="roadmap-status">In development</span>
                     </span>
                 </button>
-                <p class="roadmap-summary">Audiobookshelf, tap to download, books that follow you to every device, and Lock Screen widgets.</p>
+                <p class="roadmap-summary">Audiobookshelf, tap to download, books that follow you to every device, details found online, and Lock Screen widgets.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-4" role="region" aria-labelledby="changelog-3-4-title">
                     <h2 class="tile-title" id="changelog-3-4-title">Planned for Novelwave 3.4</h2>
                     <div class="roadmap-groups">
@@ -357,10 +397,18 @@
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Tap to download.</span> Tap an audiobook that isn't on this device and it starts downloading, with no alert first.</li>
                                 <li><span class="roadmap-change-title">Clear about what's missing.</span> Audiobooks that aren't on this device are dimmed, and a tap explains why and what you can do.</li>
-                                <li><span class="roadmap-change-title">Move to iCloud Drive.</span> Upload an audiobook you imported from Files to iCloud Drive, so it plays on your other devices too.</li>
-                                <li><span class="roadmap-change-title">Find your files.</span> After a reinstall, point Novelwave at the folders holding your audiobooks to bring their audio back.</li>
+                                <li><span class="roadmap-change-title">Upload to iCloud Drive.</span> Send books you added from files on one device to iCloud Drive, and they play on all your devices, with their progress, bookmarks and shelves just as they were.</li>
+                                <li><span class="roadmap-change-title">Find your audiobook files.</span> Reinstalled Novelwave, or moved to a new phone without a backup? Choose the folders that hold your files, and Novelwave matches them to your books, progress included.</li>
                                 <li><span class="roadmap-change-title">Downloads that fit.</span> Novelwave tells you how much space a download needs before starting one that won't fit.</li>
                                 <li><span class="roadmap-change-title">Already in your library.</span> iCloud Drive files you've already added are marked as you browse.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>Book details</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Find details online.</span> Search Open Library from Edit Audiobook, then choose field by field between your details and what it found.</li>
+                                <li><span class="roadmap-change-title">Fix My Library.</span> Check your whole library for missing covers, authors, years, genres and descriptions, then apply them all at once or one book at a time.</li>
+                                <li><span class="roadmap-change-title">Details for new imports.</span> Turn it on, and books you import get their missing details looked up straight away. Only titles and authors are sent to Open Library.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
