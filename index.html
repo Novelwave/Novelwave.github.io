@@ -76,6 +76,10 @@
                 <li><a href="roadmap.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
             </ul>
         </nav>
+        <div class="device-switch header-device-switch" role="group" aria-label="Show Novelwave on" data-device-switch hidden>
+            <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
+            <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
+        </div>
         <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
             <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
                 <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
@@ -86,6 +90,12 @@
             <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
                 <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
                     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </button>
+            <button class="theme-option" type="button" data-theme-option="midnight" aria-label="Midnight mode" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                    <path d="M20 3v4M22 5h-4"/>
                 </svg>
             </button>
         </div>
@@ -157,7 +167,7 @@
                         <img class="device device-front" src="images/ipad/light-library-wide.png" srcset="images/ipad/light-library-wide.png 1x, images/ipad/light-library-wide@2x.png 2x" alt="The Novelwave library on iPad, a grid of shelves and audiobook covers" width="1096" height="832" loading="lazy" decoding="async">
                     </picture>
                 </div>
-                <div class="device-switch" role="group" aria-label="Show Novelwave on" data-device-switch hidden>
+                <div class="device-switch hero-device-switch" role="group" aria-label="Show Novelwave on" data-device-switch hidden>
                     <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
                     <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
                 </div>
@@ -899,12 +909,13 @@
                     <article class="tile theme-tile reveal">
                         <div class="tile-heading">
                             <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-contrast"/></svg></span>
-                            <h3 class="tile-title">Light, dark or system</h3>
-                            <p class="tile-text">Novelwave follows your iPhone, or your mood. So does this page: try the switch at the top.</p>
+                            <h3 class="tile-title">Light, dark or Midnight</h3>
+                            <p class="tile-text">Novelwave follows your device or your mood, down to true black on Midnight. So does this page: try the switch at the top.</p>
                         </div>
                         <div class="theme-swatches" aria-hidden="true">
                             <span class="theme-swatch theme-swatch-light">Aa</span>
                             <span class="theme-swatch theme-swatch-dark">Aa</span>
+                            <span class="theme-swatch theme-swatch-midnight">Aa</span>
                         </div>
                     </article>
                 </div>

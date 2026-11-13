@@ -61,7 +61,8 @@
     --dock-inset: 1.625rem;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme="dark"],
+:root[data-theme="midnight"] {
     color-scheme: dark;
     --background: #171614;
     --foreground: #FBFAF8;
@@ -82,6 +83,19 @@
     --screen-track: #2E2D2B;
     --screen-label: #E5E5E5;
     --screen-thumb-shadow: none;
+}
+
+/* The app's Midnight: Dark on true black, which an OLED screen draws with its pixels off. */
+:root[data-theme="midnight"] {
+    --background: #000000;
+    --grid-color: #2A2A2A;
+    --surface: #151412;
+    --fill: #211F1D;
+    --track: #4A494B;
+    --glass: rgb(21 20 18 / 0.9);
+    --wallpaper: linear-gradient(140deg, #3E2819, #1E1611 55%, #000000);
+    --car-bezel: #000000;
+    --screen-track: #242321;
 }
 
 /* ==========================================================================
@@ -342,6 +356,10 @@ figure {
     transform: translateX(100%);
 }
 
+:root[data-theme="midnight"] .theme-toggle::before {
+    transform: translateX(200%);
+}
+
 .theme-option {
     position: relative;
     display: grid;
@@ -459,6 +477,12 @@ figure {
     row-gap: 2rem;
 }
 
+/* Wide screens switch devices from the header, beside the theme toggle; narrow ones, whose
+   header is one tight row of round buttons, from below the hero's devices. */
+.hero-device-switch:not([hidden]) {
+    display: none;
+}
+
 /* Matches the site's segmented controls, with buttons in place of radios since the choice
    reaches beyond one demo: every showcase on the page follows it. */
 .device-switch {
@@ -505,6 +529,19 @@ figure {
     outline-offset: 2px;
 }
 
+/* Sized like the theme toggle beside it. */
+.header-device-switch {
+    padding: 0.1875rem;
+    border: 1px solid var(--surface-border);
+    transition: background-color var(--theme-transition), border-color var(--theme-transition);
+}
+
+.header-device-switch .device-option {
+    min-height: 2.25rem;
+    padding-block: 0;
+    padding-inline: 0.75rem 0.875rem;
+}
+
 /* --pointer-x and --pointer-y (-1 to 1) are set by hero.js; without it they fall back to a resting 0. */
 .hero-devices {
     --device-aspect-ratio: calc(385 / 776);
@@ -514,13 +551,11 @@ figure {
     /* Nudges the devices down, clear of the header's navigation. They're centered, so their height
        budget gives up twice the shift to keep their bottom edge from moving closer to the fold. */
     --hero-devices-shift: 1.5rem;
-    /* The device switch and its gap, below the devices. */
-    --hero-switch-space: 4.75rem;
     position: relative;
     inset-block-start: var(--hero-devices-shift);
     width: min(
         24.0625rem * var(--device-group-span),
-        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift) - var(--hero-switch-space)) * var(--device-aspect-ratio) * var(--device-group-span),
+        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift)) * var(--device-aspect-ratio) * var(--device-group-span),
         40vw
     );
     transform:
@@ -564,7 +599,7 @@ figure {
     --back-device-scale: 0.82;
     width: min(
         34rem * var(--device-group-span),
-        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift) - var(--hero-switch-space)) * var(--device-aspect-ratio) * var(--device-group-span),
+        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift)) * var(--device-aspect-ratio) * var(--device-group-span),
         50vw
     );
 }
@@ -2306,14 +2341,18 @@ figure {
 
 .theme-swatches {
     display: flex;
-    gap: 1rem;
+    flex: 1 1 18rem;
+    gap: 0.75rem;
+    max-width: 25.5rem;
 }
 
 .theme-swatch {
     position: relative;
     display: grid;
+    flex: 1;
     place-items: center;
-    width: 8rem;
+    min-width: 0;
+    max-width: 8rem;
     height: 5.5rem;
     border-radius: 1.125rem;
     font-family: var(--font-serif);
@@ -2346,8 +2385,15 @@ figure {
     box-shadow: inset 0 0 0 1px rgb(251 250 248 / 0.1);
 }
 
-.theme-swatch-dark::after {
+.theme-swatch-dark::after,
+.theme-swatch-midnight::after {
     background-color: #F4AF60;
+}
+
+.theme-swatch-midnight {
+    background-color: #000000;
+    color: #FBFAF8;
+    box-shadow: inset 0 0 0 1px rgb(251 250 248 / 0.14);
 }
 
 /* ==========================================================================
@@ -3434,6 +3480,14 @@ figure {
         order: 1;
     }
 
+    .header-device-switch:not([hidden]) {
+        display: none;
+    }
+
+    .hero-device-switch:not([hidden]) {
+        display: inline-flex;
+    }
+
     .theme-toggle {
         position: static;
         padding: 0;
@@ -3463,7 +3517,10 @@ figure {
         height: 1.25rem;
     }
 
-    .theme-option[aria-pressed="true"] {
+    /* One button that moves to the next theme: Light, Dark, Midnight, then Light again. */
+    :root:not([data-theme="light"], [data-theme="midnight"]) .theme-option:not([data-theme-option="midnight"]),
+    :root[data-theme="light"] .theme-option:not([data-theme-option="dark"]),
+    :root[data-theme="midnight"] .theme-option:not([data-theme-option="light"]) {
         display: none;
     }
 
@@ -3692,8 +3749,12 @@ figure {
         align-items: flex-start;
     }
 
+    .theme-swatches {
+        flex: none;
+        align-self: stretch;
+    }
+
     .theme-swatch {
-        width: 6.5rem;
         height: 4.5rem;
     }
 }

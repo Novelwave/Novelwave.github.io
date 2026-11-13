@@ -14,7 +14,7 @@
         // Theme switching still works when browser storage is unavailable.
     }
 
-    if (preference !== "light" && preference !== "dark") {
+    if (!["light", "dark", "midnight"].includes(preference)) {
         preference = null;
     }
 
@@ -25,9 +25,12 @@
             option.setAttribute("aria-pressed", String(option.dataset.themeOption === theme));
         });
 
-        // Sources default to the system theme in HTML, so only a manual override downloads the other variant.
+        // Sources default to the system theme in HTML, so only a manual override downloads the other
+        // variant. A picture with no Midnight shot (the watch's, CarPlay's) shows its dark one there.
         document.querySelectorAll("source[data-theme-source]").forEach((source) => {
-            source.media = source.dataset.themeSource === theme ? "all" : "not all";
+            const hasMidnight = source.parentElement.querySelector('source[data-theme-source="midnight"]');
+            const shown = theme === "midnight" && !hasMidnight ? "dark" : theme;
+            source.media = source.dataset.themeSource === shown ? "all" : "not all";
         });
 
         // Lets canvas-drawn parts of the page (the hero's dot grid) repaint in the new colors.
