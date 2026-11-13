@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Novelwave is an audiobook player for iPhone and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
+    <meta name="description" content="Novelwave is an audiobook player for iPhone, iPad and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
     <title>Novelwave: Your ultimate audiobook player</title>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Novelwave">
     <meta property="og:title" content="Novelwave: Your ultimate audiobook player">
-    <meta property="og:description" content="Novelwave is an audiobook player for iPhone and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
+    <meta property="og:description" content="Novelwave is an audiobook player for iPhone, iPad and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
     <meta property="og:url" content="https://www.novelwave.app/">
     <meta property="og:image" content="https://www.novelwave.app/images/social-card.png">
     <meta property="og:image:width" content="1200">
@@ -25,6 +25,7 @@
     <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="theme.js"></script>
+    <script src="device.js"></script>
     <script src="hero.js" defer></script>
     <script src="tour.js" defer></script>
 </head>
@@ -43,6 +44,7 @@
         <symbol id="icon-cloud-download" viewBox="0 0 24 24"><path d="M12 13v8l-4-4"/><path d="m12 21 4-4"/><path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"/></symbol>
         <symbol id="icon-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
         <symbol id="icon-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="3"/><path d="M12 18h.01"/></symbol>
+        <symbol id="icon-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
         <symbol id="icon-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
         <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
         <symbol id="icon-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
@@ -111,7 +113,7 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
                 <h1 class="hero-title" id="hero-title">Your <span class="accent">ultimate</span> audiobook player.</h1>
-                <p class="hero-lede">For iPhone and Apple Watch. Play the M4B, MP3 and Opus audiobooks you already own.</p>
+                <p class="hero-lede">For iPhone, iPad and Apple Watch. Play the M4B, MP3 and Opus audiobooks you already own.</p>
                 <div class="hero-actions">
                     <a class="app-store-button" href="https://apps.apple.com/app/id6720100886">
                         <picture>
@@ -122,21 +124,43 @@
                     <a class="tour-button" href="#tour">Take the tour</a>
                 </div>
             </div>
-            <div class="hero-devices">
-                <div class="device device-back">
+            <div class="hero-showcase">
+                <div class="hero-devices" data-only="iphone">
+                    <div class="device device-back">
+                        <picture>
+                            <source srcset="images/dark-device-back.avif 1x, images/dark-device-back@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/dark-device-back.png 1x, images/dark-device-back@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/light-device-back.avif 1x, images/light-device-back@2x.avif 2x" type="image/avif">
+                            <img class="device-image" src="images/light-device-back.png" srcset="images/light-device-back.png 1x, images/light-device-back@2x.png 2x" alt="The Novelwave player playing an audiobook" width="385" height="776" decoding="async">
+                        </picture>
+                    </div>
                     <picture>
-                        <source srcset="images/dark-device-back.avif 1x, images/dark-device-back@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                        <source srcset="images/dark-device-back.png 1x, images/dark-device-back@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                        <source srcset="images/light-device-back.avif 1x, images/light-device-back@2x.avif 2x" type="image/avif">
-                        <img class="device-image" src="images/light-device-back.png" srcset="images/light-device-back.png 1x, images/light-device-back@2x.png 2x" alt="The Novelwave player playing an audiobook" width="385" height="776" decoding="async">
+                        <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                        <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                        <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
+                        <img class="device device-front" src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="The Novelwave library listing audiobooks with their listening progress" width="385" height="776" fetchpriority="high">
                     </picture>
                 </div>
-                <picture>
-                    <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                    <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                    <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
-                    <img class="device device-front" src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="The Novelwave library listing audiobooks with their listening progress" width="385" height="776" fetchpriority="high">
-                </picture>
+                <div class="hero-devices hero-devices-ipad" data-only="ipad">
+                    <div class="device device-back">
+                        <picture>
+                            <source srcset="images/ipad/dark-player.avif 1x, images/ipad/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/dark-player.png 1x, images/ipad/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/light-player.avif 1x, images/ipad/light-player@2x.avif 2x" type="image/avif">
+                            <img class="device-image" src="images/ipad/light-player.png" srcset="images/ipad/light-player.png 1x, images/ipad/light-player@2x.png 2x" alt="The Novelwave player on iPad, with the cover of 1984 beside its chapters" width="1096" height="832" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <picture>
+                        <source srcset="images/ipad/dark-library-wide.avif 1x, images/ipad/dark-library-wide@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                        <source srcset="images/ipad/dark-library-wide.png 1x, images/ipad/dark-library-wide@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                        <source srcset="images/ipad/light-library-wide.avif 1x, images/ipad/light-library-wide@2x.avif 2x" type="image/avif">
+                        <img class="device device-front" src="images/ipad/light-library-wide.png" srcset="images/ipad/light-library-wide.png 1x, images/ipad/light-library-wide@2x.png 2x" alt="The Novelwave library on iPad, a grid of shelves and audiobook covers" width="1096" height="832" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="device-switch" role="group" aria-label="Show Novelwave on" data-device-switch hidden>
+                    <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
+                    <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
+                </div>
             </div>
             <a class="scroll-cue" href="#tour" aria-hidden="true" tabindex="-1">
                 <span class="scroll-cue-label">Scroll to begin</span>
@@ -181,7 +205,15 @@
                     </dl>
                 </div>
                 <div class="bento">
-                    <figure class="tile tile-device reveal">
+                    <figure class="tile tile-wide tile-tablet reveal" data-only="ipad">
+                        <picture>
+                            <source srcset="images/ipad/dark-shelf.avif 1x, images/ipad/dark-shelf@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/dark-shelf.png 1x, images/ipad/dark-shelf@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/light-shelf.avif 1x, images/ipad/light-shelf@2x.avif 2x" type="image/avif">
+                            <img src="images/ipad/light-shelf.png" srcset="images/ipad/light-shelf.png 1x, images/ipad/light-shelf@2x.png 2x" alt="" width="1096" height="832" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                    <figure class="tile tile-device reveal" data-only="iphone">
                         <picture>
                             <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
                             <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -264,7 +296,15 @@
                             </button>
                         </div>
                     </article>
-                    <figure class="tile tile-device reveal">
+                    <figure class="tile tile-wide tile-tablet reveal" data-only="ipad">
+                        <picture>
+                            <source srcset="images/ipad/dark-player.avif 1x, images/ipad/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/dark-player.png 1x, images/ipad/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/light-player.avif 1x, images/ipad/light-player@2x.avif 2x" type="image/avif">
+                            <img src="images/ipad/light-player.png" srcset="images/ipad/light-player.png 1x, images/ipad/light-player@2x.png 2x" alt="" width="1096" height="832" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                    <figure class="tile tile-device reveal" data-only="iphone">
                         <picture>
                             <source srcset="images/dark-device-player.avif 1x, images/dark-device-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
                             <source srcset="images/dark-device-player.png 1x, images/dark-device-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -585,7 +625,15 @@
                             </div>
                         </div>
                     </article>
-                    <figure class="tile tile-device reveal">
+                    <figure class="tile tile-wide tile-tablet reveal" data-only="ipad">
+                        <picture>
+                            <source srcset="images/ipad/dark-stats.avif 1x, images/ipad/dark-stats@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/dark-stats.png 1x, images/ipad/dark-stats@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                            <source srcset="images/ipad/light-stats.avif 1x, images/ipad/light-stats@2x.avif 2x" type="image/avif">
+                            <img src="images/ipad/light-stats.png" srcset="images/ipad/light-stats.png 1x, images/ipad/light-stats@2x.png 2x" alt="Listening Stats on iPad for one week: 1 hour 55 minutes, a bar for each day, and the week's books" width="1096" height="832" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+                    <figure class="tile tile-device reveal" data-only="iphone">
                         <picture>
                             <source srcset="images/gallery/dark-stats.avif 1x, images/gallery/dark-stats@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
                             <source srcset="images/gallery/dark-stats.png 1x, images/gallery/dark-stats@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -869,6 +917,10 @@
                         <h2 class="section-title" id="gallery-title">See it for <span class="accent">yourself</span>.</h2>
                     </div>
                     <div class="gallery-controls">
+                        <div class="device-switch" role="group" aria-label="Show screenshots for" data-device-switch hidden>
+                            <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
+                            <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
+                        </div>
                         <button class="round-button" type="button" data-gallery-previous aria-controls="gallery-track" aria-label="Previous screenshots">
                             <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
                         </button>
@@ -878,7 +930,7 @@
                     </div>
                 </div>
                 <ol class="gallery-track" id="gallery-track" role="list" aria-label="App screenshots" tabindex="0">
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-chapters.avif 1x, images/gallery/dark-chapters@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -889,7 +941,7 @@
                             <figcaption><strong>Chapters</strong>Jump straight to any chapter of the book.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-bookmarks.avif 1x, images/gallery/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -900,7 +952,7 @@
                             <figcaption><strong>Bookmarks</strong>Save a moment, with a note to remember it by.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-speed.avif 1x, images/gallery/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -911,7 +963,7 @@
                             <figcaption><strong>Speed controls</strong>Find your pace, anywhere from 0.5× to 6×.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-sleep.avif 1x, images/gallery/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -922,7 +974,7 @@
                             <figcaption><strong>Sleep timer</strong>From five minutes to the end of the file.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-search.avif 1x, images/gallery/dark-search@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -933,7 +985,7 @@
                             <figcaption><strong>Search</strong>Find any book in your library in a few letters.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-edit.avif 1x, images/gallery/dark-edit@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -944,7 +996,7 @@
                             <figcaption><strong>Edit Audiobook</strong>Titles, authors, descriptions and covers, your way.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-widgets.avif 1x, images/gallery/dark-widgets@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -955,7 +1007,7 @@
                             <figcaption><strong>Home Screen widgets</strong>Your book on the Home Screen, small or medium.</figcaption>
                         </figure>
                     </li>
-                    <li class="gallery-item">
+                    <li class="gallery-item" data-only="iphone">
                         <figure>
                             <picture class="gallery-shot">
                                 <source srcset="images/gallery/dark-settings.avif 1x, images/gallery/dark-settings@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
@@ -964,6 +1016,83 @@
                                 <img src="images/gallery/light-settings.png" srcset="images/gallery/light-settings.png 1x, images/gallery/light-settings@2x.png 2x" alt="The Profile tab, with Settings, Sources, storage tools and feedback options" width="385" height="776" loading="lazy" decoding="async">
                             </picture>
                             <figcaption><strong>Profile</strong>Settings, sources, storage and feedback, all in one place.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-library.avif 1x, images/ipad/dark-library@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-library.png 1x, images/ipad/dark-library@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-library.avif 1x, images/ipad/light-library@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-library.png" srcset="images/ipad/light-library.png 1x, images/ipad/light-library@2x.png 2x" alt="The library on iPad, with shelves in the sidebar and a grid of audiobook covers" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Library</strong>Your shelves in the sidebar, every cover in view.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-bookmarks.avif 1x, images/ipad/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-bookmarks.png 1x, images/ipad/dark-bookmarks@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-bookmarks.avif 1x, images/ipad/light-bookmarks@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-bookmarks.png" srcset="images/ipad/light-bookmarks.png 1x, images/ipad/light-bookmarks@2x.png 2x" alt="Five bookmarks in 1984 beside the Player on iPad, each with its time, its chapter and a note" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Bookmarks</strong>Notes and chapters sit right beside the Player.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-speed.avif 1x, images/ipad/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-speed.png 1x, images/ipad/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-speed.avif 1x, images/ipad/light-speed@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-speed.png" srcset="images/ipad/light-speed.png 1x, images/ipad/light-speed@2x.png 2x" alt="Speed Controls over Greenlights on iPad at 1.0×, with presets from 0.7× to 2.0×" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Speed controls</strong>Find your pace, anywhere from 0.5× to 6×.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-sleep.avif 1x, images/ipad/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-sleep.png 1x, images/ipad/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-sleep.avif 1x, images/ipad/light-sleep@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-sleep.png" srcset="images/ipad/light-sleep.png 1x, images/ipad/light-sleep@2x.png 2x" alt="The sleep timer menu over The Song of Achilles on iPad, from End of Chapter down to 5 minutes" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Sleep timer</strong>From five minutes to the end of the file.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-search.avif 1x, images/ipad/dark-search@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-search.png 1x, images/ipad/dark-search@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-search.avif 1x, images/ipad/light-search@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-search.png" srcset="images/ipad/light-search.png 1x, images/ipad/light-search@2x.png 2x" alt="Search results for “The” on iPad: three shelves and eighteen audiobooks" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Search</strong>Shelves and books, found in a few letters.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-edit.avif 1x, images/ipad/dark-edit@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-edit.png 1x, images/ipad/dark-edit@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-edit.avif 1x, images/ipad/light-edit@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-edit.png" srcset="images/ipad/light-edit.png 1x, images/ipad/light-edit@2x.png 2x" alt="Edit Audiobook for 1984 on iPad, with its cover, details and description" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Edit Audiobook</strong>Titles, authors, descriptions and covers, your way.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
+                        <figure>
+                            <picture class="gallery-shot">
+                                <source srcset="images/ipad/dark-settings.avif 1x, images/ipad/dark-settings@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/dark-settings.png 1x, images/ipad/dark-settings@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                                <source srcset="images/ipad/light-settings.avif 1x, images/ipad/light-settings@2x.avif 2x" type="image/avif">
+                                <img src="images/ipad/light-settings.png" srcset="images/ipad/light-settings.png 1x, images/ipad/light-settings@2x.png 2x" alt="The Profile tab on iPad, with Settings open beside it" width="1096" height="832" loading="lazy" decoding="async">
+                            </picture>
+                            <figcaption><strong>Profile</strong>Settings, sources, storage and feedback, side by side.</figcaption>
                         </figure>
                     </li>
                 </ol>
@@ -982,7 +1111,7 @@
                         </picture>
                     </a>
                 </div>
-                <p class="epilogue-note">For iPhone and Apple Watch. Requires iOS 17 or watchOS 11 or later.</p>
+                <p class="epilogue-note">For iPhone, iPad and Apple Watch. Requires iOS 17, iPadOS 17 or watchOS 11 or later.</p>
             </div>
         </section>
     </main>

@@ -294,7 +294,8 @@
         const behavior = () => (reducedMotion.matches ? "auto" : "smooth");
 
         function itemSpan() {
-            const item = track.querySelector(".gallery-item");
+            // The first one shown: the other device's screenshots are hidden.
+            const item = [...track.querySelectorAll(".gallery-item")].find((candidate) => candidate.offsetParent);
             const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
             return item ? item.getBoundingClientRect().width + gap : track.clientWidth;
         }
@@ -312,6 +313,10 @@
         next.addEventListener("click", () => track.scrollBy({ left: itemSpan(), behavior: behavior() }));
         track.addEventListener("scroll", updateButtons, { passive: true });
         window.addEventListener("resize", updateButtons);
+        document.addEventListener("novelwave:devicechange", () => {
+            track.scrollLeft = 0;
+            updateButtons();
+        });
         updateButtons();
 
         let drag = null;

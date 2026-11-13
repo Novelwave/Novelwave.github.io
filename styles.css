@@ -447,6 +447,64 @@ figure {
         scale 250ms var(--ease-out-expo);
 }
 
+/* data-device on the root (device.js) picks whose screenshots show: iPhone's or iPad's. */
+:root:not([data-device="ipad"]) [data-only="ipad"],
+:root[data-device="ipad"] [data-only="iphone"] {
+    display: none !important;
+}
+
+.hero-showcase {
+    display: grid;
+    justify-items: center;
+    row-gap: 2rem;
+}
+
+/* Matches the site's segmented controls, with buttons in place of radios since the choice
+   reaches beyond one demo: every showcase on the page follows it. */
+.device-switch {
+    display: inline-flex;
+    padding: 0.25rem;
+    border-radius: 999px;
+    background-color: var(--fill);
+    transition: background-color var(--theme-transition);
+}
+
+.device-switch[hidden] {
+    display: none;
+}
+
+.device-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4375rem;
+    padding: 0.5625rem 1rem;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        background-color var(--theme-transition),
+        color var(--theme-transition),
+        box-shadow var(--theme-transition),
+        scale 250ms var(--ease-out-expo);
+}
+
+.device-option .icon {
+    width: 1.0625rem;
+    height: 1.0625rem;
+}
+
+.device-option[aria-pressed="true"] {
+    background-color: var(--surface);
+    color: var(--foreground);
+    box-shadow: var(--toggle-shadow);
+}
+
+.device-option:focus-visible {
+    outline-offset: 2px;
+}
+
 /* --pointer-x and --pointer-y (-1 to 1) are set by hero.js; without it they fall back to a resting 0. */
 .hero-devices {
     --device-aspect-ratio: calc(385 / 776);
@@ -456,11 +514,13 @@ figure {
     /* Nudges the devices down, clear of the header's navigation. They're centered, so their height
        budget gives up twice the shift to keep their bottom edge from moving closer to the fold. */
     --hero-devices-shift: 1.5rem;
+    /* The device switch and its gap, below the devices. */
+    --hero-switch-space: 4.75rem;
     position: relative;
     inset-block-start: var(--hero-devices-shift);
     width: min(
         24.0625rem * var(--device-group-span),
-        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift)) * var(--device-aspect-ratio) * var(--device-group-span),
+        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift) - var(--hero-switch-space)) * var(--device-aspect-ratio) * var(--device-group-span),
         40vw
     );
     transform:
@@ -495,6 +555,18 @@ figure {
 .device-image {
     width: 100%;
     height: auto;
+}
+
+/* Two landscape iPads: the Player behind and to the right of the library. */
+.hero-devices-ipad {
+    --device-aspect-ratio: calc(1096 / 832);
+    --back-device-offset: 0.5;
+    --back-device-scale: 0.82;
+    width: min(
+        34rem * var(--device-group-span),
+        (100svh - 2 * var(--hero-padding-block) - 2 * var(--hero-devices-shift) - var(--hero-switch-space)) * var(--device-aspect-ratio) * var(--device-group-span),
+        50vw
+    );
 }
 
 /* A desktop-only hint below the fold line; its dot travels like the ones in the tour demos. */
@@ -791,6 +863,20 @@ figure {
     width: min(78%, 17rem);
     height: auto;
     transform: translateX(-50%);
+}
+
+/* The iPad rises from the bottom edge like the iPhone in .tile-device, its lowest strip cropped. */
+.tile-tablet {
+    display: block;
+    padding: 2.5rem 2.5rem 0;
+    background-image: radial-gradient(120% 80% at 50% 0%, var(--accent-soft), transparent 70%);
+}
+
+.tile-tablet img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-block-end: -8%;
 }
 
 /* ==========================================================================
@@ -2284,7 +2370,12 @@ figure {
 
 .gallery-controls {
     display: flex;
+    align-items: center;
     gap: 0.75rem;
+}
+
+.gallery-controls .device-switch {
+    margin-inline-end: 0.75rem;
 }
 
 .round-button:disabled {
@@ -2323,6 +2414,14 @@ figure {
 
 .gallery-item {
     scroll-snap-align: start;
+}
+
+:root[data-device="ipad"] .gallery-track {
+    grid-auto-columns: clamp(20rem, 38vw, 32rem);
+}
+
+.gallery-item-ipad .gallery-shot {
+    aspect-ratio: 1096 / 832;
 }
 
 .gallery-item figure {
@@ -3056,7 +3155,8 @@ figure {
         scale: 1.08;
     }
 
-    .segmented input:not(:checked) + label:hover {
+    .segmented input:not(:checked) + label:hover,
+    .device-option[aria-pressed="false"]:hover {
         scale: 1.04;
     }
 
@@ -3117,6 +3217,7 @@ figure {
 }
 
 .segmented label:active,
+.device-option:active,
 .scroll-cue:active,
 .release-badge:active {
     scale: 0.96;
@@ -3409,6 +3510,10 @@ figure {
         grid-auto-columns: min(68vw, 16rem);
     }
 
+    :root[data-device="ipad"] .gallery-track {
+        grid-auto-columns: min(84vw, 26rem);
+    }
+
     .hero {
         grid-template-columns: minmax(0, 1fr);
         row-gap: 4rem;
@@ -3428,10 +3533,18 @@ figure {
         justify-content: center;
     }
 
+    .hero-showcase {
+        justify-self: stretch;
+    }
+
     .hero-devices {
         --hero-devices-shift: 0rem;
         justify-self: center;
         width: min(20.5rem * var(--device-group-span), 85%);
+    }
+
+    .hero-devices-ipad {
+        width: min(30rem * var(--device-group-span), 92%);
     }
 
     .tour-intro,
@@ -3505,6 +3618,10 @@ figure {
         grid-row: auto;
         min-height: 26rem;
         padding: 0;
+    }
+
+    .tile-tablet {
+        padding: 1.5rem 1.25rem 0;
     }
 
     .contents-list a {
