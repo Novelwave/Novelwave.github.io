@@ -57,7 +57,7 @@
             <p class="eyebrow">Roadmap</p>
             <h1 class="section-title">Where Novelwave is <span class="accent">headed</span></h1>
             <p class="lede">Choose a stop on the map to see what's in it. There are no dates, and plans can change as we learn what listeners need most.</p>
-            <p class="page-meta">Last updated November 10, 2026</p>
+            <p class="page-meta">Last updated November 13, 2026</p>
         </header>
 
         <ol class="roadmap" aria-label="Versions">
@@ -244,55 +244,35 @@
                                 <li><span class="roadmap-change-title">Search keeps up.</span> Results always match what you typed last.</li>
                                 <li><span class="roadmap-change-title">Covers stay crisp.</span> Editing a book's details no longer re-saves its cover.</li>
                                 <li><span class="roadmap-change-title">Finished stays finished.</span> Listening to a book again keeps its finish in your stats.</li>
+                                <li><span class="roadmap-change-title">Keeps playing in the background.</span> Audiobooks with chapter images no longer pause when you leave Novelwave or lock your iPhone.</li>
+                                <li><span class="roadmap-change-title">No false finishes.</span> A file that stops short of its end keeps your place instead of marking the audiobook finished.</li>
+                                <li><span class="roadmap-change-title">Chapters open where you are.</span> The chapter list opens on the chapter you're playing, and the whole row takes a tap.</li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </li>
             <li class="roadmap-stop is-patch is-current">
-                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2-1" data-open-by-default>
-                    <span class="roadmap-dot" aria-hidden="true"></span>
-                    <span class="roadmap-stop-label">
-                        <span class="roadmap-version">3.2.1</span>
-                        <span class="roadmap-status">Available now</span>
-                    </span>
-                </button>
-                <p class="roadmap-summary">Steadier playback in the background, and chapters that open where you are.</p>
-                <div class="tile roadmap-changelog" id="changelog-3-2-1" role="region" aria-labelledby="changelog-3-2-1-title">
-                    <h2 class="tile-title" id="changelog-3-2-1-title">What's new in Novelwave 3.2.1</h2>
-                    <div class="roadmap-groups">
-                        <section class="roadmap-group">
-                            <h3>Fixes</h3>
-                            <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Keeps playing in the background.</span> Audiobooks with chapter images no longer pause when you leave Novelwave, and their files stay readable while your iPhone is locked.</li>
-                                <li><span class="roadmap-change-title">No false finishes.</span> A file that stops short of its end keeps your place and says so, instead of marking the audiobook finished.</li>
-                                <li><span class="roadmap-change-title">Chapters open where you are.</span> The chapter list opens on the chapter you're playing, and the whole row takes a tap.</li>
-                                <li><span class="roadmap-change-title">App icons on iPad.</span> Choosing an app icon now works when Novelwave runs on an iPad.</li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </li>
-            <li class="roadmap-stop is-patch">
-                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2-2">
+                <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2-2" data-open-by-default>
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
                         <span class="roadmap-version">3.2.2</span>
-                        <span class="roadmap-status">Coming soon</span>
+                        <span class="roadmap-status">Available now</span>
                     </span>
                 </button>
-                <p class="roadmap-summary">Ready for iOS 27.2, a library that always opens, and your place kept when you leave.</p>
+                <p class="roadmap-summary">Crash fixes, and your library and your place in every book kept safe.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-2-2" role="region" aria-labelledby="changelog-3-2-2-title">
-                    <h2 class="tile-title" id="changelog-3-2-2-title">Coming in Novelwave 3.2.2</h2>
+                    <h2 class="tile-title" id="changelog-3-2-2-title">What's new in Novelwave 3.2.2</h2>
                     <div class="roadmap-groups">
                         <section class="roadmap-group">
                             <h3>Fixes</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Ready for iOS 27.2.</span> Novelwave no longer crashes when iCloud syncs on the iOS 27.2 betas.</li>
-                                <li><span class="roadmap-change-title">Always opens.</span> A library from an older version that can't be fully brought across no longer keeps Novelwave from starting, and an iPhone too full to open your library gets a screen that says so, with your library left safe.</li>
-                                <li><span class="roadmap-change-title">Your place, kept.</span> Leaving the app saves where you are, so closing Novelwave mid-listen no longer loses the last half-minute.</li>
-                                <li><span class="roadmap-change-title">Skips that stay put.</span> Long Ogg and variable-bitrate MP3 audiobooks get their true length when they play, so skipping near the end no longer throws you back minutes.</li>
-                                <li><span class="roadmap-change-title">No crash on a broken length.</span> A file that reports an impossible length no longer crashes the Library.</li>
+                                <li><span class="roadmap-change-title">Ready for iOS 27.2.</span> Novelwave no longer crashes right after opening with iCloud turned on, on early iOS 27.2 betas.</li>
+                                <li><span class="roadmap-change-title">Your place, kept.</span> Your place in a book is saved as soon as you leave the app.</li>
+                                <li><span class="roadmap-change-title">Skips that stay put.</span> Long Ogg and MP3 audiobooks whose length was set too short get their true length, so skipping near the end no longer jumps you back several minutes.</li>
+                                <li><span class="roadmap-change-title">Your old library, brought across.</span> Bringing over a library from the previous version of Novelwave no longer gets stuck. If it can't finish, try again, or continue and pick it up later.</li>
+                                <li><span class="roadmap-change-title">Room to open.</span> If your iPhone is too full to open your library, Novelwave asks you to free up space instead of crashing, and your library stays where it is.</li>
+                                <li><span class="roadmap-change-title">Fewer crashes.</span> No more crashes in the Library when an audiobook has a broken length, or in the background after restarting your iPhone.</li>
                             </ul>
                         </section>
                     </div>
@@ -306,7 +286,7 @@
                         <span class="roadmap-status">Beta testing</span>
                     </span>
                 </button>
-                <p class="roadmap-summary">Novelwave on iPad, easier imports, private shelves, autoplay, larger widgets, a true-black Midnight theme, and seven more languages.</p>
+                <p class="roadmap-summary">Novelwave on iPad, simpler imports, hidden shelves, a new Player on Apple Watch, a true-black Midnight theme, and seven more languages.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-3" role="region" aria-labelledby="changelog-3-3-title">
                     <h2 class="tile-title" id="changelog-3-3-title">Coming in Novelwave 3.3</h2>
                     <div class="roadmap-groups">
@@ -323,37 +303,36 @@
                         <section class="roadmap-group">
                             <h3>Bringing books in</h3>
                             <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">Importing, simplified.</span> Everything happens on one screen: choose whether your files become one book or several, and check each book's title, author and cover before saving. New books are highlighted in your library once they're in.</li>
+                                <li><span class="roadmap-change-title">A new iCloud Drive browser.</span> Pick files and folders together, search every folder at once, and sort the list. Each folder you pick becomes its own book.</li>
                                 <li><span class="roadmap-change-title">Drop files in.</span> Drop audio files or whole folders onto your library on iPhone or iPad to import them.</li>
                                 <li><span class="roadmap-change-title">Whole folders from Files.</span> Choose folders in the import menu, not just files.</li>
-                                <li><span class="roadmap-change-title">Books sorted out for you.</span> A folder becomes one audiobook, or one per subfolder or album when it holds several, listed in series order.</li>
-                                <li><span class="roadmap-change-title">iCloud Drive, rebuilt.</span> Browse every folder, choose folders and files together, search them all and sort the list, with each file's size and date.</li>
-                                <li><span class="roadmap-change-title">Connect as you go.</span> Import from iCloud Drive before connecting it, and Novelwave connects it on the spot instead of sending you to Sources.</li>
-                                <li><span class="roadmap-change-title">See where they landed.</span> The Library scrolls to what you just imported and highlights it for a moment.</li>
+                            </ul>
+                        </section>
+                        <section class="roadmap-group">
+                            <h3>On your wrist</h3>
+                            <ul class="roadmap-changes">
+                                <li><span class="roadmap-change-title">A new Player on Apple Watch.</span> Laid out like Now Playing, over your cover's own colors. Turn the volume with the Digital Crown, swipe left for the sleep timer, speed, chapters and bookmarks, and see the chapter playing in a complication.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>While you listen</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Autoplay next book.</span> When a book ends, the next one on the same shelf starts playing. Turn it on in Settings.</li>
+                                <li><span class="roadmap-change-title">Autoplay next book.</span> When a book ends, the next one on its shelf or in Library starts playing. Turn it on in Settings.</li>
+                                <li><span class="roadmap-change-title">Stats that outlast a book.</span> Delete a book and its listening time stays in Stats, where you can still edit its details.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>Kept private</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Private shelves.</span> Hide a shelf behind Face ID. Its audiobooks stay out of search, Stats, Siri, Spotlight, CarPlay, widgets and the watch, and show as “Private Audiobook” on the Lock Screen.</li>
-                            </ul>
-                        </section>
-                        <section class="roadmap-group">
-                            <h3>On your Home Screen</h3>
-                            <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Larger widgets.</span> A large Now Playing widget on iPhone and iPad, and an extra-large one on iPad, with the rest of the books you're listening to beside it.</li>
+                                <li><span class="roadmap-change-title">Hidden shelves.</span> Hide a shelf behind Face ID, Touch ID or your passcode. Its books stay out of Search, Stats, widgets, CarPlay and Apple Watch, and show as Private Audiobook on the Lock Screen.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>Make it yours</h3>
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Midnight.</span> A true-black theme beside Light and Dark, which OLED screens draw with their pixels off.</li>
-                                <li><span class="roadmap-change-title">Grid or list.</span> Show your shelves as a grid of covers or as a list, on iPhone or iPad.</li>
+                                <li><span class="roadmap-change-title">Grid or list.</span> Show your shelves as a grid of covers or as a list, on iPhone too. Pick one from a shelf's More menu.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
