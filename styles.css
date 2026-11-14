@@ -1615,23 +1615,22 @@ figure {
     background-image: radial-gradient(90% 60% at 50% 100%, var(--accent-soft), transparent 70%);
 }
 
-/* Three watches, the Player in front and a little lower, like the hero's devices. */
+/* The watch's screens in the order you'd reach them, four to a row with the last row centered. */
 .watch-devices {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 11rem));
+    --watch-gap: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.5rem var(--watch-gap);
     margin-block-start: 1.5rem;
 }
 
 .watch-device {
     display: grid;
+    flex: 0 0 min(8.5rem, (100% - var(--watch-gap) * 3) / 4);
     gap: 0.5rem;
+    align-content: start;
     justify-items: center;
-}
-
-.watch-device:nth-child(2) {
-    margin-block-start: 2.5rem;
 }
 
 .watch-device img {
@@ -3663,12 +3662,27 @@ figure {
         margin-block-start: 1.5rem;
     }
 
+    /* On a phone the watches scroll sideways from edge to edge of the tile. */
     .watch-devices {
-        gap: 0.5rem;
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap: 1rem;
+        margin-inline: -1.5rem;
+        padding-inline: 1.5rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-padding-inline: 1.5rem;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
     }
 
-    .watch-device:nth-child(2) {
-        margin-block-start: 1.5rem;
+    .watch-devices::-webkit-scrollbar {
+        display: none;
+    }
+
+    .watch-device {
+        flex: 0 0 8.5rem;
+        scroll-snap-align: start;
     }
 
     .tile-device {
