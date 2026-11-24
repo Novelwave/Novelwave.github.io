@@ -934,23 +934,21 @@ body::before {
     align-content: start;
 }
 
-/* Cropped to the watch itself: the bands fade to grey, which reads as a smudge on the espresso.
-   A straight crop still leaves a strip of band above and below the case and in its rounded
-   corners, so the mask follows the case's squircle outline (keeping the crown and side button),
-   in the crop's own 268 × 300 units. */
+/* Cropped to the watch and a short run of band above and below its case, which fades out (the
+   band's own ends fade to grey, which reads as a smudge on the espresso). The capture is 268 × 484;
+   the crop keeps rows 50 to 435, and the case (rows 92 to 392) stays whole inside the fade. */
 .watches picture {
-    --case-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 268 300' preserveAspectRatio='none'%3E%3Cpath d='M2.5 55.5C2.5 11.3 10.3 3.5 54.5 3.5H204.5C248.7 3.5 256.5 11.3 256.5 55.5V246C256.5 285.1 249.9 292 212.5 292H46.5C9.1 292 2.5 285.1 2.5 246Z'/%3E%3Crect x='248' y='58' width='20' height='170'/%3E%3C/svg%3E");
     display: block;
     width: 100%;
-    aspect-ratio: 268 / 300;
+    aspect-ratio: 268 / 385;
     overflow: hidden;
-    -webkit-mask: var(--case-mask) center / 100% 100% no-repeat;
-    mask: var(--case-mask) center / 100% 100% no-repeat;
+    -webkit-mask: linear-gradient(transparent, #000 10%, #000 90%, transparent);
+    mask: linear-gradient(transparent, #000 10%, #000 90%, transparent);
 }
 
 .watches img {
     width: 100%;
-    margin-block-start: -34.7%;
+    margin-block-start: -18.66%;
 }
 
 .watches figcaption {
@@ -1026,14 +1024,16 @@ picture.leans {
     }
 }
 
-/* The capture is 800 px wide, so the frame stays near its size (32rem) and keeps it sharp. */
+/* The capture is 800 px wide, so the frame stays near its size (32rem) and keeps it sharp. Its
+   corners are rounded like the car's display, in pure black, so the bezel is pure black too and
+   they disappear into it. */
 .car-screen {
     justify-self: end;
     width: 100%;
     max-width: 32rem;
     padding: 1.25rem;
     border-radius: 1.5rem;
-    background-color: #0E0C0A;
+    background-color: #000;
     box-shadow: 0 30px 60px -30px rgb(29 25 21 / 0.5), inset 0 0 0 1px rgb(255 255 255 / 0.06);
 }
 
