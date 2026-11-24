@@ -12,7 +12,8 @@ loose text around them, and the alt, aria-label, title, data-chapter and meta te
 card and current language link. It also gives every App Store link, the Smart App Banner and the
 QR codes a campaign token of their own per language (ct=web-de-hero), redrawing each QR code for
 its new URL; drawn codes are kept in qr-codes.json, and a new one is drawn with qr.swift (macOS).
-Where `images/<folder>/` holds a screenshot taken in that language (an AVIF copy only), the
+Apple's App Store badge in the language, from images/badges/download-<folder>.svg, replaces the
+English one wherever the page shows it. Where `images/<folder>/` holds a screenshot taken in that language (an AVIF copy only), the
 page's AVIF sources use it; the English PNGs stay as the fallback.
 It marks links to the English-only subpages and guides hreflang="en", writes the App Store rating
 in the language's number format, and gives the app's structured data the translated description.
@@ -161,6 +162,20 @@ def localize_shots(page, folder):
     return page
 
 
+def localize_badge(page, folder):
+    """Swaps the English App Store badge for Apple's badge in this language, where there is one,
+    with the width its wording needs (French runs longer) at the same 40 px height."""
+    badge = SITE / "images" / "badges" / f"download-{folder}.svg"
+    if not badge.exists():
+        return page
+    width = round(float(re.search(r'viewBox="0 0 ([\d.]+) 40"', badge.read_text()).group(1)))
+    return re.sub(
+        r'<img src="\.\./images/download_light\.svg"([^>]*?) width="\d+" height="40"',
+        lambda m: f'<img src="../images/badges/download-{folder}.svg"{m.group(1)} width="{width}" height="40"',
+        page,
+    )
+
+
 def qr_code(url, codes):
     """The `viewBox|path` drawing of a QR code for url, drawn once and then kept in qr-codes.json."""
     if url not in codes:
@@ -280,6 +295,7 @@ def build():
 
         page = relocate(page)
         page = localize_shots(page, folder)
+        page = localize_badge(page, folder)
         page = page.replace('<html lang="en" data-page="home">', f'<html lang="{language}" data-page="home">')
         page = page.replace(
             '<link rel="canonical" href="https://www.novelwave.app/">',
