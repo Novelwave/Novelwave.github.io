@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it" data-page="home">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Ascolta offline su iPhone, iPad, Apple Watch e CarPlay gli audiolibri M4B, MP3 e Opus senza DRM che possiedi, con scaffali, capitoli, segnalibri e sincronizzazione iCloud.">
+    <title>Lettore di audiolibri M4B e MP3 per iPhone, iPad e Apple Watch · Novelwave</title>
+    <link rel="canonical" href="https://www.novelwave.app/it/">
+    <link rel="alternate" hreflang="en" href="https://www.novelwave.app/">
+    <link rel="alternate" hreflang="de" href="https://www.novelwave.app/de/">
+    <link rel="alternate" hreflang="es" href="https://www.novelwave.app/es/">
+    <link rel="alternate" hreflang="fr" href="https://www.novelwave.app/fr/">
+    <link rel="alternate" hreflang="it" href="https://www.novelwave.app/it/">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.novelwave.app/pt-br/">
+    <link rel="alternate" hreflang="ro" href="https://www.novelwave.app/ro/">
+    <link rel="alternate" hreflang="ru" href="https://www.novelwave.app/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://www.novelwave.app/">
+    <meta name="theme-color" content="#221C16">
+    <meta name="apple-itunes-app" content="app-id=6720100886, affiliate-data=pt=122786304&amp;ct=web-it-banner">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Novelwave">
+    <meta property="og:title" content="Novelwave: per gli audiolibri che hai già">
+    <meta property="og:description" content="Ascolta offline su iPhone, iPad, Apple Watch e CarPlay gli audiolibri M4B, MP3 e Opus senza DRM che possiedi, con scaffali, capitoli, segnalibri e sincronizzazione iCloud.">
+    <meta property="og:url" content="https://www.novelwave.app/it/">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ro_RO">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:image" content="https://www.novelwave.app/images/social-card-it.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Novelwave su iPhone, con la scritta Per gli audiolibri che hai già">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="../images/favicon-16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../images/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../images/favicon-96.png" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../theme.js"></script>
+    <script src="../hero.js" defer></script>
+    <script src="../gallery.js" defer></script>
+    <script src="../home.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            { "@type": "WebSite", "name": "Novelwave", "url": "https://www.novelwave.app/" },
+            { "@type": "Organization", "name": "Novelwave", "url": "https://www.novelwave.app/", "logo": "https://www.novelwave.app/images/icon-512.png", "sameAs": ["https://apps.apple.com/app/id6720100886"] },
+            { "@type": "MobileApplication", "name": "Novelwave", "url": "https://www.novelwave.app/", "installUrl": "https://apps.apple.com/app/id6720100886", "image": "https://www.novelwave.app/images/icon-512.png", "description": "Ascolta offline su iPhone, iPad, Apple Watch e CarPlay gli audiolibri M4B, MP3 e Opus senza DRM che possiedi, con scaffali, capitoli, segnalibri e sincronizzazione iCloud.", "operatingSystem": "iOS 17, iPadOS 17, watchOS 11", "applicationCategory": "MultimediaApplication", "inLanguage": ["en", "de", "es", "fr", "it", "pt-BR", "ro", "ru"], "author": { "@type": "Person", "name": "Mihai Petrenco" } }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <svg class="icon-sprite" aria-hidden="true">
+        <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+        <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+        <symbol id="icon-chapters" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="2.6"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M8 5.5v13M16 5.5v13" stroke-width="3"/></symbol>
+    </svg>
+
+    <canvas class="dot-grid" aria-hidden="true"></canvas>
+
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="site-title" href="./"><img src="../images/favicon-96.png" alt="" width="32" height="32"><span>Novelwave</span></a>
+            <nav aria-label="Principale">
+                <ul class="header-links">
+                    <li><a href="../roadmap.html" hreflang="en"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
+                    <li><a href="../support.html" hreflang="en"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Support</a></li>
+                </ul>
+            </nav>
+            <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-it-header&amp;mt=8"><img src="../images/download_light.svg" alt="Scarica su App Store" width="120" height="40"></a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-kicker">Lettore di audiolibri per iPhone, iPad e Apple&nbsp;Watch</p>
+                    <h1 class="display hero-title" id="hero-title">Per gli audiolibri che hai&nbsp;già.</h1>
+                    <p class="lede">Riproduci i tuoi file di audiolibri M4B, MP3 e non solo, senza DRM, con i loro capitoli, e riprendi da dove eri rimasto su ogni dispositivo.</p>
+                    <div class="hero-actions">
+                        <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-it-hero&amp;mt=8"><img src="../images/download_light.svg" alt="Scarica su App Store" width="120" height="40"></a>
+                        <!-- data-app-rating-total keeps the worldwide count out of sight for the daily update's safeguard (.github/scripts/rating_format.py). -->
+                        <p class="rating"><span class="rating-star" aria-hidden="true">★</span> <strong data-app-rating-total="179" data-app-rating>4,8</strong> su App&nbsp;Store</p>
+                    </div>
+                </div>
+                <div class="hero-art">
+                    <div class="hero-devices">
+                        <picture class="device device-back">
+                            <source srcset="../images/it/dark-device-back.avif 1x, ../images/it/dark-device-back@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/dark-device-back.png 1x, ../images/dark-device-back@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/light-device-back.avif 1x, ../images/it/light-device-back@2x.avif 2x" type="image/avif">
+                            <img src="../images/light-device-back.png" srcset="../images/light-device-back.png 1x, ../images/light-device-back@2x.png 2x" alt="Il player di Novelwave mentre riproduce 1984, con il capitolo, il tempo rimanente e i controlli di riproduzione" width="385" height="776" fetchpriority="high">
+                        </picture>
+                        <picture class="device device-front">
+                            <source srcset="../images/it/dark-device-front.avif 1x, ../images/it/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/dark-device-front.png 1x, ../images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/light-device-front.avif 1x, ../images/it/light-device-front@2x.avif 2x" type="image/avif">
+                            <img src="../images/light-device-front.png" srcset="../images/light-device-front.png 1x, ../images/light-device-front@2x.png 2x" alt="La libreria di Novelwave, con i libri che stai ascoltando e quanto manca a ciascuno" width="385" height="776" fetchpriority="high">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section how" id="how" aria-labelledby="how-title" data-chapter="Come funziona">
+            <div class="container">
+                <h2 class="section-title section-title-small" id="how-title"><span class="eyebrow">Come funziona</span> Porta i tuoi audiolibri.</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>Procurati i file</h3>
+                        <p>Audiolibri senza DRM da negozi come Libro.fm e Downpour, CD che hai digitalizzato o classici di pubblico dominio da LibriVox.</p>
+                    </li>
+                    <li>
+                        <h3>Importali</h3>
+                        <p>Da File, iCloud Drive, AirDrop o <a href="../m4b-player-iphone.html" hreflang="en">un computer</a>. Un libro in più parti diventa uno solo.</p>
+                    </li>
+                    <li>
+                        <h3>Ascolta ovunque</h3>
+                        <p>Il punto in cui sei, gli scaffali e i segnalibri ti seguono su iPad, Apple Watch e in auto tramite il tuo iCloud. Nessun account, nessun server.</p>
+                    </li>
+                </ol>
+                <p class="steps-note">Riproduce M4B, M4A, MP3, AAC, FLAC, WAV, AIFF, Ogg Opus e MP4. I file AAX di Audible si ascoltano solo nell’app di Audible.</p>
+            </div>
+        </section>
+
+        <section class="section player band" id="player" aria-labelledby="player-title" data-chapter="Player">
+            <div class="container">
+                <h2 class="section-title" id="player-title"><span class="eyebrow">Player</span> Fatto per i libri lunghi.</h2>
+                <ul class="phones" role="list">
+                    <li>
+                        <picture>
+                            <source srcset="../images/it/gallery/dark-chapters.avif 1x, ../images/it/gallery/dark-chapters@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/gallery/dark-chapters.png 1x, ../images/gallery/dark-chapters@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/gallery/light-chapters.avif 1x, ../images/it/gallery/light-chapters@2x.avif 2x" type="image/avif">
+                            <img src="../images/gallery/light-chapters.png" srcset="../images/gallery/light-chapters.png 1x, ../images/gallery/light-chapters@2x.png 2x" alt="Il player su The Alchemist, in «Part One», con i pulsanti che saltano da un capitolo all’altro e una barra a un terzo del capitolo" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Capitoli</h3>
+                        <p>Salta da un capitolo all’altro e vedi a che punto sei di ognuno. L’elenco completo è a un tocco.</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="../images/it/gallery/dark-speed.avif 1x, ../images/it/gallery/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/gallery/dark-speed.png 1x, ../images/gallery/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/gallery/light-speed.avif 1x, ../images/it/gallery/light-speed@2x.avif 2x" type="image/avif">
+                            <img src="../images/gallery/light-speed.png" srcset="../images/gallery/light-speed.png 1x, ../images/gallery/light-speed@2x.png 2x" alt="Controlli velocità aperti su Greenlights a 1,0×, con il tempo che serve per finire il libro e le velocità predefinite da 0,7× a 2,0×" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Velocità</h3>
+                        <p>Da 0,5× a 6× a passi di 0,05, con il tempo che resta a ogni velocità.</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="../images/it/gallery/dark-sleep.avif 1x, ../images/it/gallery/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/gallery/dark-sleep.png 1x, ../images/gallery/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/gallery/light-sleep.avif 1x, ../images/it/gallery/light-sleep@2x.avif 2x" type="image/avif">
+                            <img src="../images/gallery/light-sleep.png" srcset="../images/gallery/light-sleep.png 1x, ../images/gallery/light-sleep@2x.png 2x" alt="Il menu del timer di spegnimento su The Song of Achilles, da Fine del capitolo fino a 5 minuti" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Timer di spegnimento</h3>
+                        <p>Da cinque minuti alla fine del capitolo, con il conto alla rovescia sulla schermata di&nbsp;blocco.</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="../images/it/gallery/dark-bookmarks.avif 1x, ../images/it/gallery/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/gallery/dark-bookmarks.png 1x, ../images/gallery/dark-bookmarks@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/gallery/light-bookmarks.avif 1x, ../images/it/gallery/light-bookmarks@2x.avif 2x" type="image/avif">
+                            <img src="../images/gallery/light-bookmarks.png" srcset="../images/gallery/light-bookmarks.png 1x, ../images/gallery/light-bookmarks@2x.png 2x" alt="Il player su They Both Die at the End conferma un segnalibro appena salvato, con i pulsanti per aggiungere una nota o vedere i segnalibri" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Segnalibri</h3>
+                        <p>Salva un momento con un tocco, e una nota per ricordare perché.</p>
+                    </li>
+                </ul>
+                <p class="phones-note">In più, salti da 5 a 45 secondi, un breve riavvolgimento quando metti in pausa e una riproduzione che riprende dopo chiamate e sveglie.</p>
+            </div>
+        </section>
+
+        <section class="section" id="library" aria-labelledby="library-title" data-chapter="Libreria">
+            <div class="container split">
+                <div class="library-showcase reveal">
+                    <picture>
+                        <source srcset="../images/it/ipad/dark-library-wide.avif 1x, ../images/it/ipad/dark-library-wide@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                        <source srcset="../images/ipad/dark-library-wide.png 1x, ../images/ipad/dark-library-wide@2x.png 2x" media="(prefers-color-scheme: dark)">
+                        <source srcset="../images/it/ipad/light-library-wide.avif 1x, ../images/it/ipad/light-library-wide@2x.avif 2x" type="image/avif">
+                        <img src="../images/ipad/light-library-wide.png" srcset="../images/ipad/light-library-wide.png 1x, ../images/ipad/light-library-wide@2x.png 2x" alt="La libreria di Novelwave su iPad, una griglia di scaffali e copertine di audiolibri" width="1096" height="832" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div>
+                    <h2 class="section-title" id="library-title"><span class="eyebrow">Libreria</span> Scaffali, come in una vera libreria.</h2>
+                    <div class="run-ins">
+                        <p><strong>Scaffali dentro scaffali.</strong> Sanderson, poi Cosmere, poi Mistborn. Annidali per tutti i livelli che servono alla tua collezione.</p>
+                        <p><strong>Trova qualsiasi libro.</strong> Cerca per titolo, autore e scaffale, o mostra solo quelli che stai ascoltando.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrist band" id="watch" aria-labelledby="watch-title" data-chapter="Apple Watch">
+            <div class="container">
+                <h2 class="section-title" id="watch-title"><span class="eyebrow">Apple Watch</span> Lascia il telefono a casa.</h2>
+                <p class="lede">Manda un libro sul tuo Apple Watch prima di correre, o tieni l’iPhone in tasca e controllalo dal polso. <a href="../apple-watch-audiobooks.html" hreflang="en">Come funziona su Apple Watch</a></p>
+                <div class="watches" role="group" aria-label="Novelwave su Apple Watch">
+                    <figure>
+                        <picture>
+                            <source srcset="../images/it/watch/dark-home.avif 1x, ../images/it/watch/dark-home@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/watch/dark-home.png 1x, ../images/watch/dark-home@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/watch/light-home.avif 1x, ../images/it/watch/light-home@2x.avif 2x" type="image/avif">
+                            <img src="../images/watch/light-home.png" srcset="../images/watch/light-home.png 1x, ../images/watch/light-home@2x.png 2x" alt="La Home di Novelwave su Apple Watch, con i libri che stai ascoltando e quanto manca alla fine di ciascuno" width="268" height="484" loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>I tuoi libri, con il tempo che resta a ciascuno</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <source srcset="../images/it/watch/dark-player.avif 1x, ../images/it/watch/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/watch/dark-player.png 1x, ../images/watch/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/watch/light-player.avif 1x, ../images/it/watch/light-player@2x.avif 2x" type="image/avif">
+                            <img src="../images/watch/light-player.png" srcset="../images/watch/light-player.png 1x, ../images/watch/light-player@2x.png 2x" alt="Il player su Apple Watch mentre riproduce 1984 sui colori della sua copertina, con il capitolo, il tempo rimanente, i pulsanti di salto e il tasto Play circondato dall’anello di avanzamento" width="268" height="484" loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>In riproduzione, nei colori della copertina</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <source srcset="../images/it/watch/dark-options.avif 1x, ../images/it/watch/dark-options@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/watch/dark-options.png 1x, ../images/watch/dark-options@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="../images/it/watch/light-options.avif 1x, ../images/it/watch/light-options@2x.avif 2x" type="image/avif">
+                            <img src="../images/watch/light-options.png" srcset="../images/watch/light-options.png 1x, ../images/watch/light-options@2x.png 2x" alt="Le opzioni del player su Apple Watch: il timer di spegnimento, la velocità a 1,25× e il capitolo precedente" width="268" height="484" loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>Velocità, timer e capitoli</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section road" id="carplay" aria-labelledby="carplay-title" data-chapter="CarPlay e Siri">
+            <div class="container road-grid">
+                <div>
+                    <h2 class="section-title section-title-small" id="carplay-title"><span class="eyebrow">CarPlay e Siri</span> Mani sul volante.</h2>
+                    <p class="lede">Riprendi da dove eri rimasto, o sfoglia i tuoi scaffali. Poi basta chiedere.</p>
+                    <ul class="phrases" role="list">
+                        <li>«Torna indietro di 30 secondi.»</li>
+                        <li>«Capitolo successivo.»</li>
+                        <li>«Fermati alla fine di questo capitolo.»</li>
+                    </ul>
+                </div>
+                <div class="car-screen reveal">
+                    <picture>
+                        <source srcset="../images/carplay/dark-continue.avif" type="image/avif" media="(prefers-color-scheme: dark)">
+                        <source srcset="../images/carplay/dark-continue.png" media="(prefers-color-scheme: dark)">
+                        <source srcset="../images/carplay/light-continue.avif" type="image/avif">
+                        <img src="../images/carplay/light-continue.png" alt="La schermata Continua di Novelwave in CarPlay, con le copertine e il tempo rimanente di ogni audiolibro" width="800" height="480" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="section more" id="more" aria-labelledby="more-title" data-chapter="E altro ancora">
+            <div class="container">
+                <h2 class="section-title section-title-small" id="more-title">E altro ancora.</h2>
+                <ul class="more-list" role="list">
+                    <li>
+                        <h3>Comandi rapidi</h3>
+                        <p>Azioni per la riproduzione, i capitoli, la velocità, i segnalibri e il timer.</p>
+                    </li>
+                    <li>
+                        <h3>Schermata di blocco</h3>
+                        <p>Il timer fa lì il conto alla rovescia, e anche nella Dynamic&nbsp;Island.</p>
+                    </li>
+                    <li>
+                        <h3>Widget</h3>
+                        <p>In riproduzione sulla schermata Home, e i controlli nel Centro di&nbsp;Controllo.</p>
+                    </li>
+                    <li>
+                        <h3>Statistiche di ascolto</h3>
+                        <p>Per settimana, mese e anno, con un riepilogo ogni gennaio.</p>
+                    </li>
+                    <li>
+                        <h3>Ogni dettaglio</h3>
+                        <p>Titoli, autori e copertine da Foto o File, come preferisci.</p>
+                    </li>
+                    <li>
+                        <h3>Esporta</h3>
+                        <p>Tutta la tua libreria in File, segnalibri e note compresi.</p>
+                    </li>
+                    <li>
+                        <h3>Spotlight</h3>
+                        <p>Trova un libro dalla ricerca della schermata Home.</p>
+                    </li>
+                    <li>
+                        <h3>Otto lingue</h3>
+                        <p>Con un’impostazione della lingua tutta sua.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section privacy-note" id="privacy" aria-labelledby="privacy-title" data-chapter="Privacy">
+            <div class="container">
+                <h2 class="section-title" id="privacy-title"><span class="eyebrow">Privacy</span> Nessun&nbsp;account. Nessuna&nbsp;pubblicità. Nessun&nbsp;tracciamento.</h2>
+                <p class="lede">Nessun abbonamento per ascoltare i libri che possiedi. La tua libreria vive sui tuoi dispositivi e nel tuo iCloud, e gli scaffali che nascondi restano protetti da Face&nbsp;ID.</p>
+                <p class="privacy-label">Su App Store, l’etichetta sulla privacy di Novelwave riporta «Dati non raccolti». <a class="text-link" href="../privacy.html" hreflang="en">Leggi l’informativa sulla privacy</a></p>
+            </div>
+        </section>
+
+        <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title" data-chapter="Recensioni">
+            <div class="container">
+                <div class="reviews-head">
+                    <h2 class="section-title section-title-small" id="reviews-title"><span class="eyebrow">Recensioni su App&nbsp;Store</span> Cosa dice chi ascolta.</h2>
+                    <div class="reviews-nav" data-reviews-nav hidden>
+                        <button class="round-button" type="button" data-reviews-step="-1" aria-label="Recensioni precedenti"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                        <button class="round-button" type="button" data-reviews-step="1" aria-label="Recensioni successive"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+                    </div>
+                </div>
+                <ul class="reviews" role="list" data-reviews tabindex="0" aria-label="Dalle recensioni su App Store">
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stelle">★★★★★</span>
+                        <blockquote lang="en" translate="no">“I open the app and all my audiobooks are right in front of me, ready to play, with all the listening tools I need and 0 clutter.”</blockquote>
+                        <p>DaveAsh90 · Stati&nbsp;Uniti</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stelle">★★★★★</span>
+                        <blockquote lang="en" translate="no">“This app does everything it needs to and nothing it doesn’t. A sleek, simple interface and enough playback customisation to allow many different listening styles.”</blockquote>
+                        <p>Alastair Stone · Regno&nbsp;Unito</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stelle">★★★★★</span>
+                        <blockquote lang="en" translate="no">“I tried a similar app, but the speed settings &amp; sleep timer options for Novelwave beat the competition. (Stop at end of chapter = genius!)”</blockquote>
+                        <p>hollyreviewsapps · Stati&nbsp;Uniti</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stelle">★★★★★</span>
+                        <blockquote lang="en" translate="no">“I tried several other apps and this one is by far the most responsive and reliable.”</blockquote>
+                        <p>nonetaat · Stati&nbsp;Uniti</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stelle">★★★★★</span>
+                        <blockquote lang="en" translate="no">“Just enough customization and features to make the player disappear into the background while enjoying the audiobook.”</blockquote>
+                        <p>Throog · Stati&nbsp;Uniti</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stelle">★★★★★</span>
+                        <blockquote lang="en" translate="no">“Indie dev, zero data collection and telemetry, responsive to feedback.”</blockquote>
+                        <p>Massaholic · Stati&nbsp;Uniti</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="band">
+        <section class="closing" aria-labelledby="closing-title">
+            <div class="container">
+                <picture><source srcset="../images/icon-336.avif" type="image/avif"><img class="closing-icon" src="../images/icon-336.png" alt="" width="112" height="112" loading="lazy"></picture>
+                <h2 class="section-title" id="closing-title">Comincia dal libro che hai a metà.</h2>
+                <div class="closing-actions">
+                    <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-it-closing&amp;mt=8"><img src="../images/download_light.svg" alt="Scarica su App Store" width="120" height="40"></a>
+                    <div class="qr">
+                        <svg class="qr-code" role="img" aria-label="Codice QR: inquadralo con la fotocamera del tuo iPhone per aprire Novelwave su App Store" data-qr="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-it-qr&amp;mt=8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" shape-rendering="crispEdges"><path fill="currentColor" d="M1 1h7v1h-7zM12 1h1v1h-1zM14 1h4v1h-4zM21 1h1v1h-1zM23 1h1v1h-1zM31 1h7v1h-7zM1 2h1v1h-1zM7 2h1v1h-1zM12 2h1v1h-1zM15 2h5v1h-5zM21 2h3v1h-3zM29 2h1v1h-1zM31 2h1v1h-1zM37 2h1v1h-1zM1 3h1v1h-1zM3 3h3v1h-3zM7 3h1v1h-1zM10 3h2v1h-2zM14 3h2v1h-2zM17 3h1v1h-1zM23 3h1v1h-1zM28 3h2v1h-2zM31 3h1v1h-1zM33 3h3v1h-3zM37 3h1v1h-1zM1 4h1v1h-1zM3 4h3v1h-3zM7 4h1v1h-1zM10 4h3v1h-3zM15 4h2v1h-2zM18 4h1v1h-1zM20 4h1v1h-1zM23 4h1v1h-1zM25 4h1v1h-1zM27 4h3v1h-3zM31 4h1v1h-1zM33 4h3v1h-3zM37 4h1v1h-1zM1 5h1v1h-1zM3 5h3v1h-3zM7 5h1v1h-1zM10 5h4v1h-4zM15 5h2v1h-2zM18 5h4v1h-4zM23 5h2v1h-2zM26 5h4v1h-4zM31 5h1v1h-1zM33 5h3v1h-3zM37 5h1v1h-1zM1 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1zM14 6h1v1h-1zM17 6h3v1h-3zM21 6h2v1h-2zM25 6h1v1h-1zM28 6h1v1h-1zM31 6h1v1h-1zM37 6h1v1h-1zM1 7h7v1h-7zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h1v1h-1zM15 7h1v1h-1zM17 7h1v1h-1zM19 7h1v1h-1zM21 7h1v1h-1zM23 7h1v1h-1zM25 7h1v1h-1zM27 7h1v1h-1zM29 7h1v1h-1zM31 7h7v1h-7zM12 8h1v1h-1zM15 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM27 8h3v1h-3zM1 9h1v1h-1zM4 9h1v1h-1zM6 9h2v1h-2zM9 9h1v1h-1zM12 9h3v1h-3zM16 9h1v1h-1zM18 9h1v1h-1zM23 9h3v1h-3zM29 9h2v1h-2zM32 9h1v1h-1zM1 10h5v1h-5zM11 10h1v1h-1zM15 10h2v1h-2zM18 10h1v1h-1zM20 10h5v1h-5zM27 10h3v1h-3zM33 10h3v1h-3zM37 10h1v1h-1zM1 11h3v1h-3zM7 11h1v1h-1zM9 11h1v1h-1zM14 11h1v1h-1zM17 11h2v1h-2zM21 11h1v1h-1zM25 11h2v1h-2zM29 11h1v1h-1zM31 11h1v1h-1zM34 11h1v1h-1zM36 11h2v1h-2zM1 12h1v1h-1zM4 12h2v1h-2zM10 12h3v1h-3zM15 12h2v1h-2zM22 12h1v1h-1zM26 12h2v1h-2zM29 12h2v1h-2zM32 12h3v1h-3zM2 13h1v1h-1zM4 13h4v1h-4zM9 13h1v1h-1zM13 13h2v1h-2zM17 13h1v1h-1zM20 13h4v1h-4zM25 13h2v1h-2zM30 13h2v1h-2zM34 13h1v1h-1zM36 13h2v1h-2zM3 14h1v1h-1zM8 14h5v1h-5zM14 14h1v1h-1zM16 14h3v1h-3zM23 14h1v1h-1zM25 14h1v1h-1zM31 14h2v1h-2zM35 14h2v1h-2zM3 15h1v1h-1zM6 15h2v1h-2zM9 15h4v1h-4zM14 15h1v1h-1zM18 15h2v1h-2zM22 15h1v1h-1zM24 15h1v1h-1zM26 15h2v1h-2zM31 15h3v1h-3zM35 15h1v1h-1zM37 15h1v1h-1zM1 16h1v1h-1zM5 16h1v1h-1zM8 16h2v1h-2zM13 16h1v1h-1zM15 16h2v1h-2zM18 16h3v1h-3zM25 16h4v1h-4zM31 16h1v1h-1zM33 16h1v1h-1zM36 16h1v1h-1zM1 17h1v1h-1zM5 17h1v1h-1zM7 17h2v1h-2zM11 17h3v1h-3zM15 17h1v1h-1zM19 17h2v1h-2zM23 17h3v1h-3zM27 17h1v1h-1zM29 17h8v1h-8zM1 18h1v1h-1zM4 18h3v1h-3zM8 18h2v1h-2zM12 18h1v1h-1zM14 18h1v1h-1zM16 18h2v1h-2zM19 18h3v1h-3zM26 18h3v1h-3zM30 18h2v1h-2zM33 18h2v1h-2zM36 18h2v1h-2zM2 19h3v1h-3zM7 19h1v1h-1zM9 19h1v1h-1zM12 19h3v1h-3zM16 19h2v1h-2zM19 19h1v1h-1zM22 19h1v1h-1zM24 19h1v1h-1zM28 19h2v1h-2zM31 19h2v1h-2zM35 19h3v1h-3zM1 20h1v1h-1zM3 20h2v1h-2zM11 20h1v1h-1zM18 20h1v1h-1zM22 20h1v1h-1zM27 20h1v1h-1zM30 20h1v1h-1zM32 20h1v1h-1zM35 20h2v1h-2zM5 21h1v1h-1zM7 21h3v1h-3zM13 21h2v1h-2zM16 21h1v1h-1zM18 21h1v1h-1zM22 21h1v1h-1zM24 21h3v1h-3zM29 21h1v1h-1zM31 21h1v1h-1zM33 21h1v1h-1zM35 21h2v1h-2zM1 22h1v1h-1zM9 22h1v1h-1zM11 22h1v1h-1zM15 22h3v1h-3zM22 22h1v1h-1zM26 22h1v1h-1zM29 22h1v1h-1zM31 22h2v1h-2zM34 22h1v1h-1zM36 22h2v1h-2zM2 23h2v1h-2zM6 23h3v1h-3zM10 23h1v1h-1zM12 23h2v1h-2zM15 23h4v1h-4zM21 23h1v1h-1zM27 23h1v1h-1zM30 23h2v1h-2zM5 24h2v1h-2zM10 24h1v1h-1zM18 24h1v1h-1zM21 24h3v1h-3zM25 24h3v1h-3zM29 24h1v1h-1zM31 24h1v1h-1zM36 24h2v1h-2zM1 25h2v1h-2zM6 25h3v1h-3zM11 25h3v1h-3zM20 25h2v1h-2zM23 25h2v1h-2zM26 25h1v1h-1zM28 25h1v1h-1zM30 25h3v1h-3zM34 25h1v1h-1zM36 25h2v1h-2zM2 26h4v1h-4zM9 26h1v1h-1zM11 26h3v1h-3zM16 26h3v1h-3zM21 26h1v1h-1zM24 26h3v1h-3zM28 26h1v1h-1zM34 26h4v1h-4zM1 27h1v1h-1zM3 27h1v1h-1zM6 27h2v1h-2zM9 27h2v1h-2zM13 27h2v1h-2zM19 27h2v1h-2zM23 27h1v1h-1zM26 27h6v1h-6zM33 27h3v1h-3zM37 27h1v1h-1zM2 28h1v1h-1zM4 28h1v1h-1zM6 28h1v1h-1zM14 28h3v1h-3zM19 28h1v1h-1zM21 28h3v1h-3zM26 28h1v1h-1zM30 28h1v1h-1zM34 28h1v1h-1zM1 29h2v1h-2zM5 29h1v1h-1zM7 29h1v1h-1zM9 29h2v1h-2zM12 29h2v1h-2zM15 29h1v1h-1zM18 29h1v1h-1zM21 29h3v1h-3zM25 29h1v1h-1zM29 29h5v1h-5zM35 29h2v1h-2zM9 30h4v1h-4zM14 30h1v1h-1zM16 30h2v1h-2zM19 30h1v1h-1zM21 30h1v1h-1zM24 30h6v1h-6zM33 30h2v1h-2zM1 31h7v1h-7zM10 31h2v1h-2zM13 31h1v1h-1zM19 31h1v1h-1zM21 31h2v1h-2zM26 31h1v1h-1zM28 31h2v1h-2zM31 31h1v1h-1zM33 31h2v1h-2zM36 31h2v1h-2zM1 32h1v1h-1zM7 32h1v1h-1zM9 32h1v1h-1zM12 32h1v1h-1zM18 32h2v1h-2zM23 32h1v1h-1zM25 32h2v1h-2zM28 32h2v1h-2zM33 32h5v1h-5zM1 33h1v1h-1zM3 33h3v1h-3zM7 33h1v1h-1zM11 33h3v1h-3zM15 33h1v1h-1zM17 33h3v1h-3zM21 33h1v1h-1zM25 33h1v1h-1zM27 33h1v1h-1zM29 33h6v1h-6zM36 33h2v1h-2zM1 34h1v1h-1zM3 34h3v1h-3zM7 34h1v1h-1zM9 34h2v1h-2zM15 34h6v1h-6zM22 34h1v1h-1zM24 34h4v1h-4zM29 34h1v1h-1zM32 34h3v1h-3zM1 35h1v1h-1zM3 35h3v1h-3zM7 35h1v1h-1zM11 35h2v1h-2zM15 35h2v1h-2zM18 35h1v1h-1zM20 35h1v1h-1zM23 35h1v1h-1zM27 35h1v1h-1zM30 35h1v1h-1zM32 35h2v1h-2zM35 35h1v1h-1zM37 35h1v1h-1zM1 36h1v1h-1zM7 36h1v1h-1zM10 36h2v1h-2zM13 36h1v1h-1zM17 36h1v1h-1zM19 36h4v1h-4zM24 36h3v1h-3zM28 36h3v1h-3zM32 36h1v1h-1zM1 37h7v1h-7zM9 37h1v1h-1zM13 37h5v1h-5zM19 37h1v1h-1zM23 37h1v1h-1zM25 37h2v1h-2zM29 37h1v1h-1zM36 37h2v1h-2z"/></svg>
+                    </div>
+                </div>
+                <p class="closing-note">Richiede iOS&nbsp;17, iPadOS&nbsp;17, watchOS&nbsp;11 o versioni successive.</p>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <nav class="footer-nav" aria-label="Altro su Novelwave">
+                    <div class="footer-group">
+                        <h2 class="footer-label" id="footer-novelwave">Novelwave</h2>
+                        <ul class="footer-links" aria-labelledby="footer-novelwave">
+                            <li><a href="../roadmap.html" hreflang="en">Roadmap</a></li>
+                            <li><a href="../support.html" hreflang="en">Supporto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h2 class="footer-label" id="footer-guides">Guide</h2>
+                        <ul class="footer-links" aria-labelledby="footer-guides">
+                            <li><a href="../m4b-player-iphone.html" hreflang="en">M4B su iPhone</a></li>
+                            <li><a href="../mp3-audiobooks-iphone.html" hreflang="en">MP3 su iPhone</a></li>
+                            <li><a href="../apple-watch-audiobooks.html" hreflang="en">Audiolibri su Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h2 class="footer-label" id="footer-legal">Note legali</h2>
+                        <ul class="footer-links" aria-labelledby="footer-legal">
+                            <li><a href="../privacy.html" hreflang="en">Informativa sulla privacy</a></li>
+                            <li><a href="../terms.html" hreflang="en">Condizioni d’uso</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="footer-base">
+                    <span>© 2026 Novelwave. Creato da Mihai Petrenco.</span>
+                    <nav class="language-links" aria-label="Lingua">
+                        <ul translate="no">
+                            <li><a href="/" hreflang="en" lang="en">English</a></li>
+                            <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+                            <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+                            <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+                            <li><a href="/it/" aria-current="page" hreflang="it" lang="it">Italiano</a></li>
+                            <li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+                            <li><a href="/ro/" hreflang="ro" lang="ro">Română</a></li>
+                            <li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="menu band" id="menu" popover>
+        <nav aria-label="Capitoli">
+            <p class="menu-heading">Capitoli</p>
+            <ol class="menu-chapters" data-menu-chapters>
+                <li><a href="#how">Come funziona</a></li>
+                <li><a href="#player">Player</a></li>
+                <li><a href="#library">Libreria</a></li>
+                <li><a href="#watch">Apple Watch</a></li>
+                <li><a href="#carplay">CarPlay e Siri</a></li>
+                <li><a href="#more">E altro ancora</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#reviews">Recensioni</a></li>
+            </ol>
+            <a class="app-store-button menu-download" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-it-menu&amp;mt=8"><img src="../images/download_light.svg" alt="Scarica su App Store" width="120" height="40"></a>
+        </nav>
+    </div>
+
+    <div class="mini-player band" data-mini-player hidden>
+        <button class="mini-player-button" type="button" popovertarget="menu">
+            <span class="mini-player-text">
+                <span class="visually-hidden">Capitoli. Ora in ascolto: </span>
+                <span class="mini-player-chapter" data-mini-player-chapter>Come funziona</span>
+            </span>
+            <svg class="icon" aria-hidden="true"><use href="#icon-chapters"/></svg>
+        </button>
+        <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-it-mini&amp;mt=8"><img src="../images/download_light.svg" alt="Scarica su App Store" width="120" height="40"></a>
+        <span class="mini-player-progress" aria-hidden="true"><span data-mini-player-progress></span></span>
+    </div>
+</body>
+</html>
