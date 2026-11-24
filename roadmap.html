@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Where Novelwave is headed: what's in the current version, what's in beta testing, and what's further down the road.">
-    <title>Roadmap — Novelwave</title>
+    <meta name="description" content="Where Novelwave is headed: what’s in the current version, what’s in development now, and what’s further down the road.">
+    <title>Roadmap · Novelwave</title>
+    <link rel="canonical" href="https://www.novelwave.app/roadmap.html">
+    <meta name="theme-color" content="#221C16">
+    <meta name="apple-itunes-app" content="app-id=6720100886, affiliate-data=pt=122786304&amp;ct=web-banner-roadmap">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Novelwave">
-    <meta property="og:title" content="Roadmap — Novelwave">
-    <meta property="og:description" content="Where Novelwave is headed: what's in the current version, what's in beta testing, and what's further down the road.">
+    <meta property="og:title" content="Roadmap · Novelwave">
+    <meta property="og:description" content="Where Novelwave is headed: what’s in the current version, what’s in development now, and what’s further down the road.">
     <meta property="og:url" content="https://www.novelwave.app/roadmap.html">
-    <meta property="og:image" content="https://www.novelwave.app/images/social-card.png">
+    <meta property="og:image" content="https://www.novelwave.app/images/social-roadmap.jpg">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Novelwave on iPhone and Apple Watch, with the words Your ultimate audiobook player">
+    <meta property="og:image:alt" content="Novelwave on iPhone, with the words Coming in 3.4: Audiobookshelf">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16">
@@ -22,7 +26,6 @@
     <link rel="icon" href="images/favicon-96.png" type="image/png" sizes="96x96">
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="theme.js"></script>
     <script src="roadmap.js" defer></script>
@@ -31,43 +34,30 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-        <a class="site-title" href="./">Novelwave</a>
-        <nav aria-label="Main">
-            <ul class="header-links">
-                <li><a href="./"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home</a></li>
-            </ul>
-        </nav>
-        <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
-            <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="4"/>
-                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-                </svg>
-            </button>
-            <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                </svg>
-            </button>
-            <button class="theme-option" type="button" data-theme-option="midnight" aria-label="Midnight mode" aria-pressed="false">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                    <path d="M20 3v4M22 5h-4"/>
-                </svg>
-            </button>
+        <div class="container">
+            <a class="site-title" href="./"><img src="images/favicon-96.png" alt="" width="32" height="32"><span>Novelwave</span></a>
+            <nav aria-label="Main">
+                <ul class="header-links">
+                    <li><a href="roadmap.html" aria-current="page"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
+                    <li><a href="support.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Support</a></li>
+                </ul>
+            </nav>
+            <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-roadmap&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
+            <button class="round-button menu-button" type="button" popovertarget="menu" aria-label="Menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
         </div>
     </header>
 
     <main class="page container" id="main">
         <header class="page-header">
             <p class="eyebrow">Roadmap</p>
-            <h1 class="section-title">Where Novelwave is <span class="accent">headed</span></h1>
-            <p class="lede">Choose a stop on the map to see what's in it. There are no dates, and plans can change as we learn what listeners need most.</p>
+            <h1 class="section-title">Where Novelwave is headed</h1>
+            <p class="lede">Choose a stop on the map to see what’s in it. There are no dates, and plans can change as I learn what listeners need most.</p>
+            <p class="roadmap-jump">Jump to <a href="#v3-3">3.3, out now</a> · <a href="#v3-4">3.4, in development</a> · <a href="#vlater">Later</a></p>
             <p class="page-meta">Last updated November 18, 2026</p>
         </header>
 
         <ol class="roadmap" aria-label="Versions">
-            <li class="roadmap-stop is-released">
+            <li class="roadmap-stop is-released" id="v3-0">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-0">
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
@@ -77,14 +67,14 @@
                 </button>
                 <p class="roadmap-summary">A new chapter: iCloud sync, iCloud Drive import, export, a livelier Player, Now Playing widgets and a cat for company.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-0" role="region" aria-labelledby="changelog-3-0-title">
-                    <h2 class="tile-title" id="changelog-3-0-title">What's in Novelwave 3.0</h2>
+                    <h2 class="tile-title" id="changelog-3-0-title">What’s in Novelwave 3.0</h2>
                     <div class="roadmap-groups">
                         <section class="roadmap-group">
                             <h3>A new chapter</h3>
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Refreshed design.</span> A refreshed library, player and profile make browsing, listening and managing your audiobooks easier.</li>
                                 <li><span class="roadmap-change-title">Sync between devices.</span> Shelves, audiobook details, listening progress and bookmarks stay in sync through iCloud.</li>
-                                <li><span class="roadmap-change-title">Import from iCloud Drive.</span> Add audiobooks to Novelwave's iCloud Drive folder, then download, pause, resume or remove them whenever you like.</li>
+                                <li><span class="roadmap-change-title">Import from iCloud Drive.</span> Add audiobooks to Novelwave’s iCloud Drive folder, then download, pause, resume or remove them whenever you like.</li>
                                 <li><span class="roadmap-change-title">Export your audiobooks.</span> Save single audiobooks, a selection, shelves or your whole library to Files.</li>
                                 <li><span class="roadmap-change-title">Your 1.x library, brought across.</span> On iPhones that stayed on Novelwave 1.x, your audiobooks, shelves and bookmarks move into the new app, and your old library is never deleted.</li>
                                 <li><span class="roadmap-change-title">Become a beta tester.</span> Request a TestFlight invitation from Profile to try new features early.</li>
@@ -107,13 +97,13 @@
                                 <li><span class="roadmap-change-title">Choose your app icon.</span> Keep the book, or switch to Nova, the cat in headphones, in Settings.</li>
                                 <li><span class="roadmap-change-title">A cat for company.</span> Empty shelves, searches, bookmarks, chapters and widgets have a resident cat, who waves back when you tap it in Profile.</li>
                                 <li><span class="roadmap-change-title">Text at your size.</span> Every screen follows your Dynamic Type setting.</li>
-                                <li><span class="roadmap-change-title">Smooth with big libraries.</span> Covers load once at the size they're shown, and imports show how far along they are.</li>
+                                <li><span class="roadmap-change-title">Smooth with big libraries.</span> Covers load once at the size they’re shown, and imports show how far along they are.</li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-released">
+            <li class="roadmap-stop is-released" id="v3-1">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-1">
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
@@ -123,7 +113,7 @@
                 </button>
                 <p class="roadmap-summary">CarPlay, Siri and Shortcuts, Control Center, Opus and MP4 support, a Minimal style, and a quicker library.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-1" role="region" aria-labelledby="changelog-3-1-title">
-                    <h2 class="tile-title" id="changelog-3-1-title">What's new in Novelwave 3.1</h2>
+                    <h2 class="tile-title" id="changelog-3-1-title">What’s new in Novelwave 3.1</h2>
                     <div class="roadmap-groups">
                         <section class="roadmap-group">
                             <h3>In the car and hands-free</h3>
@@ -139,7 +129,7 @@
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">A sleep timer Live Activity.</span> Watch the sleep timer count down on the Lock Screen and in the Dynamic Island, and cancel it right there.</li>
                                 <li><span class="roadmap-change-title">Control Center.</span> Play and pause, or start and stop a sleep timer that shows when playback will stop, without opening the app.</li>
-                                <li><span class="roadmap-change-title">Spotlight and Siri Suggestions.</span> Find any audiobook from Spotlight, and see what you've been listening to suggested on the Lock Screen.</li>
+                                <li><span class="roadmap-change-title">Spotlight and Siri Suggestions.</span> Find any audiobook from Spotlight, and see what you’ve been listening to suggested on the Lock Screen.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
@@ -155,7 +145,7 @@
                             <h3>Make it yours</h3>
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Illustrated or Minimal.</span> Keep the cat, or choose a Minimal style without illustrations.</li>
-                                <li><span class="roadmap-change-title">The original icon is back.</span> Novelwave's first icon, headphones over a book of dunes, joins the picker as Classic.</li>
+                                <li><span class="roadmap-change-title">The original icon is back.</span> Novelwave’s first icon, headphones over a book of dunes, joins the picker as Classic.</li>
                                 <li><span class="roadmap-change-title">Keep listening while you bookmark.</span> Turn off “Pause when adding a bookmark” in Settings, and playback carries on as you save one.</li>
                             </ul>
                         </section>
@@ -176,7 +166,7 @@
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-released">
+            <li class="roadmap-stop is-released" id="v3-2">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-2">
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
@@ -186,23 +176,23 @@
                 </button>
                 <p class="roadmap-summary">Novelwave on Apple Watch, listening stats and your Year in Listening, a widget for every book, bookmarks you can share, and your latest place on every device.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-2" role="region" aria-labelledby="changelog-3-2-title">
-                    <h2 class="tile-title" id="changelog-3-2-title">What's new in Novelwave 3.2</h2>
+                    <h2 class="tile-title" id="changelog-3-2-title">What’s new in Novelwave 3.2</h2>
                     <div class="roadmap-groups">
                         <section class="roadmap-group">
                             <h3>On your wrist</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Apple Watch.</span> Browse your library, play what's on your iPhone, or download audiobooks to the watch and leave the phone at home.</li>
+                                <li><span class="roadmap-change-title">Apple Watch.</span> Browse your library, play what’s on your iPhone, or download audiobooks to the watch and leave the phone at home.</li>
                                 <li><span class="roadmap-change-title">Everything in reach.</span> Speed, sleep timer, chapters and bookmarks on either device, with notes you can dictate.</li>
                                 <li><span class="roadmap-change-title">A Player like Now Playing.</span> The whole cover over a wash of its colors, with the part playing and the time left in it, and play ringed by its progress.</li>
                                 <li><span class="roadmap-change-title">Pick up on either device.</span> Carry on listening on the iPhone or the watch, right where you were.</li>
                                 <li><span class="roadmap-change-title">On the watch face.</span> Complications that curve the part playing over its progress or show Nova, and a Smart Stack widget.</li>
-                                <li><span class="roadmap-change-title">Downloads you can manage.</span> Pause and resume a transfer, see the watch's storage on your iPhone, and remove a book from the watch when you're done.</li>
+                                <li><span class="roadmap-change-title">Downloads you can manage.</span> Pause and resume a transfer, see the watch’s storage on your iPhone, and remove a book from the watch when you’re done.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>Your listening</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Listening stats.</span> How long you've listened by week, month and year, the books you finished and the ones in progress, and the speeds you listened at.</li>
+                                <li><span class="roadmap-change-title">Listening stats.</span> How long you’ve listened by week, month and year, the books you finished and the ones in progress, and the speeds you listened at.</li>
                                 <li><span class="roadmap-change-title">Your Year in Listening.</span> A look back at your year, with a reminder on January 1.</li>
                                 <li><span class="roadmap-change-title">Share your stats.</span> Turn any period into a story-sized card that catches the light as you tilt your iPhone, then share it or save it to Photos.</li>
                                 <li><span class="roadmap-change-title">Stats that tell the truth.</span> Hide a book from your stats, mark one as not finished, or change the date you finished it, right from a swipe.</li>
@@ -212,8 +202,8 @@
                         <section class="roadmap-group">
                             <h3>Around the app</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">A widget for every book.</span> Set each Now Playing widget to an audiobook of its own, or leave it following whatever you're playing.</li>
-                                <li><span class="roadmap-change-title">Share your bookmarks.</span> Send an audiobook's bookmarks and notes from the bookmark list, and find them in every Files export, grouped by chapter.</li>
+                                <li><span class="roadmap-change-title">A widget for every book.</span> Set each Now Playing widget to an audiobook of its own, or leave it following whatever you’re playing.</li>
+                                <li><span class="roadmap-change-title">Share your bookmarks.</span> Send an audiobook’s bookmarks and notes from the bookmark list, and find them in every Files export, grouped by chapter.</li>
                                 <li><span class="roadmap-change-title">Long-press for more.</span> Shelves, audiobooks, bookmarks and files waiting to import open a menu with the same actions as their swipes.</li>
                             </ul>
                         </section>
@@ -227,7 +217,7 @@
                         <section class="roadmap-group">
                             <h3>Bringing books in</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Straight to the shelf you're on.</span> Add audiobooks while browsing a shelf and they land there, and choosing another shelf starts from where you are.</li>
+                                <li><span class="roadmap-change-title">Straight to the shelf you’re on.</span> Add audiobooks while browsing a shelf and they land there, and choosing another shelf starts from where you are.</li>
                                 <li><span class="roadmap-change-title">Quicker imports.</span> Novelwave reads several files at once.</li>
                                 <li><span class="roadmap-change-title">Titles from the tags.</span> Merge several files into one audiobook and its title and author are filled in from their tags.</li>
                             </ul>
@@ -247,23 +237,23 @@
                                 <li><span class="roadmap-change-title">Room to open.</span> If your iPhone is too full to open your library, Novelwave asks you to free up space instead of crashing, and your library stays where it is.</li>
                                 <li><span class="roadmap-change-title">Fewer crashes.</span> No more crashes in the Library when an audiobook has a broken length, or in the background after restarting your iPhone.</li>
                                 <li><span class="roadmap-change-title">Your place, kept.</span> Your place in a book is saved as soon as you leave the app.</li>
-                                <li><span class="roadmap-change-title">Your old library, brought across.</span> Bringing over a library from the previous version of Novelwave no longer gets stuck. If it can't finish, try again, or continue and pick it up later.</li>
+                                <li><span class="roadmap-change-title">Your old library, brought across.</span> Bringing over a library from the previous version of Novelwave no longer gets stuck. If it can’t finish, try again, or continue and pick it up later.</li>
                                 <li><span class="roadmap-change-title">Other apps keep playing.</span> Opening Novelwave no longer stops their audio until you press play.</li>
                                 <li><span class="roadmap-change-title">Steady CarPlay covers.</span> Covers no longer flicker when a list refreshes.</li>
                                 <li><span class="roadmap-change-title">Exact lengths and skips.</span> Variable-bitrate MP3s and long Ogg audiobooks show their true length, and skips and reopened books land exactly where they should.</li>
                                 <li><span class="roadmap-change-title">Widgets on a clear Home Screen.</span> The Now Playing widget no longer turns into a white block on a tinted or clear Home Screen.</li>
                                 <li><span class="roadmap-change-title">Search keeps up.</span> Results always match what you typed last.</li>
-                                <li><span class="roadmap-change-title">Covers stay crisp.</span> Editing a book's details no longer re-saves its cover.</li>
+                                <li><span class="roadmap-change-title">Covers stay crisp.</span> Editing a book’s details no longer re-saves its cover.</li>
                                 <li><span class="roadmap-change-title">Finished stays finished.</span> Listening to a book again keeps its finish in your stats.</li>
                                 <li><span class="roadmap-change-title">Keeps playing in the background.</span> Audiobooks with chapter images no longer pause when you leave Novelwave or lock your iPhone.</li>
                                 <li><span class="roadmap-change-title">No false finishes.</span> A file that stops short of its end keeps your place instead of marking the audiobook finished.</li>
-                                <li><span class="roadmap-change-title">Chapters open where you are.</span> The chapter list opens on the chapter you're playing, and the whole row takes a tap.</li>
+                                <li><span class="roadmap-change-title">Chapters open where you are.</span> The chapter list opens on the chapter you’re playing, and the whole row takes a tap.</li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-current">
+            <li class="roadmap-stop is-current" id="v3-3">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-3" data-open-by-default>
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
@@ -271,9 +261,9 @@
                         <span class="roadmap-status">Available now</span>
                     </span>
                 </button>
-                <p class="roadmap-summary">Novelwave on iPad, simpler imports, hidden shelves, a new Player on Apple Watch, a true-black Midnight theme, and seven more languages.</p>
+                <p class="roadmap-summary">Novelwave on iPad, simpler imports, hidden shelves, a new Player on Apple Watch, a true‑black Midnight theme, and seven more languages.</p>
                 <div class="tile roadmap-changelog" id="changelog-3-3" role="region" aria-labelledby="changelog-3-3-title">
-                    <h2 class="tile-title" id="changelog-3-3-title">What's new in Novelwave 3.3</h2>
+                    <h2 class="tile-title" id="changelog-3-3-title">What’s new in Novelwave 3.3</h2>
                     <div class="roadmap-groups">
                         <section class="roadmap-group">
                             <h3>On iPad</h3>
@@ -288,7 +278,7 @@
                         <section class="roadmap-group">
                             <h3>Bringing books in</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Importing, simplified.</span> Everything happens on one screen: choose whether your files become one book or several, and check each book's title, author and cover before saving. New books are highlighted in your library once they're in.</li>
+                                <li><span class="roadmap-change-title">Importing, simplified.</span> Everything happens on one screen: choose whether your files become one book or several, and check each book’s title, author and cover before saving. New books are highlighted in your library once they’re in.</li>
                                 <li><span class="roadmap-change-title">A new iCloud Drive browser.</span> Pick files and folders together, search every folder at once, and sort the list. Each folder you pick becomes its own book.</li>
                                 <li><span class="roadmap-change-title">Drop files in.</span> Drop audio files or whole folders onto your library on iPhone or iPad to import them.</li>
                                 <li><span class="roadmap-change-title">Whole folders from Files.</span> Choose folders in the import menu, not just files.</li>
@@ -297,7 +287,7 @@
                         <section class="roadmap-group">
                             <h3>On your wrist</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">A new Player on Apple Watch.</span> Laid out like Now Playing, over your cover's own colors. Turn the volume with the Digital Crown, swipe left for the sleep timer, speed, chapters and bookmarks, and see the chapter playing in a complication.</li>
+                                <li><span class="roadmap-change-title">A new Player on Apple Watch.</span> Laid out like Now Playing, over your cover’s own colors. Turn the volume with the Digital Crown, swipe left for the sleep timer, speed, chapters and bookmarks, and see the chapter playing in a complication.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
@@ -316,27 +306,27 @@
                         <section class="roadmap-group">
                             <h3>Make it yours</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Midnight.</span> A true-black theme beside Light and Dark, which OLED screens draw with their pixels off.</li>
-                                <li><span class="roadmap-change-title">Grid or list.</span> Show your shelves as a grid of covers or as a list, on iPhone too. Pick one from a shelf's More menu.</li>
+                                <li><span class="roadmap-change-title">Midnight.</span> A true‑black theme beside Light and Dark, which OLED screens draw with their pixels off.</li>
+                                <li><span class="roadmap-change-title">Grid or list.</span> Show your shelves as a grid of covers or as a list, on iPhone too. Pick one from a shelf’s More menu.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>In your language</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Seven more languages.</span> Use Novelwave on iPhone, iPad and Apple Watch in German, French, Spanish, Brazilian Portuguese, Italian, Romanian or Russian, and pick its language in Settings. What's New is translated too.</li>
+                                <li><span class="roadmap-change-title">Seven more languages.</span> Use Novelwave on iPhone, iPad and Apple Watch in German, French, Spanish, Brazilian Portuguese, Italian, Romanian or Russian, and pick its language in Settings. What’s New is translated too.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>Improvements</h3>
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Better with VoiceOver and larger text.</span> Clearer labels, layouts that adapt at the largest text sizes, bigger tap targets, and stronger colors when Increase Contrast is on.</li>
-                                <li><span class="roadmap-change-title">Edits show up straight away.</span> Change a book's details and the open Player follows along.</li>
+                                <li><span class="roadmap-change-title">Edits show up straight away.</span> Change a book’s details and the open Player follows along.</li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-next">
+            <li class="roadmap-stop is-next" id="v3-4">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-3-4">
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
@@ -344,7 +334,8 @@
                         <span class="roadmap-status">In development</span>
                     </span>
                 </button>
-                <p class="roadmap-summary">Audiobookshelf, tap to download, books that follow you to every device, details found online, and Lock Screen widgets.</p>
+                <p class="roadmap-summary">Audiobookshelf, books that download when you tap them, books that follow you to every device, details found online, and Lock Screen widgets.</p>
+                <p class="roadmap-beta">Want Audiobookshelf before it ships? Install Novelwave, then ask to join the beta from Profile. <a href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-roadmap-beta&amp;mt=8">Get Novelwave</a></p>
                 <div class="tile roadmap-changelog" id="changelog-3-4" role="region" aria-labelledby="changelog-3-4-title">
                     <h2 class="tile-title" id="changelog-3-4-title">Planned for Novelwave 3.4</h2>
                     <div class="roadmap-groups">
@@ -353,18 +344,18 @@
                             <ul class="roadmap-changes">
                                 <li><span class="roadmap-change-title">Audiobookshelf.</span> Sign in to your Audiobookshelf server, then stream its audiobooks or add them to your library, with your place kept in step with the server.</li>
                                 <li><span class="roadmap-change-title">Series as shelves.</span> Add a series from your server and it lands on a shelf of its own.</li>
-                                <li><span class="roadmap-change-title">Everywhere you listen.</span> Server audiobooks play in CarPlay and from your Apple Watch through your iPhone, and grey out while the server can't be reached.</li>
+                                <li><span class="roadmap-change-title">Everywhere you listen.</span> Server audiobooks play in CarPlay and from your Apple Watch through your iPhone, and grey out while the server can’t be reached.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
                             <h3>Books on every device</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Tap to download.</span> Tap an audiobook that isn't on this device and it starts downloading, with no alert first.</li>
-                                <li><span class="roadmap-change-title">Clear about what's missing.</span> Audiobooks that aren't on this device are dimmed, and a tap explains why and what you can do.</li>
+                                <li><span class="roadmap-change-title">Tap to download.</span> Tap an audiobook that isn’t on this device and it starts downloading, with no alert first.</li>
+                                <li><span class="roadmap-change-title">Clear about what’s missing.</span> Audiobooks that aren’t on this device are dimmed, and a tap explains why and what you can do.</li>
                                 <li><span class="roadmap-change-title">Upload to iCloud Drive.</span> Send books you added from files on one device to iCloud Drive, and they play on all your devices, with their progress, bookmarks and shelves just as they were.</li>
                                 <li><span class="roadmap-change-title">Find your audiobook files.</span> Reinstalled Novelwave, or moved to a new phone without a backup? Choose the folders that hold your files, and Novelwave matches them to your books, progress included.</li>
-                                <li><span class="roadmap-change-title">Downloads that fit.</span> Novelwave tells you how much space a download needs before starting one that won't fit.</li>
-                                <li><span class="roadmap-change-title">Already in your library.</span> iCloud Drive files you've already added are marked as you browse.</li>
+                                <li><span class="roadmap-change-title">Downloads that fit.</span> Novelwave tells you how much space a download needs before starting one that won’t fit.</li>
+                                <li><span class="roadmap-change-title">Already in your library.</span> iCloud Drive files you’ve already added are marked as you browse.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
@@ -384,13 +375,13 @@
                         <section class="roadmap-group">
                             <h3>Improvements</h3>
                             <ul class="roadmap-changes">
-                                <li><span class="roadmap-change-title">Easier to tap.</span> The Player's option buttons are full-size targets on every iPhone and iPad.</li>
+                                <li><span class="roadmap-change-title">Easier to tap.</span> The Player’s option buttons are full-size targets on every iPhone and iPad.</li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </li>
-            <li class="roadmap-stop is-later">
+            <li class="roadmap-stop is-later" id="vlater">
                 <button class="roadmap-stop-button" type="button" aria-expanded="true" aria-controls="changelog-later">
                     <span class="roadmap-dot" aria-hidden="true"></span>
                     <span class="roadmap-stop-label">
@@ -422,6 +413,7 @@
                                 <li><span class="roadmap-change-title">Dropbox.</span> Bring in audiobooks from your Dropbox.</li>
                                 <li><span class="roadmap-change-title">Google Drive.</span> Bring in audiobooks from your Google Drive.</li>
                                 <li><span class="roadmap-change-title">Jellyfin.</span> Connect Novelwave to your Jellyfin server.</li>
+                                <li><span class="roadmap-change-title">Public‑domain classics.</span> Browse and download public‑domain audiobooks from catalogs like LibriVox, right inside Novelwave.</li>
                             </ul>
                         </section>
                         <section class="roadmap-group">
@@ -441,19 +433,65 @@
             </li>
         </ol>
 
-        <p class="roadmap-note">Missing something you'd love to see? <a href="mailto:mihaipetrenco@icloud.com?subject=Novelwave%20Feature%20Request">Suggest a feature</a>.</p>
+        <p class="roadmap-note">Missing something you’d love to see? <a href="mailto:mihaipetrenco@icloud.com?subject=Novelwave%20Feature%20Request">Suggest a feature</a>.</p>
+        <aside class="page-cta" aria-labelledby="page-cta-title">
+            <picture><source srcset="images/icon-336.avif" type="image/avif"><img class="page-cta-icon" src="images/icon-336.png" alt="" width="84" height="84" loading="lazy"></picture>
+            <h2 class="page-cta-title" id="page-cta-title">Start with the book you’re in the middle of.</h2>
+            <div class="closing-actions">
+                <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-roadmap-end&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
+                <div class="qr">
+                    <svg class="qr-code" role="img" aria-label="QR code that opens Novelwave on the App Store" data-qr="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-qr-roadmap&amp;mt=8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" shape-rendering="crispEdges"><path fill="currentColor" d="M1 1h7v1h-7zM9 1h1v1h-1zM11 1h2v1h-2zM19 1h2v1h-2zM23 1h1v1h-1zM26 1h1v1h-1zM29 1h1v1h-1zM31 1h7v1h-7zM1 2h1v1h-1zM7 2h1v1h-1zM10 2h2v1h-2zM14 2h1v1h-1zM17 2h1v1h-1zM21 2h1v1h-1zM24 2h5v1h-5zM31 2h1v1h-1zM37 2h1v1h-1zM1 3h1v1h-1zM3 3h3v1h-3zM7 3h1v1h-1zM11 3h1v1h-1zM14 3h2v1h-2zM19 3h5v1h-5zM25 3h1v1h-1zM29 3h1v1h-1zM31 3h1v1h-1zM33 3h3v1h-3zM37 3h1v1h-1zM1 4h1v1h-1zM3 4h3v1h-3zM7 4h1v1h-1zM9 4h2v1h-2zM14 4h5v1h-5zM20 4h1v1h-1zM24 4h5v1h-5zM31 4h1v1h-1zM33 4h3v1h-3zM37 4h1v1h-1zM1 5h1v1h-1zM3 5h3v1h-3zM7 5h1v1h-1zM9 5h1v1h-1zM11 5h6v1h-6zM19 5h3v1h-3zM23 5h2v1h-2zM26 5h4v1h-4zM31 5h1v1h-1zM33 5h3v1h-3zM37 5h1v1h-1zM1 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1zM13 6h5v1h-5zM19 6h1v1h-1zM21 6h3v1h-3zM31 6h1v1h-1zM37 6h1v1h-1zM1 7h7v1h-7zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h1v1h-1zM15 7h1v1h-1zM17 7h1v1h-1zM19 7h1v1h-1zM21 7h1v1h-1zM23 7h1v1h-1zM25 7h1v1h-1zM27 7h1v1h-1zM29 7h1v1h-1zM31 7h7v1h-7zM9 8h4v1h-4zM14 8h1v1h-1zM17 8h4v1h-4zM22 8h1v1h-1zM24 8h1v1h-1zM27 8h3v1h-3zM1 9h1v1h-1zM5 9h1v1h-1zM7 9h5v1h-5zM13 9h1v1h-1zM15 9h2v1h-2zM19 9h2v1h-2zM23 9h1v1h-1zM25 9h1v1h-1zM27 9h1v1h-1zM30 9h5v1h-5zM37 9h1v1h-1zM4 10h2v1h-2zM10 10h2v1h-2zM13 10h1v1h-1zM17 10h1v1h-1zM20 10h2v1h-2zM24 10h1v1h-1zM27 10h2v1h-2zM30 10h2v1h-2zM35 10h2v1h-2zM3 11h5v1h-5zM9 11h3v1h-3zM13 11h1v1h-1zM15 11h1v1h-1zM17 11h1v1h-1zM19 11h1v1h-1zM21 11h4v1h-4zM27 11h2v1h-2zM30 11h1v1h-1zM32 11h2v1h-2zM35 11h1v1h-1zM1 12h2v1h-2zM6 12h1v1h-1zM10 12h1v1h-1zM12 12h3v1h-3zM18 12h1v1h-1zM22 12h2v1h-2zM34 12h3v1h-3zM3 13h2v1h-2zM6 13h4v1h-4zM11 13h3v1h-3zM16 13h1v1h-1zM20 13h3v1h-3zM25 13h1v1h-1zM29 13h4v1h-4zM34 13h4v1h-4zM2 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM10 14h1v1h-1zM13 14h1v1h-1zM15 14h1v1h-1zM18 14h4v1h-4zM24 14h1v1h-1zM26 14h5v1h-5zM33 14h2v1h-2zM37 14h1v1h-1zM1 15h1v1h-1zM3 15h2v1h-2zM6 15h2v1h-2zM9 15h1v1h-1zM12 15h2v1h-2zM16 15h1v1h-1zM19 15h1v1h-1zM23 15h6v1h-6zM32 15h4v1h-4zM2 16h1v1h-1zM5 16h2v1h-2zM9 16h1v1h-1zM11 16h1v1h-1zM13 16h5v1h-5zM25 16h2v1h-2zM28 16h2v1h-2zM31 16h3v1h-3zM35 16h2v1h-2zM1 17h2v1h-2zM4 17h2v1h-2zM7 17h2v1h-2zM12 17h1v1h-1zM17 17h1v1h-1zM20 17h2v1h-2zM23 17h3v1h-3zM29 17h8v1h-8zM2 18h1v1h-1zM4 18h3v1h-3zM10 18h3v1h-3zM14 18h2v1h-2zM19 18h2v1h-2zM22 18h2v1h-2zM25 18h2v1h-2zM30 18h1v1h-1zM33 18h1v1h-1zM36 18h1v1h-1zM1 19h2v1h-2zM4 19h1v1h-1zM6 19h3v1h-3zM10 19h1v1h-1zM13 19h4v1h-4zM18 19h1v1h-1zM20 19h1v1h-1zM24 19h2v1h-2zM27 19h2v1h-2zM30 19h1v1h-1zM32 19h4v1h-4zM1 20h1v1h-1zM3 20h1v1h-1zM11 20h2v1h-2zM16 20h3v1h-3zM20 20h3v1h-3zM25 20h1v1h-1zM27 20h1v1h-1zM30 20h1v1h-1zM32 20h1v1h-1zM35 20h2v1h-2zM2 21h2v1h-2zM6 21h2v1h-2zM11 21h1v1h-1zM13 21h1v1h-1zM15 21h1v1h-1zM17 21h1v1h-1zM21 21h3v1h-3zM25 21h1v1h-1zM27 21h1v1h-1zM30 21h3v1h-3zM3 22h4v1h-4zM11 22h3v1h-3zM17 22h1v1h-1zM19 22h1v1h-1zM21 22h1v1h-1zM24 22h7v1h-7zM32 22h2v1h-2zM2 23h1v1h-1zM4 23h4v1h-4zM9 23h1v1h-1zM14 23h2v1h-2zM18 23h1v1h-1zM20 23h1v1h-1zM23 23h7v1h-7zM32 23h6v1h-6zM1 24h1v1h-1zM3 24h1v1h-1zM5 24h2v1h-2zM8 24h2v1h-2zM12 24h1v1h-1zM17 24h4v1h-4zM24 24h2v1h-2zM30 24h4v1h-4zM35 24h1v1h-1zM37 24h1v1h-1zM1 25h2v1h-2zM4 25h4v1h-4zM10 25h4v1h-4zM15 25h1v1h-1zM19 25h1v1h-1zM24 25h1v1h-1zM26 25h6v1h-6zM34 25h4v1h-4zM1 26h4v1h-4zM6 26h1v1h-1zM8 26h3v1h-3zM12 26h1v1h-1zM14 26h1v1h-1zM17 26h1v1h-1zM20 26h3v1h-3zM25 26h1v1h-1zM29 26h5v1h-5zM6 27h2v1h-2zM9 27h1v1h-1zM12 27h3v1h-3zM17 27h1v1h-1zM21 27h4v1h-4zM26 27h2v1h-2zM29 27h2v1h-2zM33 27h1v1h-1zM35 27h1v1h-1zM4 28h3v1h-3zM9 28h1v1h-1zM11 28h1v1h-1zM15 28h1v1h-1zM19 28h1v1h-1zM22 28h1v1h-1zM25 28h1v1h-1zM29 28h2v1h-2zM32 28h1v1h-1zM35 28h1v1h-1zM1 29h2v1h-2zM5 29h1v1h-1zM7 29h1v1h-1zM9 29h2v1h-2zM13 29h1v1h-1zM15 29h2v1h-2zM18 29h1v1h-1zM20 29h4v1h-4zM25 29h1v1h-1zM29 29h8v1h-8zM9 30h1v1h-1zM11 30h3v1h-3zM17 30h2v1h-2zM21 30h1v1h-1zM24 30h1v1h-1zM26 30h2v1h-2zM29 30h1v1h-1zM33 30h1v1h-1zM37 30h1v1h-1zM1 31h7v1h-7zM9 31h2v1h-2zM12 31h1v1h-1zM16 31h1v1h-1zM19 31h1v1h-1zM22 31h6v1h-6zM29 31h1v1h-1zM31 31h1v1h-1zM33 31h1v1h-1zM1 32h1v1h-1zM7 32h1v1h-1zM12 32h1v1h-1zM14 32h2v1h-2zM22 32h2v1h-2zM25 32h1v1h-1zM28 32h2v1h-2zM33 32h5v1h-5zM1 33h1v1h-1zM3 33h3v1h-3zM7 33h1v1h-1zM9 33h2v1h-2zM13 33h1v1h-1zM15 33h1v1h-1zM17 33h1v1h-1zM20 33h2v1h-2zM24 33h1v1h-1zM26 33h1v1h-1zM29 33h7v1h-7zM37 33h1v1h-1zM1 34h1v1h-1zM3 34h3v1h-3zM7 34h1v1h-1zM12 34h1v1h-1zM19 34h2v1h-2zM26 34h7v1h-7zM36 34h2v1h-2zM1 35h1v1h-1zM3 35h3v1h-3zM7 35h1v1h-1zM10 35h1v1h-1zM14 35h1v1h-1zM16 35h1v1h-1zM19 35h2v1h-2zM22 35h1v1h-1zM26 35h1v1h-1zM28 35h2v1h-2zM31 35h1v1h-1zM34 35h1v1h-1zM36 35h1v1h-1zM1 36h1v1h-1zM7 36h1v1h-1zM10 36h1v1h-1zM13 36h11v1h-11zM25 36h1v1h-1zM27 36h2v1h-2zM33 36h1v1h-1zM35 36h2v1h-2zM1 37h7v1h-7zM9 37h1v1h-1zM11 37h3v1h-3zM15 37h1v1h-1zM19 37h1v1h-1zM25 37h1v1h-1zM32 37h1v1h-1zM35 37h3v1h-3z"/></svg>
+                </div>
+            </div>
+            <p class="page-cta-note">Requires iOS 17, iPadOS 17 or watchOS 11 or later.</p>
+        </aside>
     </main>
 
-    <footer class="site-footer container">
-        <a class="site-title" href="./">Novelwave</a>
-        <nav aria-label="Support and legal">
-            <ul class="footer-links">
+    <footer class="site-footer band">
+        <div class="container">
+            <nav class="footer-nav" aria-label="More from Novelwave">
+                <div class="footer-group">
+                    <h2 class="footer-label" id="footer-novelwave">Novelwave</h2>
+                    <ul class="footer-links" aria-labelledby="footer-novelwave">
+                        <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h2 class="footer-label" id="footer-guides">Guides</h2>
+                    <ul class="footer-links" aria-labelledby="footer-guides">
+                        <li><a href="m4b-player-iphone.html">M4B on iPhone</a></li>
+                        <li><a href="mp3-audiobooks-iphone.html">MP3 on iPhone</a></li>
+                        <li><a href="apple-watch-audiobooks.html">Audiobooks on Apple Watch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-group">
+                    <h2 class="footer-label" id="footer-legal">Legal</h2>
+                    <ul class="footer-links" aria-labelledby="footer-legal">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-base">
+                <span>© 2026 Novelwave. Made by Mihai Petrenco.</span>
+            </div>
+        </div>
+    </footer>
+    <div class="menu band" id="menu" popover>
+        <nav aria-label="Menu">
+            <ul class="menu-list">
+                <li><a href="./">Home</a></li>
+                <li><a href="roadmap.html" aria-current="page">Roadmap</a></li>
                 <li><a href="support.html">Support</a></li>
+                <li><a href="m4b-player-iphone.html">M4B on iPhone</a></li>
+                <li><a href="mp3-audiobooks-iphone.html">MP3 on iPhone</a></li>
+                <li><a href="apple-watch-audiobooks.html">Audiobooks on Apple Watch</a></li>
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Use</a></li>
             </ul>
+            <a class="app-store-button menu-download" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-menu-roadmap&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
         </nav>
-        <p>© 2026 Novelwave. Made with ❤️ by Mihai Petrenco.</p>
-    </footer>
+    </div>
 </body>
 </html>

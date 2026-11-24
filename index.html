@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="home">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Novelwave is an audiobook player for iPhone, iPad and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
-    <title>Novelwave: Your ultimate audiobook player</title>
+    <meta name="description" content="Play the DRM-free M4B, MP3 and Opus audiobooks you own, offline, on iPhone, iPad, Apple Watch and CarPlay, with shelves, chapters, bookmarks and iCloud sync.">
+    <title>M4B and MP3 Audiobook Player for iPhone, iPad and Apple Watch · Novelwave</title>
+    <link rel="canonical" href="https://www.novelwave.app/">
+    <link rel="alternate" hreflang="en" href="https://www.novelwave.app/">
+    <link rel="alternate" hreflang="de" href="https://www.novelwave.app/de/">
+    <link rel="alternate" hreflang="es" href="https://www.novelwave.app/es/">
+    <link rel="alternate" hreflang="fr" href="https://www.novelwave.app/fr/">
+    <link rel="alternate" hreflang="it" href="https://www.novelwave.app/it/">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.novelwave.app/pt-br/">
+    <link rel="alternate" hreflang="ro" href="https://www.novelwave.app/ro/">
+    <link rel="alternate" hreflang="ru" href="https://www.novelwave.app/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://www.novelwave.app/">
+    <meta name="theme-color" content="#221C16">
+    <meta name="apple-itunes-app" content="app-id=6720100886, affiliate-data=pt=122786304&amp;ct=web-banner">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Novelwave">
-    <meta property="og:title" content="Novelwave: Your ultimate audiobook player">
-    <meta property="og:description" content="Novelwave is an audiobook player for iPhone, iPad and Apple Watch. Play the M4B, MP3 and Opus audiobooks you own, organize them into shelves and pick up right where you left off.">
+    <meta property="og:title" content="Novelwave: for the audiobooks you already own">
+    <meta property="og:description" content="Play the DRM-free M4B, MP3 and Opus audiobooks you own, offline, on iPhone, iPad, Apple Watch and CarPlay, with shelves, chapters, bookmarks and iCloud sync.">
     <meta property="og:url" content="https://www.novelwave.app/">
-    <meta property="og:image" content="https://www.novelwave.app/images/social-card.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="ro_RO">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:image" content="https://www.novelwave.app/images/social-card.jpg">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Novelwave on iPhone and Apple Watch, with the words Your ultimate audiobook player">
+    <meta property="og:image:alt" content="Novelwave on iPhone, with the words For the audiobooks you already own">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16">
@@ -22,47 +43,30 @@
     <link rel="icon" href="images/favicon-96.png" type="image/png" sizes="96x96">
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="preload" href="fonts/petrona-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="theme.js"></script>
-    <script src="device.js"></script>
     <script src="hero.js" defer></script>
-    <script src="tour.js" defer></script>
+    <script src="gallery.js" defer></script>
+    <script src="home.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            { "@type": "WebSite", "name": "Novelwave", "url": "https://www.novelwave.app/" },
+            { "@type": "Organization", "name": "Novelwave", "url": "https://www.novelwave.app/", "logo": "https://www.novelwave.app/images/icon-512.png", "sameAs": ["https://apps.apple.com/app/id6720100886"] },
+            { "@type": "MobileApplication", "name": "Novelwave", "url": "https://www.novelwave.app/", "installUrl": "https://apps.apple.com/app/id6720100886", "image": "https://www.novelwave.app/images/icon-512.png", "description": "An audiobook player for the DRM-free M4B, MP3 and Opus audiobooks you own, on iPhone, iPad, Apple Watch and CarPlay.", "operatingSystem": "iOS 17, iPadOS 17, watchOS 11", "applicationCategory": "MultimediaApplication", "inLanguage": ["en", "de", "es", "fr", "it", "pt-BR", "ro", "ru"], "author": { "@type": "Person", "name": "Mihai Petrenco" } }
+        ]
+    }
+    </script>
 </head>
 <body>
     <svg class="icon-sprite" aria-hidden="true">
-        <symbol id="icon-shelves" viewBox="0 0 24 24"><path d="M20 10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2.5a1 1 0 0 1-.8-.4l-.9-1.2A1 1 0 0 0 15 3h-2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z"/><path d="M20 21a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-2.9a1 1 0 0 1-.88-.55l-.42-.85a1 1 0 0 0-.92-.6H13a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z"/><path d="M3 5a2 2 0 0 0 2 2h3"/><path d="M3 3v13a2 2 0 0 0 2 2h3"/></symbol>
-        <symbol id="icon-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
-        <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
-        <symbol id="icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-        <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
-        <symbol id="icon-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
-        <symbol id="icon-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
-        <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
-        <symbol id="icon-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
-        <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
-        <symbol id="icon-cloud-download" viewBox="0 0 24 24"><path d="M12 13v8l-4-4"/><path d="m12 21 4-4"/><path d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"/></symbol>
-        <symbol id="icon-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
-        <symbol id="icon-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="3"/><path d="M12 18h.01"/></symbol>
-        <symbol id="icon-tablet" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
-        <symbol id="icon-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
-        <symbol id="icon-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
-        <symbol id="icon-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
-        <symbol id="icon-export" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
-        <symbol id="icon-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
-        <symbol id="icon-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 18a6 6 0 0 0 0-12v12z"/></symbol>
-        <symbol id="icon-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
-        <symbol id="icon-watch" viewBox="0 0 24 24"><rect width="12" height="14" x="6" y="5" rx="3"/><path d="M9 5l.5-3h5l.5 3"/><path d="M9 19l.5 3h5l.5-3"/><path d="M18 10h1"/></symbol>
-        <symbol id="icon-mic" viewBox="0 0 24 24"><rect width="6" height="12" x="9" y="2" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
-        <symbol id="icon-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
-        <symbol id="icon-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
-        <symbol id="icon-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
         <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
         <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
-        <symbol id="icon-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z" fill="currentColor" stroke="none"/></symbol>
-        <symbol id="icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/><rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor" stroke="none"/></symbol>
-        <symbol id="icon-rewind" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
-        <symbol id="icon-forward" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+        <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+        <symbol id="icon-chapters" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="2.6"/></symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 24"><path d="M8 5.5v13M16 5.5v13" stroke-width="3"/></symbol>
     </svg>
 
     <canvas class="dot-grid" aria-hidden="true"></canvas>
@@ -70,1160 +74,377 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-        <a class="site-title" href="./">Novelwave</a>
-        <nav aria-label="Main">
-            <ul class="header-links">
-                <li><a href="roadmap.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
-            </ul>
-        </nav>
-        <div class="device-switch header-device-switch" role="group" aria-label="Show Novelwave on" data-device-switch hidden>
-            <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
-            <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
-        </div>
-        <div class="theme-toggle" role="group" aria-label="Color theme" hidden>
-            <button class="theme-option" type="button" data-theme-option="light" aria-label="Light mode" aria-pressed="false">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="4"/>
-                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-                </svg>
-            </button>
-            <button class="theme-option" type="button" data-theme-option="dark" aria-label="Dark mode" aria-pressed="false">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                </svg>
-            </button>
-            <button class="theme-option" type="button" data-theme-option="midnight" aria-label="Midnight mode" aria-pressed="false">
-                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                    <path d="M20 3v4M22 5h-4"/>
-                </svg>
-            </button>
+        <div class="container">
+            <a class="site-title" href="./"><img src="images/favicon-96.png" alt="" width="32" height="32"><span>Novelwave</span></a>
+            <nav aria-label="Main">
+                <ul class="header-links">
+                    <li><a href="roadmap.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>Roadmap</a></li>
+                    <li><a href="support.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>Support</a></li>
+                </ul>
+            </nav>
+            <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-header&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
         </div>
     </header>
 
-    <nav class="tour-player" aria-label="Tour chapters" hidden>
-        <a class="tour-player-now" href="#tour">
-            <span class="tour-player-numeral" aria-hidden="true" data-tour-numeral>I</span>
-            <span class="tour-player-text">
-                <span class="tour-player-label" data-tour-label>Chapter I</span>
-                <span class="tour-player-title" data-tour-title>A place for every book</span>
-                <span class="tour-player-progress" aria-hidden="true"></span>
-                <span class="visually-hidden">, back to contents</span>
-            </span>
-        </a>
-        <a class="tour-player-skip" data-tour-previous aria-label="Previous chapter">
-            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
-        </a>
-        <a class="tour-player-skip" data-tour-next aria-label="Next chapter">
-            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
-        </a>
-    </nav>
-
     <main id="main">
         <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-copy">
-                <h1 class="hero-title" id="hero-title">Your <span class="accent">ultimate</span> audiobook player.</h1>
-                <p class="hero-lede">For iPhone, iPad and Apple Watch. Play the M4B, MP3 and Opus audiobooks you already own.</p>
-                <div class="hero-actions">
-                    <a class="app-store-button" href="https://apps.apple.com/app/id6720100886">
-                        <picture>
-                            <source srcset="images/download_light.svg" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <img src="images/download_dark.svg" alt="Download on the App Store" width="120" height="40">
-                        </picture>
-                    </a>
-                    <a class="tour-button" href="#tour">Take the tour</a>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-kicker">Audiobook player for iPhone, iPad and Apple&nbsp;Watch</p>
+                    <h1 class="display hero-title" id="hero-title">For the audiobooks you already&nbsp;own.</h1>
+                    <p class="lede">Play your DRM‑free M4B, MP3 and other audiobook files with their chapters, and pick up where you left off on every device.</p>
+                    <div class="hero-actions">
+                        <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-hero&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
+                        <!-- data-app-rating-total keeps the worldwide count out of sight for the daily update's safeguard (.github/scripts/rating_format.py). -->
+                        <p class="rating"><span class="rating-star" aria-hidden="true">★</span> <strong data-app-rating-total="179" data-app-rating>4.8</strong> on the App&nbsp;Store</p>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-showcase">
-                <div class="hero-devices" data-only="iphone">
-                    <div class="device device-back">
-                        <picture>
-                            <source srcset="images/midnight-device-back.avif 1x, images/midnight-device-back@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/midnight-device-back.png 1x, images/midnight-device-back@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/dark-device-back.avif 1x, images/dark-device-back@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/dark-device-back.png 1x, images/dark-device-back@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
+                <div class="hero-art">
+                    <div class="hero-devices">
+                        <picture class="device device-back">
+                            <source srcset="images/dark-device-back.avif 1x, images/dark-device-back@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/dark-device-back.png 1x, images/dark-device-back@2x.png 2x" media="(prefers-color-scheme: dark)">
                             <source srcset="images/light-device-back.avif 1x, images/light-device-back@2x.avif 2x" type="image/avif">
-                            <img class="device-image" src="images/light-device-back.png" srcset="images/light-device-back.png 1x, images/light-device-back@2x.png 2x" alt="The Novelwave player playing an audiobook" width="385" height="776" decoding="async">
+                            <img src="images/light-device-back.png" srcset="images/light-device-back.png 1x, images/light-device-back@2x.png 2x" alt="The Novelwave player playing 1984, with its chapter, the time left and the playback controls" width="385" height="776" fetchpriority="high">
+                        </picture>
+                        <picture class="device device-front">
+                            <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
+                            <img src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="The Novelwave library, with the books you’re listening to and how much of each is left" width="385" height="776" fetchpriority="high">
                         </picture>
                     </div>
-                    <picture>
-                        <source srcset="images/midnight-device-front.avif 1x, images/midnight-device-front@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                        <source srcset="images/midnight-device-front.png 1x, images/midnight-device-front@2x.png 2x" media="not all" data-theme-source="midnight">
-                        <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                        <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                        <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
-                        <img class="device device-front" src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="The Novelwave library listing audiobooks with their listening progress" width="385" height="776" fetchpriority="high">
-                    </picture>
-                </div>
-                <div class="hero-devices hero-devices-ipad" data-only="ipad">
-                    <div class="device device-back">
-                        <picture>
-                            <source srcset="images/ipad/midnight-player.avif 1x, images/ipad/midnight-player@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/midnight-player.png 1x, images/ipad/midnight-player@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/dark-player.avif 1x, images/ipad/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/dark-player.png 1x, images/ipad/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/light-player.avif 1x, images/ipad/light-player@2x.avif 2x" type="image/avif">
-                            <img class="device-image" src="images/ipad/light-player.png" srcset="images/ipad/light-player.png 1x, images/ipad/light-player@2x.png 2x" alt="The Novelwave player on iPad, with the cover of 1984 beside its chapters" width="1096" height="832" loading="lazy" decoding="async">
-                        </picture>
-                    </div>
-                    <picture>
-                        <source srcset="images/ipad/midnight-library-wide.avif 1x, images/ipad/midnight-library-wide@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                        <source srcset="images/ipad/midnight-library-wide.png 1x, images/ipad/midnight-library-wide@2x.png 2x" media="not all" data-theme-source="midnight">
-                        <source srcset="images/ipad/dark-library-wide.avif 1x, images/ipad/dark-library-wide@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                        <source srcset="images/ipad/dark-library-wide.png 1x, images/ipad/dark-library-wide@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                        <source srcset="images/ipad/light-library-wide.avif 1x, images/ipad/light-library-wide@2x.avif 2x" type="image/avif">
-                        <img class="device device-front" src="images/ipad/light-library-wide.png" srcset="images/ipad/light-library-wide.png 1x, images/ipad/light-library-wide@2x.png 2x" alt="The Novelwave library on iPad, a grid of shelves and audiobook covers" width="1096" height="832" loading="lazy" decoding="async">
-                    </picture>
-                </div>
-                <div class="device-switch hero-device-switch" role="group" aria-label="Show Novelwave on" data-device-switch hidden>
-                    <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
-                    <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
                 </div>
             </div>
-            <a class="scroll-cue" href="#tour" aria-hidden="true" tabindex="-1">
-                <span class="scroll-cue-label">Scroll to begin</span>
-                <span class="scroll-cue-line"></span>
-            </a>
         </section>
 
-        <div class="tour">
-            <section class="tour-intro container" id="tour" aria-labelledby="tour-title">
-                <div class="tour-intro-copy reveal">
-                    <p class="eyebrow">The tour</p>
-                    <h2 class="section-title" id="tour-title">Every feature, <span class="accent">chapter</span> by chapter.</h2>
-                    <p class="lede">Novelwave is made for books, not podcasts or playlists. Ten short chapters cover everything it can do, from the first import to the last page.</p>
-                </div>
-                <nav class="contents reveal" aria-labelledby="contents-title">
-                    <h3 class="contents-title" id="contents-title">Contents</h3>
-                    <ol class="contents-list" role="list">
-                        <li><a href="#library"><span class="contents-numeral">I</span><span class="contents-name">A place for every book</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Library</span></a></li>
-                        <li><a href="#player"><span class="contents-numeral">II</span><span class="contents-name">Listening, exactly your way</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Player</span></a></li>
-                        <li><a href="#hands-free"><span class="contents-numeral">III</span><span class="contents-name">Take it on the road</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Hands-free</span></a></li>
-                        <li><a href="#watch"><span class="contents-numeral">IV</span><span class="contents-name">Your book, on your wrist</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Apple Watch</span></a></li>
-                        <li><a href="#stats"><span class="contents-numeral">V</span><span class="contents-name">Every hour, accounted for</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Stats</span></a></li>
-                        <li><a href="#import"><span class="contents-numeral">VI</span><span class="contents-name">However your books arrive</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Import</span></a></li>
-                        <li><a href="#sync"><span class="contents-numeral">VII</span><span class="contents-name">Your library, everywhere at once</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Sync</span></a></li>
-                        <li><a href="#details"><span class="contents-numeral">VIII</span><span class="contents-name">Make every book look the part</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Metadata</span></a></li>
-                        <li><a href="#extras"><span class="contents-numeral">IX</span><span class="contents-name">The little things, done properly</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Extras</span></a></li>
-                        <li><a href="#gallery"><span class="contents-numeral">X</span><span class="contents-name">See it for yourself</span><span class="contents-leader" aria-hidden="true"></span><span class="contents-topic">Gallery</span></a></li>
-                    </ol>
-                </nav>
-            </section>
-
-            <section class="chapter container" id="library" aria-labelledby="library-title" data-numeral="I" data-title="A place for every book">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">I</span> Library</p>
-                    <h2 class="section-title" id="library-title">A place for <span class="accent">every</span> book.</h2>
-                    <p class="lede">Gather audiobooks into shelves, then tuck shelves inside other shelves, as deep as your collection needs. Sorting, filters and search keep any book only moments away.</p>
-                    <dl class="specs">
-                        <div><dt>Shelves</dt><dd>Nested, as deep as you like</dd></div>
-                        <div><dt>Sort by</dt><dd>Title, date added or date updated</dd></div>
-                        <div><dt>Filter</dt><dd>In progress, not started, finished, downloaded</dd></div>
-                        <div><dt>Search</dt><dd>Titles, authors and shelves</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <figure class="tile tile-wide tile-tablet reveal" data-only="ipad">
-                        <picture>
-                            <source srcset="images/ipad/midnight-shelf.avif 1x, images/ipad/midnight-shelf@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/midnight-shelf.png 1x, images/ipad/midnight-shelf@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/dark-shelf.avif 1x, images/ipad/dark-shelf@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/dark-shelf.png 1x, images/ipad/dark-shelf@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/light-shelf.avif 1x, images/ipad/light-shelf@2x.avif 2x" type="image/avif">
-                            <img src="images/ipad/light-shelf.png" srcset="images/ipad/light-shelf.png 1x, images/ipad/light-shelf@2x.png 2x" alt="" width="1096" height="832" loading="lazy" decoding="async">
-                        </picture>
-                    </figure>
-                    <figure class="tile tile-device reveal" data-only="iphone">
-                        <picture>
-                            <source srcset="images/midnight-device-front.avif 1x, images/midnight-device-front@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/midnight-device-front.png 1x, images/midnight-device-front@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/dark-device-front.avif 1x, images/dark-device-front@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/dark-device-front.png 1x, images/dark-device-front@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/light-device-front.avif 1x, images/light-device-front@2x.avif 2x" type="image/avif">
-                            <img src="images/light-device-front.png" srcset="images/light-device-front.png 1x, images/light-device-front@2x.png 2x" alt="" width="385" height="776" loading="lazy" decoding="async">
-                        </picture>
-                    </figure>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">Shelves within shelves</h3>
-                        <p class="tile-text">Organize by author, series or mood, at any depth.</p>
-                        <ol class="shelf-tree" aria-label="Example shelf hierarchy">
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-shelves"/></svg><span>Library</span></li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg><span>Classics</span><span class="shelf-count">24 items</span></li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg><span>Russian</span><span class="shelf-count">8 items</span></li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg><span>Tolstoy</span><span class="shelf-count">3 items</span></li>
-                        </ol>
-                    </article>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">Filters that think ahead</h3>
-                        <p class="tile-text">See just what you're reading, or what's waiting.</p>
-                        <ul class="chips" aria-label="Library filters">
-                            <li class="chip">All</li>
-                            <li class="chip is-selected">In Progress</li>
-                            <li class="chip">Not Started</li>
-                            <li class="chip">Finished</li>
-                            <li class="chip">Downloaded</li>
-                        </ul>
-                    </article>
-                    <article class="tile tile-wide reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Find anything, instantly</h3>
-                            <p class="tile-text">Search across titles, authors and shelves at once.</p>
-                        </div>
-                        <div class="search-demo" aria-hidden="true">
-                            <div class="search-field">
-                                <svg class="icon"><use href="#icon-search"/></svg>
-                                <span class="search-query">Austen</span>
-                            </div>
-                            <ul class="search-results">
-                                <li><span class="cover cover-pride"><span class="cover-title">Pride and Prejudice</span></span><span><strong>Pride and Prejudice</strong>Jane Austen</span></li>
-                                <li><span class="cover cover-emma"><span class="cover-title">Emma</span></span><span><strong>Emma</strong>Jane Austen</span></li>
-                                <li><span class="search-shelf"><svg class="icon"><use href="#icon-folder"/></svg></span><span><strong>Austen Collection</strong>Shelf · 6 items</span></li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="player" aria-labelledby="player-title" data-numeral="II" data-title="Listening, exactly your way">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">II</span> Player</p>
-                    <h2 class="section-title" id="player-title">Listening, <span class="accent">exactly</span> your way.</h2>
-                    <p class="lede">Set the pace anywhere from half speed to six times faster, let the sleep timer wait for the end of the chapter, and leave bookmarks with notes on the passages worth returning to.</p>
-                    <dl class="specs">
-                        <div><dt>Speed</dt><dd>0.5× to 6×, in 0.05× steps</dd></div>
-                        <div><dt>Sleep timer</dt><dd>5 to 90 minutes, or end of chapter</dd></div>
-                        <div><dt>Skip</dt><dd>Back and forward, 5 to 45 seconds</dd></div>
-                        <div><dt>Rewind on pause</dt><dd>Never lose the thread</dd></div>
-                        <div><dt>Interruptions</dt><dd>Resumes after Siri, calls and alarms</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide speed-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Speed controls</h3>
-                            <p class="tile-text">Try it. Moby-Dick has never gone by so fast.</p>
-                        </div>
-                        <div class="speed-readout">
-                            <output class="speed-value" for="speed-input" data-speed-value>1.0×</output>
-                            <p class="speed-remaining"><span data-speed-remaining>21h 4m</span> left at this speed</p>
-                        </div>
-                        <div class="speed-control">
-                            <button class="round-button" type="button" data-speed-step="-1" aria-label="Decrease speed">
-                                <svg class="icon" aria-hidden="true"><use href="#icon-minus"/></svg>
-                            </button>
-                            <label class="visually-hidden" for="speed-input">Playback speed</label>
-                            <input class="speed-slider" id="speed-input" type="range" min="0.5" max="6" step="0.05" value="1">
-                            <button class="round-button" type="button" data-speed-step="1" aria-label="Increase speed">
-                                <svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg>
-                            </button>
-                        </div>
-                    </article>
-                    <figure class="tile tile-wide tile-tablet reveal" data-only="ipad">
-                        <picture>
-                            <source srcset="images/ipad/midnight-player.avif 1x, images/ipad/midnight-player@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/midnight-player.png 1x, images/ipad/midnight-player@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/dark-player.avif 1x, images/ipad/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/dark-player.png 1x, images/ipad/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/light-player.avif 1x, images/ipad/light-player@2x.avif 2x" type="image/avif">
-                            <img src="images/ipad/light-player.png" srcset="images/ipad/light-player.png 1x, images/ipad/light-player@2x.png 2x" alt="" width="1096" height="832" loading="lazy" decoding="async">
-                        </picture>
-                    </figure>
-                    <figure class="tile tile-device reveal" data-only="iphone">
-                        <picture>
-                            <source srcset="images/midnight-device-player.avif 1x, images/midnight-device-player@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/midnight-device-player.png 1x, images/midnight-device-player@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/dark-device-player.avif 1x, images/dark-device-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/dark-device-player.png 1x, images/dark-device-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/light-device-player.avif 1x, images/light-device-player@2x.avif 2x" type="image/avif">
-                            <img src="images/light-device-player.png" srcset="images/light-device-player.png 1x, images/light-device-player@2x.png 2x" alt="" width="385" height="776" loading="lazy" decoding="async">
-                        </picture>
-                    </figure>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">Sleep timer</h3>
-                        <p class="tile-text">Drift off at the end of a chapter, not mid-sentence.</p>
-                        <div class="sleep-demo" aria-hidden="true">
-                            <p class="sleep-countdown"><svg class="icon"><use href="#icon-moon"/></svg>Sleeping in <span>12:41</span></p>
-                            <ul class="option-list">
-                                <li>15 minutes</li>
-                                <li>30 minutes</li>
-                                <li class="is-selected">End of Chapter<svg class="icon"><use href="#icon-check"/></svg></li>
-                                <li>End of File</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">Bookmarks with notes</h3>
-                        <p class="tile-text">Name them, annotate them, find them again.</p>
-                        <div class="bookmark-demo" aria-hidden="true">
-                            <svg class="icon"><use href="#icon-bookmark"/></svg>
-                            <div>
-                                <p class="bookmark-meta">Loomings · 00:00:42</p>
-                                <p class="bookmark-note">“Call me Ishmael.” Where it all begins.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="hands-free" aria-labelledby="hands-free-title" data-numeral="III" data-title="Take it on the road">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">III</span> Hands-free</p>
-                    <h2 class="section-title" id="hands-free-title">Take it on the <span class="accent">road</span>.</h2>
-                    <p class="lede">Novelwave rides along in CarPlay, answers when you ask Siri, and hands every control to Shortcuts, Control Center and the Lock Screen. Keep your hands on the wheel and your place in the book.</p>
-                    <dl class="specs">
-                        <div><dt>CarPlay</dt><dd>Continue, Library and Now Playing</dd></div>
-                        <div><dt>Siri</dt><dd>Play, skip, chapters, speed, sleep timer, bookmarks</dd></div>
-                        <div><dt>Shortcuts</dt><dd>13 actions for your own automations</dd></div>
-                        <div><dt>By name</dt><dd>With Apple Intelligence on iOS 27</dd></div>
-                        <div><dt>Lock Screen</dt><dd>A Live Activity for the sleep timer</dd></div>
-                        <div><dt>Control Center</dt><dd>Play, pause and the sleep timer</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide carplay-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">CarPlay</h3>
-                            <p class="tile-text">Cover cards show the time left on every book, and Now Playing keeps skip, speed and chapters in reach.</p>
-                        </div>
-                        <fieldset class="segmented">
-                            <legend class="visually-hidden">CarPlay screen</legend>
-                            <input class="visually-hidden" type="radio" name="carplay-screen" id="carplay-continue" value="continue" checked>
-                            <label for="carplay-continue">Continue</label>
-                            <input class="visually-hidden" type="radio" name="carplay-screen" id="carplay-now-playing" value="now-playing">
-                            <label for="carplay-now-playing">Now Playing</label>
-                        </fieldset>
-                        <div class="car-display">
-                            <svg class="car-rings" viewBox="0 0 400 400" aria-hidden="true">
-                                <circle cx="200" cy="200" r="120"/>
-                                <circle cx="200" cy="200" r="155"/>
-                                <circle cx="200" cy="200" r="195"/>
-                            </svg>
-                            <div class="car-screen">
-                                <picture class="car-shot car-shot-continue">
-                                    <source srcset="images/carplay/dark-continue.avif" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/carplay/dark-continue.png" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/carplay/light-continue.avif" type="image/avif">
-                                    <img src="images/carplay/light-continue.png" alt="Novelwave's Continue screen in CarPlay, with cover cards and the time left on each audiobook" width="800" height="480" loading="lazy" decoding="async">
-                                </picture>
-                                <picture class="car-shot car-shot-now-playing">
-                                    <source srcset="images/carplay/now-playing.avif" type="image/avif">
-                                    <img src="images/carplay/now-playing.png" alt="Now Playing in CarPlay, with skip, speed and chapters buttons beside the cover" width="800" height="480" loading="lazy" decoding="async">
-                                </picture>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tile siri-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Just ask Siri</h3>
-                            <p class="tile-text">Tap a request to hear what happens. With Apple Intelligence on iOS 27, just say “Play Moby-Dick”.</p>
-                        </div>
-                        <ul class="siri-requests" aria-label="Things to ask Siri">
-                            <li><button type="button" aria-pressed="true" data-siri-reply="Moby-Dick picks up right where you left off."><span class="siri-phrase">Resume my audiobook</span><span class="siri-app">in Novelwave</span></button></li>
-                            <li><button type="button" aria-pressed="false" data-siri-reply="Back 30 seconds, to catch what you missed."><span class="siri-phrase">Skip back 30 seconds</span><span class="siri-app">in Novelwave</span></button></li>
-                            <li><button type="button" aria-pressed="false" data-siri-reply="On to chapter 33, The Specksnyder."><span class="siri-phrase">Go to the next chapter</span><span class="siri-app">in Novelwave</span></button></li>
-                            <li><button type="button" aria-pressed="false" data-siri-reply="Playing at 1.5×. The book keeps its speed."><span class="siri-phrase">Set the speed to 1.5×</span><span class="siri-app">in Novelwave</span></button></li>
-                            <li><button type="button" aria-pressed="false" data-siri-reply="Novelwave will stop at the end of this chapter." data-siri-spoken><span class="siri-phrase">Stop Novelwave at the end of the chapter</span><span class="siri-app">Sleep timer</span></button></li>
-                            <li><button type="button" aria-pressed="false" data-siri-reply="Bookmark added." data-siri-spoken><span class="siri-phrase">Bookmark this</span><span class="siri-app">in Novelwave</span></button></li>
-                        </ul>
-                        <div class="siri-reply" aria-live="polite">
-                            <span class="siri-orb" aria-hidden="true"></span>
-                            <p data-siri-output>Moby-Dick picks up right where you left off.</p>
-                        </div>
-                    </article>
-                    <article class="tile shortcuts-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Shortcuts</h3>
-                            <p class="tile-text">Every control is an action, ready for your own automations.</p>
-                        </div>
-                        <ol class="shortcut-flow" aria-label="An example automation">
-                            <li class="shortcut-trigger"><svg class="icon" aria-hidden="true"><use href="#icon-car"/></svg><span>When <strong>CarPlay</strong> connects</span></li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-headphones"/></svg><span><strong>Resume</strong> Audiobook</span></li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-gauge"/></svg><span>Set Playback Speed to <strong>1.25×</strong></span></li>
-                        </ol>
-                    </article>
-                    <article class="tile tile-wide glance-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Without opening the app</h3>
-                            <p class="tile-text">Watch the sleep timer count down on the Lock Screen, or play, pause and set a timer from Control Center.</p>
-                        </div>
-                        <div class="glance-devices">
-                            <figure class="glance-device">
-                                <picture>
-                                    <source srcset="images/dark-device-sleep-activity.avif 1x, images/dark-device-sleep-activity@2x.avif 2x" type="image/avif">
-                                    <img src="images/dark-device-sleep-activity.png" srcset="images/dark-device-sleep-activity.png 1x, images/dark-device-sleep-activity@2x.png 2x" alt="The Lock Screen, with Now Playing above a sleep timer Live Activity counting down from 14:47" width="385" height="776" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Sleep timer Live Activity</figcaption>
-                            </figure>
-                            <figure class="glance-device">
-                                <picture>
-                                    <source srcset="images/dark-device-control-center.avif 1x, images/dark-device-control-center@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/dark-device-control-center.png 1x, images/dark-device-control-center@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/light-device-control-center.avif 1x, images/light-device-control-center@2x.avif 2x" type="image/avif">
-                                    <img src="images/light-device-control-center.png" srcset="images/light-device-control-center.png 1x, images/light-device-control-center@2x.png 2x" alt="Control Center, with Novelwave's play control showing Part Two, Chapter 2 playing, and a sleep timer control set to 15 minutes" width="385" height="776" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Control Center</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="watch" aria-labelledby="watch-title" data-numeral="IV" data-title="Your book, on your wrist">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">IV</span> Apple Watch <a class="release-badge" href="roadmap.html">New in 3.2</a></p>
-                    <h2 class="section-title" id="watch-title">Your book, on your <span class="accent">wrist</span>.</h2>
-                    <p class="lede">Your whole library comes to Apple Watch through iCloud. Download a book and leave the iPhone at home, or keep it in your pocket and run it from your wrist. Either way, your place goes with you.</p>
-                    <dl class="specs">
-                        <div><dt>Listen</dt><dd>On the watch, with Bluetooth headphones</dd></div>
-                        <div><dt>Remote</dt><dd>Play, skip and speed on your iPhone</dd></div>
-                        <div><dt>Player</dt><dd>Speed, sleep timer, chapters and bookmarks</dd></div>
-                        <div><dt>Library</dt><dd>Synced through iCloud</dd></div>
-                        <div><dt>Watch face</dt><dd>Complication and Smart Stack widget</dd></div>
-                        <div><dt>Requires</dt><dd>watchOS 11 or later</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide watch-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Everything in reach</h3>
-                            <p class="tile-text">Pick up from Home or browse your books, then change speed, set a sleep timer or jump to a chapter, all from the watch.</p>
-                        </div>
-                        <div class="watch-devices">
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-home.avif 1x, images/watch/dark-home@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-home.png 1x, images/watch/dark-home@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-home.avif 1x, images/watch/light-home@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-home.png" srcset="images/watch/light-home.png 1x, images/watch/light-home@2x.png 2x" alt="Novelwave's Home on Apple Watch, with the books you're listening to and how long each has left" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Home</figcaption>
-                            </figure>
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-library.avif 1x, images/watch/dark-library@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-library.png 1x, images/watch/dark-library@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-library.avif 1x, images/watch/light-library@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-library.png" srcset="images/watch/light-library.png 1x, images/watch/light-library@2x.png 2x" alt="Novelwave's library on Apple Watch, with each book's cover and whether it's finished or how much is left" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Library</figcaption>
-                            </figure>
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-player.avif 1x, images/watch/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-player.png 1x, images/watch/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-player.avif 1x, images/watch/light-player@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-player.png" srcset="images/watch/light-player.png 1x, images/watch/light-player@2x.png 2x" alt="The Player on Apple Watch, playing 1984 over its cover's colors, with the chapter, the time left, skip buttons and play ringed by its progress" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Player</figcaption>
-                            </figure>
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-options.avif 1x, images/watch/dark-options@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-options.png 1x, images/watch/dark-options@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-options.avif 1x, images/watch/light-options@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-options.png" srcset="images/watch/light-options.png 1x, images/watch/light-options@2x.png 2x" alt="The Player's options on Apple Watch: Speed at 1.25×, Sleep Timer and Chapters" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Options</figcaption>
-                            </figure>
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-speed.avif 1x, images/watch/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-speed.png 1x, images/watch/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-speed.avif 1x, images/watch/light-speed@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-speed.png" srcset="images/watch/light-speed.png 1x, images/watch/light-speed@2x.png 2x" alt="Speed on Apple Watch at 1.25×, with buttons to step it and preset speeds below" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Speed</figcaption>
-                            </figure>
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-sleep.avif 1x, images/watch/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-sleep.png 1x, images/watch/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-sleep.avif 1x, images/watch/light-sleep@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-sleep.png" srcset="images/watch/light-sleep.png 1x, images/watch/light-sleep@2x.png 2x" alt="The Sleep Timer on Apple Watch, offering 5, 10 and 15 minutes" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Sleep Timer</figcaption>
-                            </figure>
-                            <figure class="watch-device">
-                                <picture>
-                                    <source srcset="images/watch/dark-chapters.avif 1x, images/watch/dark-chapters@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/dark-chapters.png 1x, images/watch/dark-chapters@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                    <source srcset="images/watch/light-chapters.avif 1x, images/watch/light-chapters@2x.avif 2x" type="image/avif">
-                                    <img src="images/watch/light-chapters.png" srcset="images/watch/light-chapters.png 1x, images/watch/light-chapters@2x.png 2x" alt="Chapters on Apple Watch, with Part Two, Chapter 2 checked as the one playing" width="268" height="484" loading="lazy" decoding="async">
-                                </picture>
-                                <figcaption>Chapters</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg></span>
-                        <h3 class="tile-title">Pick up on either device</h3>
-                        <p class="tile-text">Start a chapter on your iPhone and finish it on the watch, or the other way round.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-mic"/></svg></span>
-                        <h3 class="tile-title">Bookmarks you can say</h3>
-                        <p class="tile-text">Mark a moment and dictate a note to go with it, without reaching for your phone.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud-download"/></svg></span>
-                        <h3 class="tile-title">Downloads you can manage</h3>
-                        <p class="tile-text">Put the next book on the watch before a run, pause a transfer, and see from your iPhone what's taking up space.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-watch"/></svg></span>
-                        <h3 class="tile-title">On the watch face</h3>
-                        <p class="tile-text">A Now Playing complication and a Smart Stack widget keep your book one tap away.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="stats" aria-labelledby="stats-title" data-numeral="V" data-title="Every hour, accounted for">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">V</span> Listening Stats <a class="release-badge" href="roadmap.html">New in 3.2</a></p>
-                    <h2 class="section-title" id="stats-title">Every hour, <span class="accent">accounted</span> for.</h2>
-                    <p class="lede">See how long you've listened by week, month and year, the books you finished and the ones still going, and the speeds you listened at. Your history syncs privately through iCloud, the watch included.</p>
-                    <dl class="specs">
-                        <div><dt>Periods</dt><dd>Week, month and year</dd></div>
-                        <div><dt>Books</dt><dd>Finished and in progress</dd></div>
-                        <div><dt>Speed</dt><dd>The speeds you listened at</dd></div>
-                        <div><dt>Year in Listening</dt><dd>A look back, every January 1</dd></div>
-                        <div><dt>Sharing</dt><dd>Story-sized cards for any period</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide stats-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Your listening, at a glance</h3>
-                            <p class="tile-text">Switch the period to see the hours add up.</p>
-                        </div>
-                        <fieldset class="segmented">
-                            <legend class="visually-hidden">Stats period</legend>
-                            <input class="visually-hidden" type="radio" name="stats-period" id="stats-week" value="week" checked>
-                            <label for="stats-week">Week</label>
-                            <input class="visually-hidden" type="radio" name="stats-period" id="stats-month" value="month">
-                            <label for="stats-month">Month</label>
-                            <input class="visually-hidden" type="radio" name="stats-period" id="stats-year" value="year">
-                            <label for="stats-year">Year</label>
-                        </fieldset>
-                        <div class="stats-chart">
-                            <div class="stats-period stats-period-week">
-                                <p class="stats-total"><span class="stats-caption">This week</span>1h 55m<span class="visually-hidden">, listened this week</span></p>
-                                <ol class="stats-bars" aria-hidden="true">
-                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label">M</span></li>
-                                    <li style="--value: 1.00"><span class="stats-bar"></span><span class="stats-label">T</span></li>
-                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label">W</span></li>
-                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label">T</span></li>
-                                    <li style="--value: 0.71"><span class="stats-bar"></span><span class="stats-label">F</span></li>
-                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label">S</span></li>
-                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label">S</span></li>
-                                </ol>
-                                <dl class="stats-summary">
-                                    <div><dt>Books</dt><dd>2</dd></div>
-                                    <div><dt>Finished</dt><dd>1</dd></div>
-                                    <div><dt>Speed</dt><dd>1.25×</dd></div>
-                                </dl>
-                            </div>
-                            <div class="stats-period stats-period-month">
-                                <p class="stats-total"><span class="stats-caption">This month</span>17h 20m<span class="visually-hidden">, listened this month</span></p>
-                                <ol class="stats-bars" aria-hidden="true">
-                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label">1</span></li>
-                                    <li style="--value: 0.71"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.86"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.36"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label">8</span></li>
-                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.79"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 1.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label">15</span></li>
-                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.93"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.71"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.36"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label">22</span></li>
-                                    <li style="--value: 0.86"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.21"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.79"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.43"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                    <li style="--value: 0.57"><span class="stats-bar"></span><span class="stats-label">29</span></li>
-                                    <li style="--value: 0.29"><span class="stats-bar"></span><span class="stats-label"></span></li>
-                                </ol>
-                                <dl class="stats-summary">
-                                    <div><dt>Books</dt><dd>4</dd></div>
-                                    <div><dt>Finished</dt><dd>2</dd></div>
-                                    <div><dt>Speed</dt><dd>1.3×</dd></div>
-                                </dl>
-                            </div>
-                            <div class="stats-period stats-period-year">
-                                <p class="stats-total"><span class="stats-caption">This year</span>145h<span class="visually-hidden">, listened this year</span></p>
-                                <ol class="stats-bars" aria-hidden="true">
-                                    <li style="--value: 0.41"><span class="stats-bar"></span><span class="stats-label">J</span></li>
-                                    <li style="--value: 0.55"><span class="stats-bar"></span><span class="stats-label">F</span></li>
-                                    <li style="--value: 0.36"><span class="stats-bar"></span><span class="stats-label">M</span></li>
-                                    <li style="--value: 0.64"><span class="stats-bar"></span><span class="stats-label">A</span></li>
-                                    <li style="--value: 0.73"><span class="stats-bar"></span><span class="stats-label">M</span></li>
-                                    <li style="--value: 0.50"><span class="stats-bar"></span><span class="stats-label">J</span></li>
-                                    <li style="--value: 0.86"><span class="stats-bar"></span><span class="stats-label">J</span></li>
-                                    <li style="--value: 1.00"><span class="stats-bar"></span><span class="stats-label">A</span></li>
-                                    <li style="--value: 0.59"><span class="stats-bar"></span><span class="stats-label">S</span></li>
-                                    <li style="--value: 0.68"><span class="stats-bar"></span><span class="stats-label">O</span></li>
-                                    <li style="--value: 0.27"><span class="stats-bar"></span><span class="stats-label">N</span></li>
-                                    <li style="--value: 0.00"><span class="stats-bar"></span><span class="stats-label">D</span></li>
-                                </ol>
-                                <dl class="stats-summary">
-                                    <div><dt>Books</dt><dd>18</dd></div>
-                                    <div><dt>Finished</dt><dd>11</dd></div>
-                                    <div><dt>Speed</dt><dd>1.3×</dd></div>
-                                </dl>
-                            </div>
-                        </div>
-                    </article>
-                    <figure class="tile tile-wide tile-tablet reveal" data-only="ipad">
-                        <picture>
-                            <source srcset="images/ipad/midnight-stats.avif 1x, images/ipad/midnight-stats@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/midnight-stats.png 1x, images/ipad/midnight-stats@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/ipad/dark-stats.avif 1x, images/ipad/dark-stats@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/dark-stats.png 1x, images/ipad/dark-stats@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/ipad/light-stats.avif 1x, images/ipad/light-stats@2x.avif 2x" type="image/avif">
-                            <img src="images/ipad/light-stats.png" srcset="images/ipad/light-stats.png 1x, images/ipad/light-stats@2x.png 2x" alt="Listening Stats on iPad for one week: 1 hour 55 minutes, a bar for each day, and the week's books" width="1096" height="832" loading="lazy" decoding="async">
-                        </picture>
-                    </figure>
-                    <figure class="tile tile-device reveal" data-only="iphone">
-                        <picture>
-                            <source srcset="images/gallery/midnight-stats.avif 1x, images/gallery/midnight-stats@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                            <source srcset="images/gallery/midnight-stats.png 1x, images/gallery/midnight-stats@2x.png 2x" media="not all" data-theme-source="midnight">
-                            <source srcset="images/gallery/dark-stats.avif 1x, images/gallery/dark-stats@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/gallery/dark-stats.png 1x, images/gallery/dark-stats@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <source srcset="images/gallery/light-stats.avif 1x, images/gallery/light-stats@2x.avif 2x" type="image/avif">
-                            <img src="images/gallery/light-stats.png" srcset="images/gallery/light-stats.png 1x, images/gallery/light-stats@2x.png 2x" alt="Listening Stats for one week: 1 hour 55 minutes, a bar for each day, and the week's books" width="385" height="776" loading="lazy" decoding="async">
-                        </picture>
-                    </figure>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg></span>
-                        <h3 class="tile-title">Your year in listening</h3>
-                        <p class="tile-text">A look back at the year's books and hours, with a reminder on January 1 when it's ready.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-image"/></svg></span>
-                        <h3 class="tile-title">Share your stats</h3>
-                        <p class="tile-text">Turn any period into a story-sized card that catches the light as you tilt your iPhone, then share it or save it to Photos.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">Stats that tell the truth</h3>
-                        <p class="tile-text">Fix what the numbers can't know.</p>
-                        <ul class="source-list" aria-label="Ways to correct your stats">
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-eye-off"/></svg>Hide from Stats</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-rewind"/></svg>Mark as Not Finished</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-calendar"/></svg>Change Finish Date</li>
-                        </ul>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg></span>
-                        <h3 class="tile-title">Every hour still counts</h3>
-                        <p class="tile-text">Delete a book you've finished to free up space, and the hours you spent with it stay in your stats.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="import" aria-labelledby="import-title" data-numeral="VI" data-title="However your books arrive">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">VI</span> Import</p>
-                    <h2 class="section-title" id="import-title">However your books <span class="accent">arrive</span>.</h2>
-                    <p class="lede">Tap an audiobook in Files, or share one from another app, and it opens in Novelwave. Bring in as many as you like at once, then keep them as separate audiobooks or merge them into one.</p>
-                    <dl class="specs">
-                        <div><dt>Formats</dt><dd>M4B, M4A, MP3, Opus and MP4</dd></div>
-                        <div><dt>Sources</dt><dd>Files, iCloud Drive and other apps</dd></div>
-                        <div><dt>Save as</dt><dd>Separate books, or one merged book</dd></div>
-                        <div><dt>Destination</dt><dd>The shelf you're on, or any other</dd></div>
-                        <div><dt>Covers</dt><dd>Embedded, Photos, Files or clipboard</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide import-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Separate, or merged</h3>
-                            <p class="tile-text">Four parts of one book become one audiobook, with one cover and one progress bar.</p>
-                        </div>
-                        <fieldset class="segmented">
-                            <legend class="visually-hidden">Save imported files as</legend>
-                            <input class="visually-hidden" type="radio" name="save-as" id="save-separately" value="separately">
-                            <label for="save-separately">Save Separately</label>
-                            <input class="visually-hidden" type="radio" name="save-as" id="save-merged" value="merged" checked>
-                            <label for="save-merged">Merge Into One</label>
-                        </fieldset>
-                        <div class="import-flow">
-                            <ul class="import-files" aria-label="Selected files">
-                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 1.m4a<span>5h 21m</span></li>
-                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 2.m4a<span>5h 9m</span></li>
-                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 3.m4a<span>5h 30m</span></li>
-                                <li><svg class="icon" aria-hidden="true"><use href="#icon-music"/></svg>Moby-Dick – Part 4.m4a<span>5h 4m</span></li>
-                            </ul>
-                            <span class="import-connector" aria-hidden="true"></span>
-                            <div class="import-result">
-                                <div class="import-merged">
-                                    <span class="cover cover-moby" aria-hidden="true"><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
-                                    <p><strong>Moby-Dick</strong>Herman Melville<span>One audiobook · 21h 4m</span></p>
-                                </div>
-                                <ul class="import-separate" aria-label="Resulting audiobooks">
-                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 1</li>
-                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 2</li>
-                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 3</li>
-                                    <li><span class="cover cover-moby" aria-hidden="true"></span>Part 4</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">From where they live</h3>
-                        <p class="tile-text">Import from Files, keep books in iCloud Drive until you play them, or send them from any app.</p>
-                        <ul class="source-list" aria-label="Import sources">
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg>Local Files</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-cloud"/></svg>iCloud Drive<span class="status-dot">Connected</span></li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-export"/></svg>Open with Novelwave</li>
-                        </ul>
-                    </article>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">The formats you own</h3>
-                        <p class="tile-text">Opus plays natively, without re-encoding, and an MP4 comes in as just its audio.</p>
-                        <ul class="chips" aria-label="Supported formats">
-                            <li class="chip">M4B</li>
-                            <li class="chip">M4A</li>
-                            <li class="chip">MP3</li>
-                            <li class="chip">Opus</li>
-                            <li class="chip">MP4</li>
-                        </ul>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="sync" aria-labelledby="sync-title" data-numeral="VII" data-title="Your library, everywhere at once">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">VII</span> Sync</p>
-                    <h2 class="section-title" id="sync-title">Your library, <span class="accent">everywhere</span> at once.</h2>
-                    <p class="lede">Shelves, progress, chapters and bookmarks sync privately through your iCloud account with CloudKit. Start a chapter on the train and finish it at home, right where you left off.</p>
-                    <dl class="specs">
-                        <div><dt>In sync</dt><dd>Shelves, books, progress, bookmarks</dd></div>
-                        <div><dt>Powered by</dt><dd>iCloud and CloudKit</dd></div>
-                        <div><dt>Storage</dt><dd>Books download when you play them</dd></div>
-                        <div><dt>Privacy</dt><dd>Novelwave sees only its own folder</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide sync-demo reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">Your latest place, every time</h3>
-                            <p class="tile-text">Open a book and Novelwave checks iCloud first, so you carry on from wherever you stopped, on any device.</p>
-                        </div>
-                        <div class="sync-story" aria-hidden="true">
-                            <div class="sync-device">
-                                <p class="sync-moment"><svg class="icon"><use href="#icon-phone"/></svg>On the train · 8:12</p>
-                                <div class="sync-book">
-                                    <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span></span>
-                                    <p><strong>Moby-Dick</strong>Cetology</p>
-                                </div>
-                                <span class="progress-bar" style="--progress: 41%"></span>
-                            </div>
-                            <span class="sync-path"><svg class="icon"><use href="#icon-cloud"/></svg></span>
-                            <div class="sync-device">
-                                <p class="sync-moment"><svg class="icon"><use href="#icon-phone"/></svg>At home · 18:40</p>
-                                <div class="sync-book">
-                                    <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span></span>
-                                    <p><strong>Moby-Dick</strong>Cetology</p>
-                                </div>
-                                <span class="progress-bar" style="--progress: 41%"></span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-lock"/></svg></span>
-                        <h3 class="tile-title">Private by design</h3>
-                        <p class="tile-text">Novelwave creates its own folder in your iCloud Drive and can only see the files inside it. Nothing else.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud-download"/></svg></span>
-                        <h3 class="tile-title">Light on storage</h3>
-                        <p class="tile-text">Books stay in iCloud until you press play. Download, pause or remove any of them, whenever you like.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter container" id="details" aria-labelledby="details-title" data-numeral="VIII" data-title="Make every book look the part">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">VIII</span> Metadata</p>
-                    <h2 class="section-title" id="details-title">Make every book look <span class="accent">the part</span>.</h2>
-                    <p class="lede">Fix a title, credit the right author and write a description. Fill in the genre, composer and release year, then give the book the cover it deserves.</p>
-                    <dl class="specs">
-                        <div><dt>Details</dt><dd>Title, author and description</dd></div>
-                        <div><dt>Metadata</dt><dd>Genre, composer and release year</dd></div>
-                        <div><dt>Artwork</dt><dd>Photos, Files or the clipboard</dd></div>
-                        <div><dt>Anywhere</dt><dd>Even books that aren't downloaded</dd></div>
-                    </dl>
-                </div>
-                <div class="bento">
-                    <article class="tile tile-wide edit-demo reveal">
-                        <h3 class="visually-hidden">Edit audiobook</h3>
-                        <div class="edit-cover">
-                            <button class="cover-button" type="button" data-cover-cycle aria-label="Change the example cover">
-                                <span class="cover cover-moby" data-cover><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
-                            </button>
-                            <p class="tile-text">Tap the cover to change it.</p>
-                        </div>
-                        <dl class="edit-fields">
-                            <div class="edit-group">
-                                <div><dt>Title</dt><dd>Moby-Dick; or, The Whale</dd></div>
-                                <div><dt>Author</dt><dd>Herman Melville</dd></div>
-                            </div>
-                            <div class="edit-group">
-                                <div><dt>Genre</dt><dd>Adventure</dd></div>
-                                <div><dt>Composer</dt><dd class="is-empty">Not Set</dd></div>
-                                <div><dt>Release Year</dt><dd>1851</dd></div>
-                            </div>
-                            <div class="edit-group">
-                                <div class="edit-description"><dt>Description</dt><dd>The obsessive voyage of the Pequod and its captain, Ahab, in pursuit of the white whale.</dd></div>
-                            </div>
-                        </dl>
-                    </article>
-                    <article class="tile reveal">
-                        <h3 class="tile-title">Artwork from anywhere</h3>
-                        <p class="tile-text">Or reset to the cover embedded in the file.</p>
-                        <ul class="source-list" aria-label="Artwork sources">
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-image"/></svg>Choose from Photos…</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-folder"/></svg>Choose from Files…</li>
-                            <li><svg class="icon" aria-hidden="true"><use href="#icon-clipboard"/></svg>Paste from Clipboard</li>
-                        </ul>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-cloud"/></svg></span>
-                        <h3 class="tile-title">Edit before you download</h3>
-                        <p class="tile-text">Books still waiting in iCloud can be edited and organized like any other.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="chapter chapter-wide container" id="extras" aria-labelledby="extras-title" data-numeral="IX" data-title="The little things, done properly">
-                <div class="chapter-copy reveal">
-                    <p class="eyebrow"><span class="chapter-numeral">IX</span> Extras</p>
-                    <h2 class="section-title" id="extras-title">The little things, done <span class="accent">properly</span>.</h2>
-                    <p class="lede">Keep your books on the Home Screen, control them from your headphones, and keep your library as tidy as your shelves.</p>
-                </div>
-                <div class="bento bento-three">
-                    <article class="tile tile-wide widget-tile reveal">
-                        <div class="tile-heading">
-                            <h3 class="tile-title">A widget for every book</h3>
-                            <p class="tile-text">Let a widget follow whatever's playing, or pin each one to a book of its own.</p>
-                        </div>
-                        <div class="widgets" aria-hidden="true">
-                            <div class="widget widget-small">
-                                <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
-                                <div class="widget-small-bar">
-                                    <span>Moby-Dick</span>
-                                    <span class="widget-play"><svg class="icon"><use href="#icon-play"/></svg></span>
-                                </div>
-                            </div>
-                            <div class="widget widget-medium">
-                                <span class="cover cover-moby"><span class="cover-title">Moby-Dick</span><span class="cover-author">Herman Melville</span></span>
-                                <div class="widget-medium-body">
-                                    <p><strong>Moby-Dick</strong>Herman Melville</p>
-                                    <div class="widget-controls">
-                                        <span class="widget-skip"><svg class="icon"><use href="#icon-rewind"/></svg><span>15</span></span>
-                                        <span class="widget-play"><svg class="icon"><use href="#icon-pause"/></svg></span>
-                                        <span class="widget-skip"><svg class="icon"><use href="#icon-forward"/></svg><span>30</span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-headphones"/></svg></span>
-                        <h3 class="tile-title">Headphone controls</h3>
-                        <p class="tile-text">Play, pause and skip from your AirPods or headset.</p>
-                        <ul class="press-list" aria-label="Headphone presses">
-                            <li><span class="press-dots" aria-hidden="true"><i></i></span>Play or pause</li>
-                            <li><span class="press-dots" aria-hidden="true"><i></i><i></i></span>Skip forward</li>
-                            <li><span class="press-dots" aria-hidden="true"><i></i><i></i><i></i></span>Skip back</li>
-                        </ul>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-export"/></svg></span>
-                        <h3 class="tile-title">Export to Files</h3>
-                        <p class="tile-text">Copy a single audiobook, or your entire library, to any folder in Files.</p>
-                    </article>
-                    <article class="tile reveal">
-                        <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-sparkles"/></svg></span>
-                        <h3 class="tile-title">Recover storage</h3>
-                        <p class="tile-text">Novelwave finds files nothing uses any more and clears them away, without touching your books.</p>
-                    </article>
-                    <article class="tile theme-tile reveal">
-                        <div class="tile-heading">
-                            <span class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#icon-contrast"/></svg></span>
-                            <h3 class="tile-title">Light, dark or Midnight</h3>
-                            <p class="tile-text">Novelwave follows your device or your mood, down to true black on Midnight. So does this page: try the switch at the top.</p>
-                        </div>
-                        <div class="theme-swatches" aria-hidden="true">
-                            <span class="theme-swatch theme-swatch-light">Aa</span>
-                            <span class="theme-swatch theme-swatch-dark">Aa</span>
-                            <span class="theme-swatch theme-swatch-midnight">Aa</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="gallery" id="gallery" aria-labelledby="gallery-title" data-numeral="X" data-title="See it for yourself">
-                <div class="gallery-header container reveal">
-                    <div>
-                        <p class="eyebrow"><span class="chapter-numeral">X</span> A closer look</p>
-                        <h2 class="section-title" id="gallery-title">See it for <span class="accent">yourself</span>.</h2>
-                    </div>
-                    <div class="gallery-controls">
-                        <div class="device-switch" role="group" aria-label="Show screenshots for" data-device-switch hidden>
-                            <button class="device-option" type="button" data-device-option="iphone" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-phone"/></svg>iPhone</button>
-                            <button class="device-option" type="button" data-device-option="ipad" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-tablet"/></svg>iPad</button>
-                        </div>
-                        <button class="round-button" type="button" data-gallery-previous aria-controls="gallery-track" aria-label="Previous screenshots">
-                            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"/></svg>
-                        </button>
-                        <button class="round-button" type="button" data-gallery-next aria-controls="gallery-track" aria-label="Next screenshots">
-                            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"/></svg>
-                        </button>
-                    </div>
-                </div>
-                <ol class="gallery-track" id="gallery-track" role="list" aria-label="App screenshots" tabindex="0">
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-chapters.avif 1x, images/gallery/midnight-chapters@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-chapters.png 1x, images/gallery/midnight-chapters@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-chapters.avif 1x, images/gallery/dark-chapters@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-chapters.png 1x, images/gallery/dark-chapters@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-chapters.avif 1x, images/gallery/light-chapters@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-chapters.png" srcset="images/gallery/light-chapters.png 1x, images/gallery/light-chapters@2x.png 2x" alt="The contents of 1984, with Part Two, Chapter 2 checked as the one playing" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Chapters</strong>Jump straight to any chapter of the book.</figcaption>
-                        </figure>
+        <section class="section how" id="how" aria-labelledby="how-title" data-chapter="How it works">
+            <div class="container">
+                <h2 class="section-title section-title-small" id="how-title"><span class="eyebrow">How it works</span> Bring your own audiobooks.</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>Get your files</h3>
+                        <p>DRM‑free audiobooks from stores like Libro.fm and Downpour, CDs you’ve ripped, or public‑domain classics from LibriVox.</p>
                     </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-bookmarks.avif 1x, images/gallery/midnight-bookmarks@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-bookmarks.png 1x, images/gallery/midnight-bookmarks@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-bookmarks.avif 1x, images/gallery/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-bookmarks.png 1x, images/gallery/dark-bookmarks@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-bookmarks.avif 1x, images/gallery/light-bookmarks@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-bookmarks.png" srcset="images/gallery/light-bookmarks.png 1x, images/gallery/light-bookmarks@2x.png 2x" alt="Five bookmarks in 1984, each with its time, its chapter and a note" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Bookmarks</strong>Save a moment, with a note to remember it by.</figcaption>
-                        </figure>
+                    <li>
+                        <h3>Import them</h3>
+                        <p>From Files, iCloud Drive, AirDrop or <a href="m4b-player-iphone.html">a computer</a>. A book in several parts becomes one.</p>
                     </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-speed.avif 1x, images/gallery/midnight-speed@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-speed.png 1x, images/gallery/midnight-speed@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-speed.avif 1x, images/gallery/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-speed.png 1x, images/gallery/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-speed.avif 1x, images/gallery/light-speed@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-speed.png" srcset="images/gallery/light-speed.png 1x, images/gallery/light-speed@2x.png 2x" alt="Speed Controls over Greenlights at 1.0×, with how long the rest of the book takes and presets from 0.7× to 2.0×" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Speed controls</strong>Find your pace, anywhere from 0.5× to 6×.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-sleep.avif 1x, images/gallery/midnight-sleep@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-sleep.png 1x, images/gallery/midnight-sleep@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-sleep.avif 1x, images/gallery/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-sleep.png 1x, images/gallery/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-sleep.avif 1x, images/gallery/light-sleep@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-sleep.png" srcset="images/gallery/light-sleep.png 1x, images/gallery/light-sleep@2x.png 2x" alt="The sleep timer menu over the Player, from End of Chapter down to 5 minutes" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Sleep timer</strong>From five minutes to the end of the file.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-search.avif 1x, images/gallery/midnight-search@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-search.png 1x, images/gallery/midnight-search@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-search.avif 1x, images/gallery/dark-search@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-search.png 1x, images/gallery/dark-search@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-search.avif 1x, images/gallery/light-search@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-search.png" srcset="images/gallery/light-search.png 1x, images/gallery/light-search@2x.png 2x" alt="Search results for “The”: Greenlights, The Alchemist, The Song of Achilles and They Both Die at the End" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Search</strong>Find any book in your library in a few letters.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-edit.avif 1x, images/gallery/midnight-edit@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-edit.png 1x, images/gallery/midnight-edit@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-edit.avif 1x, images/gallery/dark-edit@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-edit.png 1x, images/gallery/dark-edit@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-edit.avif 1x, images/gallery/light-edit@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-edit.png" srcset="images/gallery/light-edit.png 1x, images/gallery/light-edit@2x.png 2x" alt="Edit Audiobook for 1984, with its cover, title, author and metadata ready to change" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Edit Audiobook</strong>Titles, authors, descriptions and covers, your way.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-widgets.avif 1x, images/gallery/midnight-widgets@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-widgets.png 1x, images/gallery/midnight-widgets@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-widgets.avif 1x, images/gallery/dark-widgets@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-widgets.png 1x, images/gallery/dark-widgets@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-widgets.avif 1x, images/gallery/light-widgets@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-widgets.png" srcset="images/gallery/light-widgets.png 1x, images/gallery/light-widgets@2x.png 2x" alt="Two Now Playing widgets on the Home Screen, a medium one for Psycho-Cybernetics and a small one for The Alchemist" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Home Screen widgets</strong>Your book on the Home Screen, small or medium.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item" data-only="iphone">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/gallery/midnight-settings.avif 1x, images/gallery/midnight-settings@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/midnight-settings.png 1x, images/gallery/midnight-settings@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/gallery/dark-settings.avif 1x, images/gallery/dark-settings@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/dark-settings.png 1x, images/gallery/dark-settings@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/gallery/light-settings.avif 1x, images/gallery/light-settings@2x.avif 2x" type="image/avif">
-                                <img src="images/gallery/light-settings.png" srcset="images/gallery/light-settings.png 1x, images/gallery/light-settings@2x.png 2x" alt="The Profile tab, with Settings, Sources, storage tools and feedback options" width="385" height="776" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Profile</strong>Settings, sources, storage and feedback, all in one place.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-library.avif 1x, images/ipad/midnight-library@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-library.png 1x, images/ipad/midnight-library@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-library.avif 1x, images/ipad/dark-library@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-library.png 1x, images/ipad/dark-library@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-library.avif 1x, images/ipad/light-library@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-library.png" srcset="images/ipad/light-library.png 1x, images/ipad/light-library@2x.png 2x" alt="The library on iPad, with shelves in the sidebar and a grid of audiobook covers" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Library</strong>Your shelves in the sidebar, every cover in view.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-bookmarks.avif 1x, images/ipad/midnight-bookmarks@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-bookmarks.png 1x, images/ipad/midnight-bookmarks@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-bookmarks.avif 1x, images/ipad/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-bookmarks.png 1x, images/ipad/dark-bookmarks@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-bookmarks.avif 1x, images/ipad/light-bookmarks@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-bookmarks.png" srcset="images/ipad/light-bookmarks.png 1x, images/ipad/light-bookmarks@2x.png 2x" alt="Five bookmarks in 1984 beside the Player on iPad, each with its time, its chapter and a note" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Bookmarks</strong>Notes and chapters sit right beside the Player.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-speed.avif 1x, images/ipad/midnight-speed@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-speed.png 1x, images/ipad/midnight-speed@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-speed.avif 1x, images/ipad/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-speed.png 1x, images/ipad/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-speed.avif 1x, images/ipad/light-speed@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-speed.png" srcset="images/ipad/light-speed.png 1x, images/ipad/light-speed@2x.png 2x" alt="Speed Controls over Greenlights on iPad at 1.0×, with presets from 0.7× to 2.0×" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Speed controls</strong>Find your pace, anywhere from 0.5× to 6×.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-sleep.avif 1x, images/ipad/midnight-sleep@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-sleep.png 1x, images/ipad/midnight-sleep@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-sleep.avif 1x, images/ipad/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-sleep.png 1x, images/ipad/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-sleep.avif 1x, images/ipad/light-sleep@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-sleep.png" srcset="images/ipad/light-sleep.png 1x, images/ipad/light-sleep@2x.png 2x" alt="The sleep timer menu over The Song of Achilles on iPad, from End of Chapter down to 5 minutes" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Sleep timer</strong>From five minutes to the end of the file.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-search.avif 1x, images/ipad/midnight-search@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-search.png 1x, images/ipad/midnight-search@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-search.avif 1x, images/ipad/dark-search@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-search.png 1x, images/ipad/dark-search@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-search.avif 1x, images/ipad/light-search@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-search.png" srcset="images/ipad/light-search.png 1x, images/ipad/light-search@2x.png 2x" alt="Search results for “The” on iPad: three shelves and eighteen audiobooks" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Search</strong>Shelves and books, found in a few letters.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-edit.avif 1x, images/ipad/midnight-edit@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-edit.png 1x, images/ipad/midnight-edit@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-edit.avif 1x, images/ipad/dark-edit@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-edit.png 1x, images/ipad/dark-edit@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-edit.avif 1x, images/ipad/light-edit@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-edit.png" srcset="images/ipad/light-edit.png 1x, images/ipad/light-edit@2x.png 2x" alt="Edit Audiobook for 1984 on iPad, with its cover, details and description" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Edit Audiobook</strong>Titles, authors, descriptions and covers, your way.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="gallery-item gallery-item-ipad" data-only="ipad">
-                        <figure>
-                            <picture class="gallery-shot">
-                                <source srcset="images/ipad/midnight-settings.avif 1x, images/ipad/midnight-settings@2x.avif 2x" type="image/avif" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/midnight-settings.png 1x, images/ipad/midnight-settings@2x.png 2x" media="not all" data-theme-source="midnight">
-                                <source srcset="images/ipad/dark-settings.avif 1x, images/ipad/dark-settings@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/dark-settings.png 1x, images/ipad/dark-settings@2x.png 2x" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                                <source srcset="images/ipad/light-settings.avif 1x, images/ipad/light-settings@2x.avif 2x" type="image/avif">
-                                <img src="images/ipad/light-settings.png" srcset="images/ipad/light-settings.png 1x, images/ipad/light-settings@2x.png 2x" alt="The Profile tab on iPad, with Settings open beside it" width="1096" height="832" loading="lazy" decoding="async">
-                            </picture>
-                            <figcaption><strong>Profile</strong>Settings, sources, storage and feedback, side by side.</figcaption>
-                        </figure>
+                    <li>
+                        <h3>Listen anywhere</h3>
+                        <p>Your place, shelves and bookmarks follow you to iPad, Apple Watch and the car through your own iCloud. No account, no server.</p>
                     </li>
                 </ol>
-            </section>
-        </div>
+                <p class="steps-note">Plays M4B, M4A, MP3, AAC, FLAC, WAV, AIFF, Ogg Opus and MP4. Audible’s AAX files only play in Audible’s app.</p>
+            </div>
+        </section>
 
-        <section class="epilogue container" id="download" aria-labelledby="download-title">
-            <div class="reveal">
-                <p class="eyebrow">Epilogue</p>
-                <h2 class="epilogue-title" id="download-title">Your next <span class="accent">chapter</span> starts here.</h2>
-                <div class="hero-actions">
-                    <a class="app-store-button" href="https://apps.apple.com/app/id6720100886">
+        <section class="section player band" id="player" aria-labelledby="player-title" data-chapter="Player">
+            <div class="container">
+                <h2 class="section-title" id="player-title"><span class="eyebrow">Player</span> Made for long books.</h2>
+                <ul class="phones" role="list">
+                    <li>
                         <picture>
-                            <source srcset="images/download_light.svg" media="(prefers-color-scheme: dark)" data-theme-source="dark">
-                            <img src="images/download_dark.svg" alt="Download on the App Store" width="120" height="40" loading="lazy">
+                            <source srcset="images/gallery/dark-chapters.avif 1x, images/gallery/dark-chapters@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/dark-chapters.png 1x, images/gallery/dark-chapters@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/light-chapters.avif 1x, images/gallery/light-chapters@2x.avif 2x" type="image/avif">
+                            <img src="images/gallery/light-chapters.png" srcset="images/gallery/light-chapters.png 1x, images/gallery/light-chapters@2x.png 2x" alt="The Player on The Alchemist, in Part One, with buttons that skip by chapter and a bar a third of the way through it" width="385" height="776" loading="lazy" decoding="async">
                         </picture>
-                    </a>
+                        <h3>Chapters</h3>
+                        <p>Skip by chapter and see how far into one you are. The full list is a tap away.</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="images/gallery/dark-speed.avif 1x, images/gallery/dark-speed@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/dark-speed.png 1x, images/gallery/dark-speed@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/light-speed.avif 1x, images/gallery/light-speed@2x.avif 2x" type="image/avif">
+                            <img src="images/gallery/light-speed.png" srcset="images/gallery/light-speed.png 1x, images/gallery/light-speed@2x.png 2x" alt="Speed Controls over Greenlights at 1.0×, with how long the rest of the book takes and presets from 0.7× to 2.0×" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Speed</h3>
+                        <p>0.5× to 6× in steps of 0.05, with the time left at each speed.</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="images/gallery/dark-sleep.avif 1x, images/gallery/dark-sleep@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/dark-sleep.png 1x, images/gallery/dark-sleep@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/light-sleep.avif 1x, images/gallery/light-sleep@2x.avif 2x" type="image/avif">
+                            <img src="images/gallery/light-sleep.png" srcset="images/gallery/light-sleep.png 1x, images/gallery/light-sleep@2x.png 2x" alt="The sleep timer menu over The Song of Achilles, from End of Chapter down to 5 minutes" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Sleep timer</h3>
+                        <p>Five minutes to the end of the chapter, counting down on the Lock&nbsp;Screen.</p>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="images/gallery/dark-bookmarks.avif 1x, images/gallery/dark-bookmarks@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/dark-bookmarks.png 1x, images/gallery/dark-bookmarks@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/gallery/light-bookmarks.avif 1x, images/gallery/light-bookmarks@2x.avif 2x" type="image/avif">
+                            <img src="images/gallery/light-bookmarks.png" srcset="images/gallery/light-bookmarks.png 1x, images/gallery/light-bookmarks@2x.png 2x" alt="The Player on They Both Die at the End, confirming a bookmark just saved, with buttons to add a note or view the bookmarks" width="385" height="776" loading="lazy" decoding="async">
+                        </picture>
+                        <h3>Bookmarks</h3>
+                        <p>Save a moment in one tap, and a note to say why.</p>
+                    </li>
+                </ul>
+                <p class="phones-note">Plus skips from 5 to 45 seconds, a short rewind when you pause, and playback that picks up again after calls and alarms.</p>
+            </div>
+        </section>
+
+        <section class="section" id="library" aria-labelledby="library-title" data-chapter="Library">
+            <div class="container split">
+                <div class="library-showcase reveal">
+                    <picture>
+                        <source srcset="images/ipad/dark-library-wide.avif 1x, images/ipad/dark-library-wide@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                        <source srcset="images/ipad/dark-library-wide.png 1x, images/ipad/dark-library-wide@2x.png 2x" media="(prefers-color-scheme: dark)">
+                        <source srcset="images/ipad/light-library-wide.avif 1x, images/ipad/light-library-wide@2x.avif 2x" type="image/avif">
+                        <img src="images/ipad/light-library-wide.png" srcset="images/ipad/light-library-wide.png 1x, images/ipad/light-library-wide@2x.png 2x" alt="The Novelwave library on iPad, a grid of shelves and audiobook covers" width="1096" height="832" loading="lazy" decoding="async">
+                    </picture>
                 </div>
-                <p class="epilogue-note">For iPhone, iPad and Apple Watch. Requires iOS 17, iPadOS 17 or watchOS 11 or later.</p>
+                <div>
+                    <h2 class="section-title" id="library-title"><span class="eyebrow">Library</span> Shelves, like a real bookcase.</h2>
+                    <div class="run-ins">
+                        <p><strong>Shelves inside shelves.</strong> Sanderson, then Cosmere, then Mistborn. Nest them as deep as your collection goes.</p>
+                        <p><strong>Find any book.</strong> Search titles, authors and shelves, or show only what you’re in the middle of.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrist band" id="watch" aria-labelledby="watch-title" data-chapter="Apple Watch">
+            <div class="container">
+                <h2 class="section-title" id="watch-title"><span class="eyebrow">Apple Watch</span> Leave the phone at home.</h2>
+                <p class="lede">Send a book to your Apple Watch before a run, or keep your iPhone in your pocket and steer it from your wrist. <a href="apple-watch-audiobooks.html">How it works on Apple Watch</a></p>
+                <div class="watches" role="group" aria-label="Novelwave on Apple Watch">
+                    <figure>
+                        <picture>
+                            <source srcset="images/watch/dark-home.avif 1x, images/watch/dark-home@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/watch/dark-home.png 1x, images/watch/dark-home@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/watch/light-home.avif 1x, images/watch/light-home@2x.avif 2x" type="image/avif">
+                            <img src="images/watch/light-home.png" srcset="images/watch/light-home.png 1x, images/watch/light-home@2x.png 2x" alt="Novelwave’s Home on Apple Watch, with the books you’re listening to and how long each has left" width="268" height="484" loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>Your books, with the time left in each</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <source srcset="images/watch/dark-player.avif 1x, images/watch/dark-player@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/watch/dark-player.png 1x, images/watch/dark-player@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/watch/light-player.avif 1x, images/watch/light-player@2x.avif 2x" type="image/avif">
+                            <img src="images/watch/light-player.png" srcset="images/watch/light-player.png 1x, images/watch/light-player@2x.png 2x" alt="The Player on Apple Watch, playing 1984 over its cover’s colors, with the chapter, the time left, skip buttons and play ringed by its progress" width="268" height="484" loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>Now playing, in the cover’s colors</figcaption>
+                    </figure>
+                    <figure>
+                        <picture>
+                            <source srcset="images/watch/dark-options.avif 1x, images/watch/dark-options@2x.avif 2x" type="image/avif" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/watch/dark-options.png 1x, images/watch/dark-options@2x.png 2x" media="(prefers-color-scheme: dark)">
+                            <source srcset="images/watch/light-options.avif 1x, images/watch/light-options@2x.avif 2x" type="image/avif">
+                            <img src="images/watch/light-options.png" srcset="images/watch/light-options.png 1x, images/watch/light-options@2x.png 2x" alt="The Player’s options on Apple Watch: the sleep timer, Speed at 1.25× and the previous chapter" width="268" height="484" loading="lazy" decoding="async">
+                        </picture>
+                        <figcaption>Speed, sleep timer and chapters</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section road" id="carplay" aria-labelledby="carplay-title" data-chapter="CarPlay and Siri">
+            <div class="container road-grid">
+                <div>
+                    <h2 class="section-title section-title-small" id="carplay-title"><span class="eyebrow">CarPlay and Siri</span> Hands on the wheel.</h2>
+                    <p class="lede">Carry on where you left off, or browse your shelves. Then just ask.</p>
+                    <ul class="phrases" role="list">
+                        <li>“Skip back 30 seconds.”</li>
+                        <li>“Next chapter.”</li>
+                        <li>“Stop at the end of this chapter.”</li>
+                    </ul>
+                </div>
+                <div class="car-screen reveal">
+                    <picture>
+                        <source srcset="images/carplay/dark-continue.avif" type="image/avif" media="(prefers-color-scheme: dark)">
+                        <source srcset="images/carplay/dark-continue.png" media="(prefers-color-scheme: dark)">
+                        <source srcset="images/carplay/light-continue.avif" type="image/avif">
+                        <img src="images/carplay/light-continue.png" alt="Novelwave’s Continue screen in CarPlay, with cover cards and the time left on each audiobook" width="800" height="480" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="section more" id="more" aria-labelledby="more-title" data-chapter="And more">
+            <div class="container">
+                <h2 class="section-title section-title-small" id="more-title">And more.</h2>
+                <ul class="more-list" role="list">
+                    <li>
+                        <h3>Shortcuts</h3>
+                        <p>Actions for playback, chapters, speed, bookmarks and the sleep timer.</p>
+                    </li>
+                    <li>
+                        <h3>Lock Screen</h3>
+                        <p>The sleep timer counts down there and in the Dynamic&nbsp;Island.</p>
+                    </li>
+                    <li>
+                        <h3>Widgets</h3>
+                        <p>Now Playing on your Home Screen, and controls in Control&nbsp;Center.</p>
+                    </li>
+                    <li>
+                        <h3>Listening stats</h3>
+                        <p>By week, month and year, with a look back every January.</p>
+                    </li>
+                    <li>
+                        <h3>Every detail</h3>
+                        <p>Titles, authors and covers from Photos or Files, yours to change.</p>
+                    </li>
+                    <li>
+                        <h3>Export</h3>
+                        <p>Your whole library to Files, bookmarks and notes included.</p>
+                    </li>
+                    <li>
+                        <h3>Spotlight</h3>
+                        <p>Find a book from your Home Screen’s search.</p>
+                    </li>
+                    <li>
+                        <h3>Eight languages</h3>
+                        <p>With a language setting of its own.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section privacy-note" id="privacy" aria-labelledby="privacy-title" data-chapter="Privacy">
+            <div class="container">
+                <h2 class="section-title" id="privacy-title"><span class="eyebrow">Privacy</span> No&nbsp;account. No&nbsp;ads. No&nbsp;tracking.</h2>
+                <p class="lede">No subscription to play the books you own. Your library lives on your devices and in your own iCloud, and shelves you hide stay behind Face&nbsp;ID.</p>
+                <p class="privacy-label">On the App Store, Novelwave’s privacy label reads “Data Not Collected”. <a class="text-link" href="privacy.html">Read the privacy policy</a></p>
+            </div>
+        </section>
+
+        <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title" data-chapter="Reviews">
+            <div class="container">
+                <div class="reviews-head">
+                    <h2 class="section-title section-title-small" id="reviews-title"><span class="eyebrow">App Store reviews</span> What listeners say.</h2>
+                    <div class="reviews-nav" data-reviews-nav hidden>
+                        <button class="round-button" type="button" data-reviews-step="-1" aria-label="Previous reviews"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+                        <button class="round-button" type="button" data-reviews-step="1" aria-label="Next reviews"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+                    </div>
+                </div>
+                <ul class="reviews" role="list" data-reviews tabindex="0" aria-label="From App Store reviews">
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
+                        <blockquote lang="en" translate="no">“I open the app and all my audiobooks are right in front of me, ready to play, with all the listening tools I need and 0 clutter.”</blockquote>
+                        <p>DaveAsh90 · United&nbsp;States</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
+                        <blockquote lang="en" translate="no">“This app does everything it needs to and nothing it doesn’t. A sleek, simple interface and enough playback customisation to allow many different listening styles.”</blockquote>
+                        <p>Alastair Stone · United&nbsp;Kingdom</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
+                        <blockquote lang="en" translate="no">“I tried a similar app, but the speed settings &amp; sleep timer options for Novelwave beat the competition. (Stop at end of chapter = genius!)”</blockquote>
+                        <p>hollyreviewsapps · United&nbsp;States</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
+                        <blockquote lang="en" translate="no">“I tried several other apps and this one is by far the most responsive and reliable.”</blockquote>
+                        <p>nonetaat · United&nbsp;States</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
+                        <blockquote lang="en" translate="no">“Just enough customization and features to make the player disappear into the background while enjoying the audiobook.”</blockquote>
+                        <p>Throog · United&nbsp;States</p>
+                    </li>
+                    <li>
+                        <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
+                        <blockquote lang="en" translate="no">“Indie dev, zero data collection and telemetry, responsive to feedback.”</blockquote>
+                        <p>Massaholic · United&nbsp;States</p>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer container">
-        <a class="site-title" href="./">Novelwave</a>
-        <nav aria-label="Support and legal">
-            <ul class="footer-links">
-                <li><a href="support.html">Support</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Use</a></li>
-            </ul>
+    <div class="band">
+        <section class="closing" aria-labelledby="closing-title">
+            <div class="container">
+                <picture><source srcset="images/icon-336.avif" type="image/avif"><img class="closing-icon" src="images/icon-336.png" alt="" width="112" height="112" loading="lazy"></picture>
+                <h2 class="section-title" id="closing-title">Start with the book you’re in the middle of.</h2>
+                <div class="closing-actions">
+                    <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-closing&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
+                    <div class="qr">
+                        <svg class="qr-code" role="img" aria-label="QR code: scan with your iPhone’s camera to open Novelwave on the App Store" data-qr="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-qr&amp;mt=8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" shape-rendering="crispEdges"><path fill="currentColor" d="M1 1h7v1h-7zM10 1h1v1h-1zM13 1h2v1h-2zM16 1h4v1h-4zM23 1h1v1h-1zM27 1h7v1h-7zM1 2h1v1h-1zM7 2h1v1h-1zM9 2h6v1h-6zM18 2h1v1h-1zM21 2h1v1h-1zM25 2h1v1h-1zM27 2h1v1h-1zM33 2h1v1h-1zM1 3h1v1h-1zM3 3h3v1h-3zM7 3h1v1h-1zM9 3h4v1h-4zM14 3h4v1h-4zM19 3h6v1h-6zM27 3h1v1h-1zM29 3h3v1h-3zM33 3h1v1h-1zM1 4h1v1h-1zM3 4h3v1h-3zM7 4h1v1h-1zM9 4h1v1h-1zM12 4h2v1h-2zM17 4h1v1h-1zM20 4h1v1h-1zM22 4h4v1h-4zM27 4h1v1h-1zM29 4h3v1h-3zM33 4h1v1h-1zM1 5h1v1h-1zM3 5h3v1h-3zM7 5h1v1h-1zM10 5h3v1h-3zM15 5h4v1h-4zM20 5h4v1h-4zM27 5h1v1h-1zM29 5h3v1h-3zM33 5h1v1h-1zM1 6h1v1h-1zM7 6h1v1h-1zM11 6h1v1h-1zM17 6h1v1h-1zM21 6h1v1h-1zM25 6h1v1h-1zM27 6h1v1h-1zM33 6h1v1h-1zM1 7h7v1h-7zM9 7h1v1h-1zM11 7h1v1h-1zM13 7h1v1h-1zM15 7h1v1h-1zM17 7h1v1h-1zM19 7h1v1h-1zM21 7h1v1h-1zM23 7h1v1h-1zM25 7h1v1h-1zM27 7h7v1h-7zM9 8h1v1h-1zM16 8h2v1h-2zM20 8h2v1h-2zM23 8h1v1h-1zM1 9h1v1h-1zM7 9h1v1h-1zM9 9h2v1h-2zM12 9h1v1h-1zM14 9h1v1h-1zM16 9h1v1h-1zM18 9h2v1h-2zM23 9h5v1h-5zM30 9h3v1h-3zM3 10h4v1h-4zM8 10h1v1h-1zM10 10h2v1h-2zM13 10h1v1h-1zM15 10h2v1h-2zM19 10h2v1h-2zM24 10h2v1h-2zM29 10h3v1h-3zM33 10h1v1h-1zM1 11h2v1h-2zM6 11h2v1h-2zM10 11h2v1h-2zM14 11h1v1h-1zM16 11h3v1h-3zM21 11h2v1h-2zM26 11h1v1h-1zM29 11h1v1h-1zM31 11h1v1h-1zM33 11h1v1h-1zM1 12h2v1h-2zM5 12h1v1h-1zM8 12h2v1h-2zM13 12h3v1h-3zM19 12h2v1h-2zM24 12h8v1h-8zM33 12h1v1h-1zM1 13h1v1h-1zM4 13h1v1h-1zM7 13h1v1h-1zM9 13h3v1h-3zM13 13h3v1h-3zM19 13h2v1h-2zM22 13h1v1h-1zM24 13h2v1h-2zM27 13h3v1h-3zM32 13h2v1h-2zM1 14h1v1h-1zM3 14h1v1h-1zM6 14h1v1h-1zM8 14h5v1h-5zM17 14h3v1h-3zM21 14h1v1h-1zM24 14h2v1h-2zM30 14h4v1h-4zM6 15h4v1h-4zM11 15h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1zM18 15h1v1h-1zM20 15h3v1h-3zM24 15h1v1h-1zM26 15h2v1h-2zM29 15h4v1h-4zM4 16h3v1h-3zM8 16h1v1h-1zM12 16h2v1h-2zM16 16h1v1h-1zM20 16h2v1h-2zM23 16h2v1h-2zM26 16h1v1h-1zM28 16h2v1h-2zM33 16h1v1h-1zM6 17h3v1h-3zM10 17h2v1h-2zM13 17h4v1h-4zM18 17h1v1h-1zM23 17h1v1h-1zM26 17h1v1h-1zM28 17h2v1h-2zM31 17h1v1h-1zM33 17h1v1h-1zM3 18h1v1h-1zM8 18h1v1h-1zM10 18h1v1h-1zM15 18h3v1h-3zM19 18h3v1h-3zM23 18h2v1h-2zM27 18h1v1h-1zM30 18h2v1h-2zM2 19h1v1h-1zM4 19h1v1h-1zM7 19h2v1h-2zM10 19h2v1h-2zM13 19h1v1h-1zM15 19h2v1h-2zM19 19h10v1h-10zM30 19h4v1h-4zM2 20h1v1h-1zM9 20h1v1h-1zM12 20h1v1h-1zM15 20h8v1h-8zM25 20h3v1h-3zM29 20h3v1h-3zM2 21h1v1h-1zM7 21h1v1h-1zM9 21h2v1h-2zM13 21h1v1h-1zM15 21h1v1h-1zM20 21h1v1h-1zM23 21h1v1h-1zM25 21h3v1h-3zM29 21h2v1h-2zM1 22h4v1h-4zM10 22h2v1h-2zM16 22h1v1h-1zM26 22h3v1h-3zM30 22h2v1h-2zM1 23h1v1h-1zM5 23h1v1h-1zM7 23h1v1h-1zM9 23h5v1h-5zM16 23h1v1h-1zM19 23h1v1h-1zM21 23h2v1h-2zM25 23h1v1h-1zM29 23h1v1h-1zM32 23h1v1h-1zM1 24h1v1h-1zM3 24h1v1h-1zM5 24h1v1h-1zM9 24h2v1h-2zM14 24h1v1h-1zM16 24h1v1h-1zM20 24h2v1h-2zM24 24h3v1h-3zM30 24h3v1h-3zM1 25h5v1h-5zM7 25h1v1h-1zM10 25h1v1h-1zM13 25h2v1h-2zM16 25h2v1h-2zM20 25h2v1h-2zM24 25h8v1h-8zM9 26h2v1h-2zM12 26h1v1h-1zM14 26h3v1h-3zM20 26h1v1h-1zM24 26h2v1h-2zM29 26h1v1h-1zM31 26h1v1h-1zM33 26h1v1h-1zM1 27h7v1h-7zM10 27h2v1h-2zM16 27h1v1h-1zM18 27h1v1h-1zM21 27h1v1h-1zM24 27h2v1h-2zM27 27h1v1h-1zM29 27h1v1h-1zM31 27h1v1h-1zM33 27h1v1h-1zM1 28h1v1h-1zM7 28h1v1h-1zM10 28h1v1h-1zM12 28h2v1h-2zM17 28h1v1h-1zM23 28h3v1h-3zM29 28h3v1h-3zM1 29h1v1h-1zM3 29h3v1h-3zM7 29h1v1h-1zM10 29h1v1h-1zM12 29h1v1h-1zM15 29h2v1h-2zM19 29h1v1h-1zM21 29h1v1h-1zM23 29h1v1h-1zM25 29h6v1h-6zM33 29h1v1h-1zM1 30h1v1h-1zM3 30h3v1h-3zM7 30h1v1h-1zM12 30h1v1h-1zM14 30h1v1h-1zM16 30h1v1h-1zM20 30h1v1h-1zM22 30h1v1h-1zM25 30h2v1h-2zM28 30h2v1h-2zM31 30h2v1h-2zM1 31h1v1h-1zM3 31h3v1h-3zM7 31h1v1h-1zM10 31h1v1h-1zM14 31h1v1h-1zM16 31h1v1h-1zM18 31h5v1h-5zM24 31h2v1h-2zM28 31h6v1h-6zM1 32h1v1h-1zM7 32h1v1h-1zM10 32h1v1h-1zM13 32h1v1h-1zM16 32h2v1h-2zM19 32h3v1h-3zM25 32h1v1h-1zM28 32h4v1h-4zM1 33h7v1h-7zM9 33h1v1h-1zM12 33h1v1h-1zM16 33h3v1h-3zM23 33h1v1h-1zM25 33h2v1h-2zM28 33h1v1h-1zM31 33h2v1h-2z"/></svg>
+                    </div>
+                </div>
+                <p class="closing-note">Requires iOS&nbsp;17, iPadOS&nbsp;17 or watchOS&nbsp;11 or later.</p>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <nav class="footer-nav" aria-label="More from Novelwave">
+                    <div class="footer-group">
+                        <h2 class="footer-label" id="footer-novelwave">Novelwave</h2>
+                        <ul class="footer-links" aria-labelledby="footer-novelwave">
+                            <li><a href="roadmap.html">Roadmap</a></li>
+                            <li><a href="support.html">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h2 class="footer-label" id="footer-guides">Guides</h2>
+                        <ul class="footer-links" aria-labelledby="footer-guides">
+                            <li><a href="m4b-player-iphone.html">M4B on iPhone</a></li>
+                            <li><a href="mp3-audiobooks-iphone.html">MP3 on iPhone</a></li>
+                            <li><a href="apple-watch-audiobooks.html">Audiobooks on Apple Watch</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-group">
+                        <h2 class="footer-label" id="footer-legal">Legal</h2>
+                        <ul class="footer-links" aria-labelledby="footer-legal">
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="footer-base">
+                    <span>© 2026 Novelwave. Made by Mihai Petrenco.</span>
+                    <nav class="language-links" aria-label="Language">
+                        <ul translate="no">
+                            <li><a href="/" aria-current="page" hreflang="en" lang="en">English</a></li>
+                            <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+                            <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+                            <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+                            <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+                            <li><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a></li>
+                            <li><a href="/ro/" hreflang="ro" lang="ro">Română</a></li>
+                            <li><a href="/ru/" hreflang="ru" lang="ru">Русский</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="menu band" id="menu" popover>
+        <nav aria-label="Chapters">
+            <p class="menu-heading">Chapters</p>
+            <ol class="menu-chapters" data-menu-chapters>
+                <li><a href="#how">How it works</a></li>
+                <li><a href="#player">Player</a></li>
+                <li><a href="#library">Library</a></li>
+                <li><a href="#watch">Apple Watch</a></li>
+                <li><a href="#carplay">CarPlay and Siri</a></li>
+                <li><a href="#more">And more</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ol>
+            <a class="app-store-button menu-download" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-menu&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
         </nav>
-        <p>© 2026 Novelwave. Made with ❤️ by Mihai Petrenco.</p>
-        <a class="footer-link" href="#main">Back to top</a>
-    </footer>
+    </div>
+
+    <div class="mini-player band" data-mini-player hidden>
+        <button class="mini-player-button" type="button" popovertarget="menu">
+            <span class="mini-player-text">
+                <span class="visually-hidden">Chapters. Now reading: </span>
+                <span class="mini-player-chapter" data-mini-player-chapter>How it works</span>
+            </span>
+            <svg class="icon" aria-hidden="true"><use href="#icon-chapters"/></svg>
+        </button>
+        <a class="app-store-button" href="https://apps.apple.com/app/id6720100886?pt=122786304&amp;ct=web-mini&amp;mt=8"><img src="images/download_light.svg" alt="Download on the App Store" width="120" height="40"></a>
+        <span class="mini-player-progress" aria-hidden="true"><span data-mini-player-progress></span></span>
+    </div>
 </body>
 </html>

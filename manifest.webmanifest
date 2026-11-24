@@ -1,15 +1,35 @@
 {
     "name": "Novelwave",
     "short_name": "Novelwave",
-    "description": "Your ultimate audiobook player.",
+    "description": "The audiobook player for the audiobooks you already own.",
     "start_url": "./",
     "display": "browser",
-    "background_color": "#FBFAF8",
-    "theme_color": "#FBFAF8",
+    "background_color": "#F4EFE6",
+    "theme_color": "#221C16",
     "icons": [
-        { "src": "images/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any" },
-        { "src": "images/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any" },
-        { "src": "images/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
-        { "src": "images/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+        {
+            "src": "images/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any"
+        },
+        {
+            "src": "images/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "images/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "images/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
     ]
 }

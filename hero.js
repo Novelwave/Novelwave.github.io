@@ -15,8 +15,8 @@
     const dotRadius = 0.875;
     const fullCircle = Math.PI * 2;
 
-    // Dots around the pointer swell slightly and take on the accent color, fading out as the
-    // hero scrolls away.
+    // Dots around the pointer swell slightly and take on the accent color, wherever the grid shows
+    // between the page's sections.
     const cursorRadius = 140;
     const cursorSwell = 1.8;
 
@@ -30,12 +30,10 @@
     let height = 0;
     let gridColor = "";
     let accentColor = "";
-    let heroBottom = 1;
     let heroVisible = true;
     let pointer = null;
     let pointerInside = false;
     let cursorStrength = 0;
-    let lastSwell = 0;
     let tilt = { x: 0, y: 0 };
     let tiltTarget = { x: 0, y: 0 };
     let frame = 0;
@@ -60,19 +58,16 @@
         canvas.width = Math.round(width * ratio);
         canvas.height = Math.round(height * ratio);
         context.setTransform(ratio, 0, 0, ratio, 0, 0);
-        heroBottom = Math.max(hero.getBoundingClientRect().bottom + window.scrollY, 1);
     }
 
     function currentSwell() {
-        const scrollFade = Math.min(Math.max(1 - window.scrollY / heroBottom, 0), 1);
-        return pointer ? cursorStrength * scrollFade : 0;
+        return pointer ? cursorStrength : 0;
     }
 
     function draw() {
         const swell = currentSwell();
         const reach = 2 * cursorRadius * cursorRadius;
         const accents = [];
-        lastSwell = swell;
 
         context.clearRect(0, 0, width, height);
         context.fillStyle = gridColor;
@@ -185,13 +180,6 @@
             redraw();
         });
 
-        // The swell fades with scrolling, so repaint while it's visible and once more as it ends.
-        window.addEventListener("scroll", () => {
-            if (lastSwell > 0 || currentSwell() > 0) {
-                start();
-            }
-        }, { passive: true });
-
         window.addEventListener("pointermove", (event) => {
             if (event.pointerType !== "mouse") {
                 return;
@@ -203,9 +191,7 @@
                 ? { x: (event.clientX / width) * 2 - 1, y: (event.clientY / height) * 2 - 1 }
                 : { x: 0, y: 0 };
 
-            if (heroVisible || lastSwell > 0) {
-                start();
-            }
+            start();
         }, { passive: true });
 
         root.addEventListener("pointerleave", () => {
