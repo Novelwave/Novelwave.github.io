@@ -214,6 +214,8 @@ a {
     stroke-linejoin: round;
 }
 
+/* Hidden where it sits, clipped to nothing, until the keyboard reaches it. Moving it above the page
+   instead let Safari's pull-to-refresh bounce show it. */
 .skip-link {
     position: absolute;
     inset-block-start: 1rem;
@@ -225,11 +227,11 @@ a {
     color: var(--band);
     font-weight: 600;
     text-decoration: none;
-    transform: translateY(-200%);
+    clip-path: inset(50%);
 }
 
 .skip-link:focus {
-    transform: none;
+    clip-path: none;
 }
 
 .container {
